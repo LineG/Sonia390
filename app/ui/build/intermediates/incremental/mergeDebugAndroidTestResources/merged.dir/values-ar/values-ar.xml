@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"التنقل إلى الشاشة الرئيسية"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"التنقل إلى أعلى"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"خيارات إضافية"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"تم"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"عرض الكل"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"اختيار تطبيق"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"إيقاف"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"تشغيل"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"بحث…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"محو طلب البحث"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"طلب البحث"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"بحث"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"إرسال طلب البحث"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"البحث الصوتي"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"مشاركة مع <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"تصغير"</string>
+    <string name="add_ringtone_text">إضافة نغمة رنين</string>
+    <string name="alarm_sound_default">صوت التنبيه الافتراضي</string>
+    <string msgid="1248663997452044787" name="color_picker_default_title">"تحديد لون:"</string>
+    <string msgid="2883438431173736180" name="color_swatch_description">"اللون <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string msgid="5020921249944943124" name="color_swatch_description_selected">"تم تحديد اللون <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string name="date_picker_next_month_button">الشهر التالي</string>
+    <string name="date_picker_prev_month_button">الشهر السابق</string>
+    <string name="datetime_EMMMMdy">EEE، d MMMM، y</string>
+    <string name="datetime_EMMMd">EEE، d MMM</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="hour_picker_description">شريط التمرير الدائري للساعات</string>
+    <string name="minute_picker_description">شريط التمرير الدائري للدقائق</string>
+    <string name="notification_sound_default">صوت الإشعار التلقائي</string>
+    <string name="number_picker_decrement_button">تقليل</string>
+    <string name="number_picker_increment_button">زيادة</string>
+    <string name="ringtone_default">نغمة الرنين الافتراضية</string>
+    <string name="ringtone_picker_title">نغمات الرنين</string>
+    <string name="ringtone_silent">لا شيء</string>
+    <string msgid="146198913615257606" name="search_menu_title">"البحث"</string>
+    <string name="select_day">تحديد الشهر واليوم</string>
+    <string name="select_hours">تحديد الساعات</string>
+    <string name="select_minutes">تحديد الدقائق</string>
+    <string name="select_year">تحديد العام</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+    <string name="time_picker_decrement_hour_button">تقليل الساعات</string>
+    <string name="time_picker_decrement_minute_button">تقليل الدقائق</string>
+    <string name="time_picker_decrement_set_am_button">تعيين الصباح</string>
+    <string name="time_picker_header_text">تعيين الوقت</string>
+    <string name="time_picker_hour_label">ساعة</string>
+    <string name="time_picker_increment_hour_button">زيادة الساعات</string>
+    <string name="time_picker_increment_minute_button">زيادة الدقائق</string>
+    <string name="time_picker_increment_set_pm_button">تعيين المساء</string>
+    <string name="time_picker_input_error">يُرجى إدخال وقت صالح</string>
+    <string name="time_picker_minute_label">دقيقة</string>
+    <string name="time_picker_prompt_label">يُرجى تحديد الوقت</string>
+    <string name="time_picker_radial_mode_description">يُرجى التبديل إلى وضع الساعة لإدخال الوقت.</string>
+    <string name="time_picker_text_input_mode_description">يُرجى التبديل إلى وضع إدخال النص لإدخال الوقت.</string>
+    <string name="unable_to_add_ringtone">يتعذر إضافة نغمة رنين مخصصة</string>
+</resources>

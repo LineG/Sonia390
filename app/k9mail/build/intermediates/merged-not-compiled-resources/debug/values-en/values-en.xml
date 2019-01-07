@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="datetime_EMMMMdy">EEE, MMMM d, y</string>
+    <string name="datetime_EMMMd">EEE, MMM d</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="searchpreference_clear">Clear</string>
+    <string name="searchpreference_clear_history">Clear history</string>
+    <string name="searchpreference_history_entry">History entry</string>
+    <string name="searchpreference_more">More</string>
+    <string name="searchpreference_no_results">No results</string>
+    <string name="searchpreference_search">Search…</string>
+</resources>

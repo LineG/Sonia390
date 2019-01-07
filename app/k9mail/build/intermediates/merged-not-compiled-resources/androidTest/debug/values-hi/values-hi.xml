@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"होम पेज पर जाएं"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"ऊपर जाएं"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"ज़्यादा विकल्प"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"हो गया"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"सभी देखें"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"कोई एप्‍लिकेशन चुनें"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"बंद"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"चालू"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"खोजा जा रहा है…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"क्‍वेरी साफ़ करें"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"सर्च क्वेरी"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"सर्च करें"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"क्वेरी सबमिट करें"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"आवाज़ सर्च"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"इसके द्वारा साझा करें"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> के साथ साझा करें"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"छोटा करें"</string>
+    <string name="add_ringtone_text">रिंगटोन जोड़ेंं</string>
+    <string name="alarm_sound_default">डिफ़ॉल्ट अलार्म ध्वनि</string>
+    <string msgid="1248663997452044787" name="color_picker_default_title">"कोई रंग चुनें:"</string>
+    <string msgid="2883438431173736180" name="color_swatch_description">"रंग <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string msgid="5020921249944943124" name="color_swatch_description_selected">"रंग <ns1:g id="COLOR_INDEX">%1$d</ns1:g> चयनित"</string>
+    <string name="date_picker_next_month_button">अगला महीना</string>
+    <string name="date_picker_prev_month_button">पिछला महीना</string>
+    <string name="datetime_EMMMMdy">EEE, d MMMM y</string>
+    <string name="datetime_EMMMd">EEE, d MMM</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="hour_picker_description">घंटो का चक्राकार स्लाइडर</string>
+    <string name="minute_picker_description">मिनटों का चक्राकार स्लाइडर</string>
+    <string name="notification_sound_default">डिफ़ॉल्ट नोटिफ़िकेशन ध्वनि</string>
+    <string name="number_picker_decrement_button">कम करें</string>
+    <string name="number_picker_increment_button">बढ़ाएं</string>
+    <string name="ringtone_default">डिफ़ॉल्‍ट रिंगटोन</string>
+    <string name="ringtone_picker_title">रिंगटोन</string>
+    <string name="ringtone_silent">कोई नहीं</string>
+    <string msgid="146198913615257606" name="search_menu_title">"सर्च"</string>
+    <string name="select_day">माह और दिन चुनें</string>
+    <string name="select_hours">घंटे चुनें</string>
+    <string name="select_minutes">मिनट चुनें</string>
+    <string name="select_year">वर्ष चुनें</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="time_picker_decrement_hour_button">घंटे कम करें</string>
+    <string name="time_picker_decrement_minute_button">मिनट कम करें</string>
+    <string name="time_picker_decrement_set_am_button">प्रात: सेट करें</string>
+    <string name="time_picker_header_text">समय सेट अप करें</string>
+    <string name="time_picker_hour_label">घंटा</string>
+    <string name="time_picker_increment_hour_button">घंटे बढ़ाएं</string>
+    <string name="time_picker_increment_minute_button">मिनट बढ़ाएं</string>
+    <string name="time_picker_increment_set_pm_button">सायं सेट करें</string>
+    <string name="time_picker_input_error">मान्य समय डालें</string>
+    <string name="time_picker_minute_label">मिनट</string>
+    <string name="time_picker_prompt_label">समय लिखें</string>
+    <string name="time_picker_radial_mode_description">समय इनपुट के लिए घड़ी मोड पर जाएं.</string>
+    <string name="time_picker_text_input_mode_description">समय इनपुट के लिए लेख इनपुट मोड पर जाएं.</string>
+    <string name="unable_to_add_ringtone">कस्टम रिंगटोन जोड़ने में असमर्थ</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Нүүр хуудас руу шилжих"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Дээш шилжих"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Нэмэлт сонголтууд"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Дууссан"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Бүгдийг харах"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Апп сонгох"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"ИДЭВХГҮЙ"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ИДЭВХТЭЙ"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Хайх..."</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Асуулгыг цэвэрлэх"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Хайх асуулга"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Хайх"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Асуулгыг илгээх"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Дуут хайлт"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Хуваалцах"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-тай хуваалцах"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Хумих"</string>
+    <string name="add_ringtone_text">Хонхны ая нэмэх</string>
+    <string name="alarm_sound_default">Сэрүүлгийн өгөгдмөл дуу</string>
+    <string msgid="1248663997452044787" name="color_picker_default_title">"Өнгө сонгоно уу"</string>
+    <string msgid="2883438431173736180" name="color_swatch_description">"Өнгө <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string msgid="5020921249944943124" name="color_swatch_description_selected">"Өнгө <ns1:g id="COLOR_INDEX">%1$d</ns1:g> сонгогдсон"</string>
+    <string name="date_picker_next_month_button">Дараагийн сар</string>
+    <string name="date_picker_prev_month_button">Өмнөх сар</string>
+    <string name="datetime_EMMMMdy">EEE, y MMMM d</string>
+    <string name="datetime_EMMMd">EEE MMM d</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">y MMMM</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="hour_picker_description">Цаг гүйлгэгч</string>
+    <string name="minute_picker_description">Минут гүйлгэгч</string>
+    <string name="notification_sound_default">Мэдэгдлийн үндсэн ая</string>
+    <string name="number_picker_decrement_button">Бууруулах</string>
+    <string name="number_picker_increment_button">Өсөх</string>
+    <string name="ringtone_default">Үндсэн хонхны ая</string>
+    <string name="ringtone_picker_title">Хонхны ая</string>
+    <string name="ringtone_silent">Алийг нь ч биш</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Хайлт"</string>
+    <string name="select_day">Сар болон өдрийг сонгоно уу</string>
+    <string name="select_hours">Цаг сонгоно уу</string>
+    <string name="select_minutes">Минут сонгоно уу</string>
+    <string name="select_year">Жилийг сонгоно уу</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="time_picker_decrement_hour_button">Цаг бууруулах</string>
+    <string name="time_picker_decrement_minute_button">Минутыг бууруулах</string>
+    <string name="time_picker_decrement_set_am_button">AM тохируулах</string>
+    <string name="time_picker_header_text">Цаг тохируулах</string>
+    <string name="time_picker_hour_label">Цаг</string>
+    <string name="time_picker_increment_hour_button">Цаг өсгөх</string>
+    <string name="time_picker_increment_minute_button">Минут өсгөх</string>
+    <string name="time_picker_increment_set_pm_button">PM тохируулах</string>
+    <string name="time_picker_input_error">Цагийг зөв оруулна уу</string>
+    <string name="time_picker_minute_label">минут</string>
+    <string name="time_picker_prompt_label">Хугацааг бичнэ үү</string>
+    <string name="time_picker_radial_mode_description">Цагийг оруулахын тулд цагийн горимд шилжүүлнэ үү.</string>
+    <string name="time_picker_text_input_mode_description">Цагийг оруулахын тулд текст оруулах горимд шилжүүлнэ үү.</string>
+    <string name="unable_to_add_ringtone">Захиалгат хонхны ая нэмэх боломжгүй</string>
+</resources>

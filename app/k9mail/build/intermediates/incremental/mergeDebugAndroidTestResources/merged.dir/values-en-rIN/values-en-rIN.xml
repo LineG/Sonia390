@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navigate home"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navigate up"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"More options"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Done"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"See all"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Choose an app"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"OFF"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ON"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Search…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Clear query"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Search query"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Search"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Submit query"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Voice search"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Share with"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Share with <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Collapse"</string>
+    <string name="add_ringtone_text">Add ringtone</string>
+    <string name="alarm_sound_default">Default alarm sound</string>
+    <string msgid="1248663997452044787" name="color_picker_default_title">"Select a Colour"</string>
+    <string msgid="2883438431173736180" name="color_swatch_description">"Colour <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string msgid="5020921249944943124" name="color_swatch_description_selected">"Colour <ns1:g id="COLOR_INDEX">%1$d</ns1:g> selected"</string>
+    <string name="date_picker_next_month_button">Next month</string>
+    <string name="date_picker_prev_month_button">Previous month</string>
+    <string name="datetime_EMMMMdy">EEE d MMMM y</string>
+    <string name="datetime_EMMMd">EEE, d MMM</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="hour_picker_description">Hours circular slider</string>
+    <string name="minute_picker_description">Minutes circular slider</string>
+    <string name="notification_sound_default">Default notification sound</string>
+    <string name="number_picker_decrement_button">Decrease</string>
+    <string name="number_picker_increment_button">Increase</string>
+    <string name="ringtone_default">Default ringtone</string>
+    <string name="ringtone_picker_title">Ringtones</string>
+    <string name="ringtone_silent">None</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Search"</string>
+    <string name="select_day">Select month and day</string>
+    <string name="select_hours">Select hours</string>
+    <string name="select_minutes">Select minutes</string>
+    <string name="select_year">Select year</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="time_picker_decrement_hour_button">Decrease hour</string>
+    <string name="time_picker_decrement_minute_button">Decrease minute</string>
+    <string name="time_picker_decrement_set_am_button">Set a.m.</string>
+    <string name="time_picker_header_text">Set time</string>
+    <string name="time_picker_hour_label">hour</string>
+    <string name="time_picker_increment_hour_button">Increase hour</string>
+    <string name="time_picker_increment_minute_button">Increase minute</string>
+    <string name="time_picker_increment_set_pm_button">Set p.m.</string>
+    <string name="time_picker_input_error">Enter a valid time</string>
+    <string name="time_picker_minute_label">minute</string>
+    <string name="time_picker_prompt_label">Type in time</string>
+    <string name="time_picker_radial_mode_description">Switch to clock mode for the time input.</string>
+    <string name="time_picker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="unable_to_add_ringtone">Unable to add customised ringtone</string>
+</resources>

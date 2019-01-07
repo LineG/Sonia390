@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/charleschan/k-9-master/app/ui/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/7485037f39a6c0e26152b45eb1dd6113/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,113",
+                        "endColumns": "57,57",
+                        "endOffsets": "108,166"
+                    }
+                },
+                {
+                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c860d3d9192ff6add1129ea9d736e56e/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    },
+                    "to": {
+                        "startLines": "4,7,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "171,330,501",
+                        "endLines": "6,9,12",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "325,496,669"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/charleschan/k-9-master/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-port-v13/values-sw600dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/charleschan/k-9-master/app/k9mail/src/main/res/values-sw600dp-port/unread_widget_styles.xml",
+                    "from": {
+                        "startLines": "3,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "115,502",
+                        "endLines": "10,18",
+                        "endColumns": "12,12",
+                        "endOffsets": "496,810"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,441",
+                        "endLines": "9,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "436,749"
+                    }
+                }
+            ]
+        }
+    ]
+}

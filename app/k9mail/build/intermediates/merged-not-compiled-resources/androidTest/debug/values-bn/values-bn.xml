@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"হোম এ নেভিগেট করুন"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"উপরের দিকে নেভিগেট করুন"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"আরও বিকল্প"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"সম্পন্ন হয়েছে"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"সবগুলো দেখুন"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"একটি অ্যাপ্লিকেশান বেছে নিন"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"বন্ধ"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"চালু"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"অনুসন্ধান..."</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"ক্যোয়ারী সাফ করুন"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"ক্যোয়ারী খুঁজুন"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"খুঁজুন"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"ক্যোয়ারী জমা দিন"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"ভয়েস অনুসন্ধান"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"এর সাথে শেয়ার করুন"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> এর সাথে শেয়ার করুন"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"সঙ্কুচিত করুন"</string>
+    <string name="add_ringtone_text">রিংটোন যোগ করুন</string>
+    <string name="alarm_sound_default">ডিফল্ট অ্যালার্মের শব্দ</string>
+    <string msgid="1248663997452044787" name="color_picker_default_title">"একটি রঙ নির্বাচন করুন"</string>
+    <string msgid="2883438431173736180" name="color_swatch_description">"রঙ <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string msgid="5020921249944943124" name="color_swatch_description_selected">"<ns1:g id="COLOR_INDEX">%1$d</ns1:g> রঙ নির্বাচন করা হয়েছে"</string>
+    <string name="date_picker_next_month_button">পরের মাস</string>
+    <string name="date_picker_prev_month_button">পূর্ববর্তী মাস</string>
+    <string name="datetime_EMMMMdy">EEE, d MMMM, y</string>
+    <string name="datetime_EMMMd">EEE d MMM</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="hour_picker_description">বৃত্তাকার ঘণ্টা নির্বাচকের স্লাইডার</string>
+    <string name="minute_picker_description">বৃত্তাকার মিনিট নির্বাচকের স্লাইডার</string>
+    <string name="notification_sound_default">ডিফল্ট বিজ্ঞপ্তি শব্দ</string>
+    <string name="number_picker_decrement_button">কমান</string>
+    <string name="number_picker_increment_button">বাড়ান</string>
+    <string name="ringtone_default">ডিফল্ট রিংটোন</string>
+    <string name="ringtone_picker_title">রিংটোনগুলি</string>
+    <string name="ringtone_silent">কোনো কিছুই নয়</string>
+    <string msgid="146198913615257606" name="search_menu_title">"খুঁজুন"</string>
+    <string name="select_day">মাস এবং দিন নির্বাচন করুন</string>
+    <string name="select_hours">ঘণ্টা নির্বাচন করুন</string>
+    <string name="select_minutes">মিনিট নির্বাচন করুন</string>
+    <string name="select_year">বছর নির্বাচন করুন</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"৯৯৯+"</string>
+    <string name="time_picker_decrement_hour_button">ঘণ্টা কমান</string>
+    <string name="time_picker_decrement_minute_button">মিনিট কমান</string>
+    <string name="time_picker_decrement_set_am_button">AM সেট করুন</string>
+    <string name="time_picker_header_text">সময় সেট করুন</string>
+    <string name="time_picker_hour_label">ঘন্টা</string>
+    <string name="time_picker_increment_hour_button">ঘণ্টা বাড়ান</string>
+    <string name="time_picker_increment_minute_button">মিনিট বাড়ান</string>
+    <string name="time_picker_increment_set_pm_button">PM সেট করুন</string>
+    <string name="time_picker_input_error">সঠিক সময় দিন</string>
+    <string name="time_picker_minute_label">মিনিট</string>
+    <string name="time_picker_prompt_label">সময় টাইপ করুন</string>
+    <string name="time_picker_radial_mode_description">সময় ইনপুট দেওয়ার জন্য ঘড়ি মোডে যান।</string>
+    <string name="time_picker_text_input_mode_description">সময় ইনপুট দেওয়ার জন্য পাঠ্য ইনপুট মোডে যান।</string>
+    <string name="unable_to_add_ringtone">কাস্টম রিংটোন যোগ করা গেল না</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"ਹੋਮ \'ਤੇ ਜਾਓ"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"ਉੱਪਰ ਜਾਓ"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"ਹੋਰ ਚੋਣਾਂ"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"ਹੋ ਗਿਆ"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"ਸਭ ਦੇਖੋ"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"ਇੱਕ ਐਪ ਚੁਣੋ"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"ਬੰਦ"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ਤੇ"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"ਖੋਜ…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"ਸਵਾਲ ਹਟਾਓ"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"ਖੋਜ ਪੁੱਛਗਿੱਛ"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"ਖੋਜੋ"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"ਸਵਾਲ ਪ੍ਰਸਤੁਤ ਕਰੋ"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"ਵੌਇਸ ਖੋਜ"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"ਇਸ ਨਾਲ ਸਾਂਝਾ ਕਰੋ"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> ਨਾਲ ਸਾਂਝਾ ਕਰੋ"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"ਨਸ਼ਟ ਕਰੋ"</string>
+    <string name="add_ringtone_text">ਰਿੰਗਟੋਨ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="alarm_sound_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਅਲਾਰਮ ਧੁਨੀ</string>
+    <string msgid="1248663997452044787" name="color_picker_default_title">"ਇੱਕ ਰੰਗ ਚੁਣੋ"</string>
+    <string msgid="2883438431173736180" name="color_swatch_description">"ਰੰਗ <ns1:g id="COLOR_INDEX">%1$d</ns1:g>"</string>
+    <string msgid="5020921249944943124" name="color_swatch_description_selected">"ਰੰਗ <ns1:g id="COLOR_INDEX">%1$d</ns1:g> ਚੁਣਿਆ ਗਿਆ"</string>
+    <string name="date_picker_next_month_button">ਅਗਲੇ ਮਹੀਨੇ</string>
+    <string name="date_picker_prev_month_button">ਪਿਛਲੇ ਮਹੀਨੇ</string>
+    <string name="datetime_EMMMMdy">EEE, d MMMM y</string>
+    <string name="datetime_EMMMd">EEE, d MMM</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">MMMM y</string>
+    <string name="datetime_hm">h:mm a</string>
+    <string name="hour_picker_description">ਘੰਟੇ ਸਰਕੁਲਰ ਸਲਾਈਡਰ</string>
+    <string name="minute_picker_description">ਮਿੰਟ ਸਰਕੁਲਰ ਸਲਾਈਡਰ</string>
+    <string name="notification_sound_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸੂਚਨਾ ਧੁਨੀ</string>
+    <string name="number_picker_decrement_button">ਘਟਾਓ</string>
+    <string name="number_picker_increment_button">ਵਧਾਓ</string>
+    <string name="ringtone_default">ਪੂਰਵ-ਨਿਰਧਾਰਤ ਰਿੰਗਟੋਨ</string>
+    <string name="ringtone_picker_title">ਰਿੰਗਟੋਨਾਂ</string>
+    <string name="ringtone_silent">ਕੋਈ ਨਹੀਂ</string>
+    <string msgid="146198913615257606" name="search_menu_title">"ਖੋਜੋ"</string>
+    <string name="select_day">ਮਹੀਨਾ ਅਤੇ ਦਿਨ ਚੁਣੋ</string>
+    <string name="select_hours">ਘੰਟੇ ਚੁਣੋ</string>
+    <string name="select_minutes">ਮਿੰਟ ਚੁਣੋ</string>
+    <string name="select_year">ਸਾਲ ਚੁਣੋ</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="time_picker_decrement_hour_button">ਘੰਟੇ ਘਟਾਓ</string>
+    <string name="time_picker_decrement_minute_button">ਮਿੰਟ ਘਟਾਓ</string>
+    <string name="time_picker_decrement_set_am_button">AM ਸੈੱਟ ਕਰੋ</string>
+    <string name="time_picker_header_text">ਸਮਾਂ ਸੈੱਟ ਕਰੋ</string>
+    <string name="time_picker_hour_label">ਘੰਟਾ</string>
+    <string name="time_picker_increment_hour_button">ਘੰਟੇ ਵਧਾਓ</string>
+    <string name="time_picker_increment_minute_button">ਮਿੰਟ ਵਧਾਓ</string>
+    <string name="time_picker_increment_set_pm_button">PM ਸੈੱਟ ਕਰੋ</string>
+    <string name="time_picker_input_error">ਇੱਕ ਵੈਧ ਸਮਾਂ ਦਾਖਲ ਕਰੋ</string>
+    <string name="time_picker_minute_label">ਮਿੰਟ</string>
+    <string name="time_picker_prompt_label">ਸਮਾਂ ਟਾਈਪ ਕਰੋ</string>
+    <string name="time_picker_radial_mode_description">ਸਮਾਂ ਇਨਪੁੱਟ ਕਰਨ ਲਈ ਘੜੀ ਮੋਡ \'ਤੇ ਬਦਲੀ ਕਰੋ।</string>
+    <string name="time_picker_text_input_mode_description">ਸਮਾਂ ਇਨਪੁੱਟ ਕਰਨ ਲਈ ਲਿਖਤ ਇਨਪੁੱਟ ਮੋਡ \'ਤੇ ਬਦਲੀ ਕਰੋ।</string>
+    <string name="unable_to_add_ringtone">ਵਿਸ਼ੇਸ਼-ਵਿਉਂਤੀ ਰਿੰਗਟੋਨ ਨੂੰ ਸ਼ਾਮਲ ਕਰਨ ਦੇ ਅਯੋਗ</string>
+</resources>

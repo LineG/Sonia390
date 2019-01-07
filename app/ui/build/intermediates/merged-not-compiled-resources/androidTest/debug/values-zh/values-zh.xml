@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="datetime_EMMMMdy">y年M月d日EEE</string>
+    <string name="datetime_EMMMd">M月d日EEE</string>
+    <string name="datetime_Hm">HH:mm</string>
+    <string name="datetime_MMMMy">y年M月</string>
+    <string name="datetime_hm">ah:mm</string>
+    <string name="openpgp_key_selected">已经选中密钥</string>
+    <string name="openpgp_no_key_selected">尚未选择密钥</string>
+</resources>
