@@ -38,8 +38,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -222,9 +225,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private boolean navigateUp;
 
+    // Greeting button
+    private Spinner templatesSpinnerView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -310,6 +318,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         messageContentView.getInputExtras(true).putBoolean("allowEmoji", true);
 
         attachmentsView = findViewById(R.id.attachments);
+        // Started coding here
+        templatesSpinnerView = (Spinner) findViewById(R.id.templates);
+
+        ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.messageComposeTemplates));
+        templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        templatesSpinnerView.setAdapter(templatesAdapter);
 
         TextWatcher draftNeedsChangingTextWatcher = new SimpleTextWatcher() {
             @Override

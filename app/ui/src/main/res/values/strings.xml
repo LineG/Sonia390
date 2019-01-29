@@ -281,8 +281,20 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_attachments_skipped_toast">Some attachments cannot be forwarded because they have not been downloaded.</string>
     <string name="message_compose_attachments_forward_toast">The message cannot be forwarded because some attachments have not been downloaded.</string>
     <string name="message_compose_show_quoted_text_action">Include quoted message</string>
+    <string name="message_compose_greeting1">Greeting 1</string>
     <string name="message_compose_description_delete_quoted_text">Remove quoted text</string>
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
+    <string name="templateTitle">Template</string>
+    <string-array name="messageComposeTemplates">
+        <item>Template 1</item>
+        <item>Template 2</item>
+        <item>Template 3</item>
+        <item>Template 4</item>
+        <item>Template 5</item>
+        <item>Template 6</item>
+        <item>Template 7</item>
+    </string-array>
+
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>
     <string name="message_to_label">To:</string>

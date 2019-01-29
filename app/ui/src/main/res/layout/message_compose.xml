@@ -59,8 +59,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
+
             <!-- We have to use "wrap_content" (not "0dip") for "layout_height", otherwise the
                  EditText won't properly grow in height while the user is typing the message -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/templateString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/templateTitle" />
+
+            <Spinner
+                android:id="@+id/templates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
             <view
                 class="com.fsck.k9.ui.EolConvertingEditText"
                 android:id="@+id/message_content"
