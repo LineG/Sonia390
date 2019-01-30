@@ -284,8 +284,8 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_greeting1">Greeting 1</string>
     <string name="message_compose_description_delete_quoted_text">Remove quoted text</string>
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
-    <string name="templateTitle">Template</string>
-    <string-array name="messageComposeTemplates">
+    <string name="template_title">Templates</string>
+    <string-array name="message_compose_templates">
         <item>Template 1</item>
         <item>Template 2</item>
         <item>Template 3</item>
@@ -294,6 +294,7 @@ Please submit bug reports, contribute new features and ask questions at
         <item>Template 6</item>
         <item>Template 7</item>
     </string-array>
+    <string name="apply_template">Apply Template</string>
 
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>

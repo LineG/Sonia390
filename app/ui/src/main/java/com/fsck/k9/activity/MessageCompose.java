@@ -318,14 +318,21 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         messageContentView.getInputExtras(true).putBoolean("allowEmoji", true);
 
         attachmentsView = findViewById(R.id.attachments);
-        // Started coding here
+
+        /**
+         *  We create the spinner view so that the list of templates can be viewed
+         *          on the screen
+         */
+
         templatesSpinnerView = (Spinner) findViewById(R.id.templates);
 
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.messageComposeTemplates));
+                                            android.R.layout.simple_list_item_1,
+                                                getResources().getStringArray(R.array.messageComposeTemplates));
+
         templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         templatesSpinnerView.setAdapter(templatesAdapter);
+
 
         TextWatcher draftNeedsChangingTextWatcher = new SimpleTextWatcher() {
             @Override

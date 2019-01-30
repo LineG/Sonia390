@@ -65,17 +65,26 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="#509f1a71"
             android:orientation="horizontal" >
             <TextView
-                android:id="@+id/templateString"
+                android:id="@+id/template_string"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/templateTitle" />
+                android:text="@string/template_title" />
 
             <Spinner
                 android:id="@+id/templates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/apply_template"
+                android:text="@string/apply_template"
+                android:textSize="10sp"
+                android:padding="0dip"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
         </LinearLayout>
 
 
