@@ -1,4 +1,0 @@
-#Mon Jan 07 17:11:35 EST 2019
-base.0=/Users/charleschan/k-9-master/app/k9mail/build/intermediates/transforms/dexMerger/debug/1
-path.0=classes.dex
-renamed.0=classes.dex
