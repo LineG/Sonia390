@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.fsck.k9.debug"
-      android:versionCode="27000"
-      android:versionName="5.700-SNAPSHOT"
-      split="lib_directories_apk">
-</manifest>
