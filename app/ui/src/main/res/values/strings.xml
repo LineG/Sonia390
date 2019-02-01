@@ -286,13 +286,13 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
     <string name="template_title">Templates</string>
     <string-array name="message_compose_templates">
-        <item>Template 1</item>
-        <item>Template 2</item>
-        <item>Template 3</item>
-        <item>Template 4</item>
-        <item>Template 5</item>
-        <item>Template 6</item>
-        <item>Template 7</item>
+        <item>Professor</item>
+        <item>Boss</item>
+        <item>Landlord</item>
+        <item>Significant other</item>
+        <item>Friends</item>
+        <item>Parent</item>
+        <item>Children</item>
     </string-array>
     <string name="apply_template">Apply Template</string>
 

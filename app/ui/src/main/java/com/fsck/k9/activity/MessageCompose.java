@@ -328,7 +328,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
                                             android.R.layout.simple_list_item_1,
-                                                getResources().getStringArray(R.array.messageComposeTemplates));
+                                                getResources().getStringArray(R.array.message_compose_templates));
 
         templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         templatesSpinnerView.setAdapter(templatesAdapter);
