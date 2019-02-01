@@ -38,8 +38,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -112,7 +116,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         CancelListener, AttachmentDownloadCancelListener, OnFocusChangeListener,
         OnOpenPgpInlineChangeListener, OnOpenPgpSignOnlyChangeListener, MessageBuilder.Callback,
         AttachmentPresenter.AttachmentsChangedListener, RecipientPresenter.RecipientsChangedListener,
-        OnOpenPgpDisableListener {
+        OnOpenPgpDisableListener{
 
     private static final int DIALOG_SAVE_OR_DISCARD_DRAFT_MESSAGE = 1;
     private static final int DIALOG_CONFIRM_DISCARD_ON_BACK = 2;
@@ -222,9 +226,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private boolean navigateUp;
 
+    // Greeting spinner and button
+    private Spinner templatesSpinnerView;
+    private Button applyTemplateButtonView;
+    private String greetingText;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -310,6 +321,70 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         messageContentView.getInputExtras(true).putBoolean("allowEmoji", true);
 
         attachmentsView = findViewById(R.id.attachments);
+        templatesSpinnerView = (Spinner) findViewById(R.id.templates);
+        applyTemplateButtonView = (Button) findViewById(R.id.apply_template);
+
+/**
+*  We create the spinner view so that the list of templates can be viewed
+*          on the screen
+*/
+
+        ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
+                                            android.R.layout.simple_list_item_1,
+                                                getResources().getStringArray(R.array.message_compose_templates));
+        templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        templatesSpinnerView.setAdapter(templatesAdapter);
+        greetingText ="";
+        templatesSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    greetingText="";
+                }
+                else if(position == 1){
+                    greetingText="Professor";
+                }
+                else if(position == 2){
+                    greetingText="Boss";
+                }
+                else if(position == 3){
+                    greetingText="Landlord";
+                }
+                else if(position == 4){
+                    greetingText="Significant other";
+                }
+                else if(position == 5){
+                    greetingText="Friends";
+                }
+                else if(position == 6){
+                    greetingText="Parent";
+                }
+                else if(position == 7){
+                    greetingText="Children";
+                }
+                Toast.makeText(parent.getContext(), greetingText, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+                // sometimes you need nothing here
+            }
+        });
+
+        applyTemplateButtonView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), greetingText+"Apply", Toast.LENGTH_SHORT).show();
+                messageContentView.setText(greetingText);
+            }
+        });
+
+
+
+
+
 
         TextWatcher draftNeedsChangingTextWatcher = new SimpleTextWatcher() {
             @Override
@@ -463,7 +538,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         if (savedInstanceState == null) {
             checkAndRequestPermissions();
         }
-
     }
 
     /**

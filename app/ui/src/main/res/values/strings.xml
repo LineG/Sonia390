@@ -5,7 +5,7 @@
     <!-- This should make it easier for forks to change the branding -->
 
     <!-- Used in AndroidManifest.xml -->
-    <string name="app_name">K-9 Sonia Mail</string>
+    <string name="app_name">K-9 Mail</string>
 
     <string name="shortcuts_title">K-9 Accounts</string>
     <string name="unread_widget_label">K-9 Unread</string>
@@ -15,7 +15,7 @@
 
 
     <!-- Used in the about dialog -->
-    <string name="app_authors">The K-9 Dog Walkers feat. Team Sonia</string>
+    <string name="app_authors">The K-9 Dog Walkers</string>
     <string name="app_authors_url">https://github.com/k9mail/k-9/graphs/contributors</string>
     <string name="app_copyright_fmt">Copyright 2008-<xliff:g>%s</xliff:g> The K-9 Dog Walkers. Portions Copyright 2006-<xliff:g>%s</xliff:g> the Android Open Source Project.</string>
     <string name="source_code">Source</string>
@@ -82,7 +82,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="delete_messages_label">Delete Emails</string>
     <string name="delete_messages_desc">Allows this application to delete your Emails.</string>
 
-    <string name="about_title">About K-9 "Sonia" Mail</string>
+    <string name="about_title">About K-9 Mail</string>
     <string name="accounts_title">Accounts</string>
     <string name="folders_title">Folders</string>
     <string name="advanced">Advanced</string>
@@ -281,8 +281,22 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_attachments_skipped_toast">Some attachments cannot be forwarded because they have not been downloaded.</string>
     <string name="message_compose_attachments_forward_toast">The message cannot be forwarded because some attachments have not been downloaded.</string>
     <string name="message_compose_show_quoted_text_action">Include quoted message</string>
+    <string name="message_compose_greeting1">Greeting 1</string>
     <string name="message_compose_description_delete_quoted_text">Remove quoted text</string>
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
+    <string name="template_title">Templates</string>
+    <string-array name="message_compose_templates">
+        <item>none</item>
+        <item>Professor</item>
+        <item>Boss</item>
+        <item>Landlord</item>
+        <item>Significant other</item>
+        <item>Friends</item>
+        <item>Parent</item>
+        <item>Children</item>
+    </string-array>
+    <string name="apply_template">Apply Template</string>
+
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>
     <string name="message_to_label">To:</string>
