@@ -21,7 +21,7 @@ monkey.txt
 *.iws
 atlassian-ide-plugin.xml
 target
-build
+build/
 .gradle
 out
 build.xml
