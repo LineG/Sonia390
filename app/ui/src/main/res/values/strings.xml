@@ -289,10 +289,10 @@ Please submit bug reports, contribute new features and ask questions at
         <item>none</item>
         <item>Professor</item>
         <item>Boss</item>
-        <item>Landlord</item>
-        <item>Significant other</item>
+        <item>Job</item>
+        <item>Apartment Inquiry</item>
         <item>Friends</item>
-        <item>Parent</item>
+        <item>Event</item>
         <item>Children</item>
     </string-array>
     <string name="apply_template">Apply Template</string>
