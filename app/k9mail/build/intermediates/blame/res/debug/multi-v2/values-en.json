@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/charleschan/k-9-master/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
+            "outputFile": "/Users/mike/Documents/GitHub/Sonia390/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/a0f0c4e245c231ab83c2d6331735cda6/res/values-en/values-en.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/2b8a6903115e3027b6acc87c6fe0d9fb/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/7485037f39a6c0e26152b45eb1dd6113/res/values-en/values-en.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/6521b2dc0d3c7d2fb61bed2a6607ac1b/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",

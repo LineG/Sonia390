@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/charleschan/k-9-master/mail/common/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/charleschan/k-9-master/mail/common/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/mike/Documents/GitHub/Sonia390/mail/common/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/mike/Documents/GitHub/Sonia390/mail/common/src/debug/jniLibs"/></dataSet></merger>

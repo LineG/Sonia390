@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main$Generated" generated="true"><source path="/Users/charleschan/k-9-master/app/core/src/main/res"/><source path="/Users/charleschan/k-9-master/app/core/build/generated/res/rs/debug"/><source path="/Users/charleschan/k-9-master/app/core/build/generated/res/resValues/debug"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/Users/charleschan/k-9-master/app/core/src/main/res"><file path="/Users/charleschan/k-9-master/app/core/src/main/res/values/arrays_account_settings_values.xml" qualifiers=""><string-array name="check_frequency_values" translatable="false">
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/main/res"/><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/build/generated/res/rs/debug"/><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/build/generated/res/resValues/debug"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/main/res"><file path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/main/res/values/arrays_account_settings_values.xml" qualifiers=""><string-array name="check_frequency_values" translatable="false">
         <item>-1</item>
         <item>15</item>
         <item>30</item>
@@ -147,7 +147,7 @@
         <item>500</item>
         <item>1000</item>
         <item>0</item>
-    </string-array></file><file path="/Users/charleschan/k-9-master/app/core/src/main/res/values/arrays_general_settings_values.xml" qualifiers=""><string-array name="supported_languages" translatable="false">
+    </string-array></file><file path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/main/res/values/arrays_general_settings_values.xml" qualifiers=""><string-array name="supported_languages" translatable="false">
         <item/>
         <item>in</item>
         <item>br</item>
@@ -327,4 +327,4 @@
     </string-array><string-array name="volume_navigation_values" translatable="false">
         <item>message</item>
         <item>list</item>
-    </string-array></file><file name="temp_file_provider_paths" path="/Users/charleschan/k-9-master/app/core/src/main/res/xml/temp_file_provider_paths.xml" qualifiers="" type="xml"/><file name="decrypted_file_provider_paths" path="/Users/charleschan/k-9-master/app/core/src/main/res/xml/decrypted_file_provider_paths.xml" qualifiers="" type="xml"/></source><source path="/Users/charleschan/k-9-master/app/core/build/generated/res/rs/debug"/><source path="/Users/charleschan/k-9-master/app/core/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="/Users/charleschan/k-9-master/app/core/src/debug/res"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="/Users/charleschan/k-9-master/app/core/src/debug/res"/></dataSet><mergedItems/></merger>
+    </string-array></file><file name="temp_file_provider_paths" path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/main/res/xml/temp_file_provider_paths.xml" qualifiers="" type="xml"/><file name="decrypted_file_provider_paths" path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/main/res/xml/decrypted_file_provider_paths.xml" qualifiers="" type="xml"/></source><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/build/generated/res/rs/debug"/><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/debug/res"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="/Users/mike/Documents/GitHub/Sonia390/app/core/src/debug/res"/></dataSet><mergedItems/></merger>

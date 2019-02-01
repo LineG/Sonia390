@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/charleschan/k-9-master/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-port-v13/values-sw600dp-port-v13.xml",
+            "outputFile": "/Users/mike/Documents/GitHub/Sonia390/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-port-v13/values-sw600dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/charleschan/k-9-master/app/k9mail/src/main/res/values-sw600dp-port/unread_widget_styles.xml",
+                    "source": "/Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/res/values-sw600dp-port/unread_widget_styles.xml",
                     "from": {
                         "startLines": "3,12",
                         "startColumns": "4,4",

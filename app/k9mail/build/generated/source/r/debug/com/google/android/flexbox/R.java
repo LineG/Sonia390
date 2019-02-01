@@ -31,21 +31,21 @@ public final class R {
         public static final int showDividerVertical = 0x7f040200;
     }
     public static final class id {
-        public static final int auto = 0x7f090061;
-        public static final int baseline = 0x7f090062;
-        public static final int center = 0x7f090072;
-        public static final int column = 0x7f090086;
-        public static final int column_reverse = 0x7f090087;
-        public static final int flex_end = 0x7f0900f7;
-        public static final int flex_start = 0x7f0900f8;
-        public static final int nowrap = 0x7f0901b1;
-        public static final int row = 0x7f0901e9;
-        public static final int row_reverse = 0x7f0901ea;
-        public static final int space_around = 0x7f090232;
-        public static final int space_between = 0x7f090233;
-        public static final int stretch = 0x7f09023d;
-        public static final int wrap = 0x7f09028e;
-        public static final int wrap_reverse = 0x7f090290;
+        public static final int auto = 0x7f090062;
+        public static final int baseline = 0x7f090063;
+        public static final int center = 0x7f090073;
+        public static final int column = 0x7f090087;
+        public static final int column_reverse = 0x7f090088;
+        public static final int flex_end = 0x7f0900f8;
+        public static final int flex_start = 0x7f0900f9;
+        public static final int nowrap = 0x7f0901b2;
+        public static final int row = 0x7f0901ea;
+        public static final int row_reverse = 0x7f0901eb;
+        public static final int space_around = 0x7f090233;
+        public static final int space_between = 0x7f090234;
+        public static final int stretch = 0x7f09023e;
+        public static final int wrap = 0x7f090291;
+        public static final int wrap_reverse = 0x7f090293;
     }
     public static final class styleable {
         public static final int[] FlexboxLayout = { 0x7f040027, 0x7f040028, 0x7f0400a3, 0x7f0400a4, 0x7f0400a5, 0x7f0400dd, 0x7f0400de, 0x7f040152, 0x7f0401fe, 0x7f0401ff, 0x7f040200 };

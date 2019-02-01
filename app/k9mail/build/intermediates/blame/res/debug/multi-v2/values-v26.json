@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/charleschan/k-9-master/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/Users/mike/Documents/GitHub/Sonia390/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/charleschan/k-9-master/app/ui/build/intermediates/bundles/debug/res/values-v26/values-v26.xml",
+                    "source": "/Users/mike/Documents/GitHub/Sonia390/app/ui/build/intermediates/bundles/debug/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,26 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/e6badce508c8fb76260d02a3ee0fe8dc/res/values-v26/values-v26.xml",
-                    "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,299",
-                        "endLines": "5,6",
-                        "endColumns": "12,96",
-                        "endOffsets": "294,391"
-                    },
-                    "to": {
-                        "startLines": "18,23",
-                        "startColumns": "4,4",
-                        "startOffsets": "1036,1373",
-                        "endLines": "21,23",
-                        "endColumns": "12,96",
-                        "endOffsets": "1275,1465"
-                    }
-                },
-                {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c860d3d9192ff6add1129ea9d736e56e/res/values-v26/values-v26.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/77aefac5a819a8b25234e4ebb1929b09/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -49,6 +30,25 @@
                         "endLines": "4,5,9,13,17,22",
                         "endColumns": "74,86,12,12,12,92",
                         "endOffsets": "265,352,566,792,1031,1368"
+                    }
+                },
+                {
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/167f5beaac5a234a4f88ca59084f451d/res/values-v26/values-v26.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,299",
+                        "endLines": "5,6",
+                        "endColumns": "12,96",
+                        "endOffsets": "294,391"
+                    },
+                    "to": {
+                        "startLines": "18,23",
+                        "startColumns": "4,4",
+                        "startOffsets": "1036,1373",
+                        "endLines": "21,23",
+                        "endColumns": "12,96",
+                        "endOffsets": "1275,1465"
                     }
                 }
             ]

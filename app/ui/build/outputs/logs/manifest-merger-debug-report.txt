@@ -1,23 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml:2:1-38
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml:2:1-38
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml:2:1-38
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml:2:1-38
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml:2:1-38
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml:2:1-38
 	package
-		ADDED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml:2:11-35
-		INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-		INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml:2:11-35
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
 uses-sdk
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-		INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
-		INJECTED from /Users/charleschan/k-9-master/app/ui/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/ui/src/main/AndroidManifest.xml

@@ -1,1101 +1,1101 @@
 -- Merging decision tree log ---
 permission#com.fsck.k9.debug.permission.REMOTE_CONTROL
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:29:5-34:46
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:29:5-34:46
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:32:9-53
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:32:9-53
 	android:protectionLevel
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:34:9-44
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:34:9-44
 	android:permissionGroup
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:33:9-68
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:33:9-68
 	android:description
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:31:9-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:31:9-58
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:30:9-66
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:30:9-66
 uses-permission#com.fsck.k9.debug.permission.REMOTE_CONTROL
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:35:5-81
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:35:5-81
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:35:22-79
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:35:22-79
 permission#com.fsck.k9.debug.permission.READ_MESSAGES
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:37:5-42:46
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:37:5-42:46
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:40:9-52
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:40:9-52
 	android:protectionLevel
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:42:9-44
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:42:9-44
 	android:permissionGroup
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:41:9-68
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:41:9-68
 	android:description
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:39:9-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:39:9-57
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:38:9-65
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:38:9-65
 uses-permission#com.fsck.k9.debug.permission.READ_MESSAGES
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:43:5-80
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:43:5-80
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:43:22-78
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:43:22-78
 permission#com.fsck.k9.debug.permission.DELETE_MESSAGES
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:45:5-50:46
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:45:5-50:46
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:48:9-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:48:9-54
 	android:protectionLevel
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:50:9-44
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:50:9-44
 	android:permissionGroup
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:49:9-68
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:49:9-68
 	android:description
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:47:9-59
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:47:9-59
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:46:9-67
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:46:9-67
 uses-permission#com.fsck.k9.debug.permission.DELETE_MESSAGES
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:51:5-82
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:51:5-82
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:51:22-80
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:51:22-80
 receiver#com.fsck.k9.external.remotecontrol.RemoteControlReceiver
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:341:9-351:20
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:341:9-351:20
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:343:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:343:13-35
 	android:permission
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:344:13-76
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:344:13-76
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:342:13-73
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:342:13-73
 action#com.fsck.k9.debug.K9RemoteControl.set
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:346:17-78
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:346:17-78
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:346:25-76
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:346:25-76
 action#com.fsck.k9.debug.K9RemoteControl.requestAccounts
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:349:17-90
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:349:17-90
 	android:name
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:349:25-88
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:349:25-88
 service#com.fsck.k9.external.remotecontrol.RemoteControlService
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:418:9-421:78
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:418:9-421:78
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:420:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:420:13-35
 	android:permission
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:421:13-76
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:421:13-76
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:419:13-72
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:419:13-72
 provider#com.fsck.k9.provider.AttachmentProvider
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:444:9-454:20
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:444:9-454:20
 	android:grantUriPermissions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:448:13-47
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:448:13-47
 	android:authorities
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:446:13-70
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:446:13-70
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:447:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:447:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:445:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:445:13-56
 provider#com.fsck.k9.provider.RawMessageProvider
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:456:9-465:20
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:456:9-465:20
 	android:authorities
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:458:13-70
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:458:13-70
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:459:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:459:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:457:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:457:13-56
 provider#com.fsck.k9.external.MessageProvider
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:467:9-474:84
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:467:9-474:84
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:467:9-474:84
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:467:9-474:84
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:467:9-474:84
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:467:9-474:84
 	android:readPermission
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:473:13-79
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:473:13-79
 	android:grantUriPermissions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:471:13-47
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:471:13-47
 	android:authorities
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:469:13-67
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:469:13-67
 	android:multiprocess
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:472:13-40
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:472:13-40
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:470:13-36
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:470:13-36
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:468:13-53
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:468:13-53
 	android:writePermission
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:474:13-82
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:474:13-82
 provider#com.fsck.k9.provider.EmailProvider
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:476:9-479:39
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:476:9-479:39
 	android:authorities
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:478:13-66
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:478:13-66
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:479:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:479:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:477:13-51
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:477:13-51
 provider#com.fsck.k9.provider.DecryptedFileProvider
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:481:9-490:20
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:481:9-490:20
 	android:grantUriPermissions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:485:13-47
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:485:13-47
 	android:authorities
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:483:13-73
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:483:13-73
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:484:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:484:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:482:13-59
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:482:13-59
 provider#com.fsck.k9.provider.AttachmentTempFileProvider
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:492:9-501:20
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:492:9-501:20
 	android:grantUriPermissions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:496:13-47
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:496:13-47
 	android:authorities
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:494:13-68
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:494:13-68
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:495:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:495:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:493:13-64
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:493:13-64
 manifest
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-MERGED from [:app:ui] /Users/charleschan/k-9-master/app/ui/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-10:12
-MERGED from [:app:storage] /Users/charleschan/k-9-master/app/storage/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-10:12
-MERGED from [:app:crypto-openpgp] /Users/charleschan/k-9-master/app/crypto-openpgp/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:app:core] /Users/charleschan/k-9-master/app/core/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-10:12
-MERGED from [:backend:imap] /Users/charleschan/k-9-master/backend/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:backend:pop3] /Users/charleschan/k-9-master/backend/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:backend:webdav] /Users/charleschan/k-9-master/backend/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:backend:api] /Users/charleschan/k-9-master/backend/api/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:mail:protocols:imap] /Users/charleschan/k-9-master/mail/protocols/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:mail:protocols:smtp] /Users/charleschan/k-9-master/mail/protocols/smtp/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:mail:protocols:pop3] /Users/charleschan/k-9-master/mail/protocols/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:mail:protocols:webdav] /Users/charleschan/k-9-master/mail/protocols/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [:mail:common] /Users/charleschan/k-9-master/mail/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
-MERGED from [com.xwray:groupie-kotlin-android-extensions:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-kotlin-android-extensions-2.1.0.aar/401d545fa79984abf9c802e8c5fdf45e/AndroidManifest.xml:2:1-11:12
-MERGED from [com.takisoft.fix:preference-v7-colorpicker:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-colorpicker-27.1.1.1.aar/b9def42fc96d92894541f9f914cd1309/AndroidManifest.xml:2:1-11:12
-MERGED from [com.takisoft.fix:preference-v7-ringtone:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-ringtone-27.1.1.1.aar/02cb3a36a69ffefe75de70ac9f050a7d/AndroidManifest.xml:2:1-11:12
-MERGED from [com.mikepenz:materialdrawer:6.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/2c2ea376af21e4bb8ad40b06e808ad1a/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.ByteHamster:SearchPreference:v1.1.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/a0f0c4e245c231ab83c2d6331735cda6/AndroidManifest.xml:2:1-9:12
-MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/charleschan/k-9-master/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [com.takisoft.fix:preference-v7-datetimepicker:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-datetimepicker-27.1.1.1.aar/913aef2e1544ab9919d82e71f2c24de2/AndroidManifest.xml:2:1-11:12
-MERGED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/a91d460f7c909c5f5e6a2cc8fd80b2a7/AndroidManifest.xml:2:1-21:12
-MERGED from [com.android.support:preference-v14:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v14-27.1.1.aar/338858cd3803151d7472dc239c8978ae/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:preference-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/7c944357e9790f2d8a7ee667d9abde8d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.takisoft.fix:datetimepicker:1.0.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/7485037f39a6c0e26152b45eb1dd6113/AndroidManifest.xml:2:1-11:12
-MERGED from [com.takisoft.fix:colorpicker:1.0.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/colorpicker-1.0.4.aar/24c7edf54a0fc2c3b2258bdd6d57d2b7/AndroidManifest.xml:2:1-11:12
-MERGED from [com.mikepenz:materialize:1.1.2] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/0cb873a65228a163ff219f27a4536170/AndroidManifest.xml:2:1-12:12
-MERGED from [com.mikepenz:iconics-core:3.0.3] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.3.aar/7caa30d9c132d1dbeccf1d057ea8e1b8/AndroidManifest.xml:2:1-12:12
-MERGED from [com.android.support:design:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/e6badce508c8fb76260d02a3ee0fe8dc/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c860d3d9192ff6add1129ea9d736e56e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/4675ca12a3c846a6a2ecaf01189a1db1/AndroidManifest.xml:2:1-10:12
-MERGED from [androidx.core:core-ktx:0.3] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/core-ktx-0.3.aar/46b4267e40f9c95248da4372073cd378/AndroidManifest.xml:2:1-7:12
-MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/f6e7e09036d5592b9e896faa36fd8cb6/AndroidManifest.xml:2:1-13:12
-MERGED from [org.koin:koin-android:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/e5c72f4325f80878f8aa9cf7ccd1c9d6/AndroidManifest.xml:2:1-13:12
-MERGED from [:plugins:HoloColorPicker] /Users/charleschan/k-9-master/plugins/HoloColorPicker/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.xwray:groupie:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/47435d9adbeeeb32a93364e4db6d7dd7/AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/746f858b30907004442b087f6192fdd0/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:17:1-30:12
-MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/c365abb7b49d72142f0c30037d97b5a9/AndroidManifest.xml:2:1-12:12
-MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/80713472dbec149476958b7fba545cf4/AndroidManifest.xml:2:1-13:12
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/36b172f7d7d07d7e8eabeb13de69c3ed/AndroidManifest.xml:2:1-12:12
-MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/library-5.4.1.aar/25b8838873b45b36827a3b1be3af35c9/AndroidManifest.xml:17:1-26:12
-MERGED from [com.mikepenz:fontawesome-typeface:5.3.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fontawesome-typeface-5.3.1.1.aar/0f72bd72cb809ac1320a1d5a9f06687a/AndroidManifest.xml:2:1-11:12
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:2:1-65:12
-MERGED from [com.android.support:support-v4:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/a47b85222967d645b9cd8af760760f3b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/71c98b3ec6ce10a0a0f75c6e00890cf0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/af9ee144a4243d3d0a1b68baf888a2b4/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/dcc4ace6cc95139b60abe741020c9488/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/643706ec0062a071f3cb78d3ea118e97/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/08462f634bc885fefeb590fa06bd471f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/13e297e059edbadb8bbe79c81395ea42/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/098054f764c27391f3936b05ea82429f/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/67c46a4ad29f085687181c20e91fa4ad/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/691a15c9806ec6d3ff3c774c7a8b4bc2/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/d59b63c856e844e1497a701595708efc/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e53bb65bcd1203521098fc018580de49/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/f46197cbe05e60174a3d5fbc8ae020c8/AndroidManifest.xml:17:1-22:12
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/4187144de6bb6994cc3b10171a883d82/AndroidManifest.xml:2:1-10:12
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/12cfee3c531dcb242b8178fd4374d5ac/AndroidManifest.xml:17:1-22:12
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/relinker-1.2.1.aar/9a140f46d62f997a79fe7bef09b8e923/AndroidManifest.xml:2:1-9:12
-MERGED from [com.mikepenz:fastadapter:3.2.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.4.aar/716ccf13e6169d7c2c50cb3e6307c327/AndroidManifest.xml:2:1-12:12
-MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.4.aar/9de67986cb5171603e9d5abebd841943/AndroidManifest.xml:2:1-12:12
-MERGED from [com.google.android:flexbox:0.3.2] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.2.aar/149ff89b59eecd43af4a95536d8cc90f/AndroidManifest.xml:17:1-27:12
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+MERGED from [:app:ui] /Users/mike/Documents/GitHub/Sonia390/app/ui/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:app:storage] /Users/mike/Documents/GitHub/Sonia390/app/storage/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:app:crypto-openpgp] /Users/mike/Documents/GitHub/Sonia390/app/crypto-openpgp/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:app:core] /Users/mike/Documents/GitHub/Sonia390/app/core/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:backend:imap] /Users/mike/Documents/GitHub/Sonia390/backend/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:backend:pop3] /Users/mike/Documents/GitHub/Sonia390/backend/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:backend:webdav] /Users/mike/Documents/GitHub/Sonia390/backend/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:backend:api] /Users/mike/Documents/GitHub/Sonia390/backend/api/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:mail:protocols:imap] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:mail:protocols:smtp] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/smtp/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:mail:protocols:pop3] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:mail:protocols:webdav] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [:mail:common] /Users/mike/Documents/GitHub/Sonia390/mail/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-8:12
+MERGED from [com.xwray:groupie-kotlin-android-extensions:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-kotlin-android-extensions-2.1.0.aar/346d498edc21ba6a90ba94be3aa15226/AndroidManifest.xml:2:1-11:12
+MERGED from [com.takisoft.fix:preference-v7-colorpicker:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-colorpicker-27.1.1.1.aar/4d42e15d1734734ffa3835a6f01a157d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.takisoft.fix:preference-v7-ringtone:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-ringtone-27.1.1.1.aar/aafc74d07c9b48bf11ee5da2e265c42d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:materialdrawer:6.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/3fd1ff403193805553c99322a8d0fc7c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.ByteHamster:SearchPreference:v1.1.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/2b8a6903115e3027b6acc87c6fe0d9fb/AndroidManifest.xml:2:1-9:12
+MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/mike/Documents/GitHub/Sonia390/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.takisoft.fix:preference-v7-datetimepicker:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-datetimepicker-27.1.1.1.aar/04603ffbae05238545581ce0e87a77be/AndroidManifest.xml:2:1-11:12
+MERGED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/c08f90d34e3783e581f7be10a6fcc468/AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:preference-v14:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v14-27.1.1.aar/7342ee914a1b0e7f85e3d76708de7672/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:preference-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/75e20894a41333e7c865e8096b5fc8ce/AndroidManifest.xml:17:1-22:12
+MERGED from [com.takisoft.fix:datetimepicker:1.0.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/6521b2dc0d3c7d2fb61bed2a6607ac1b/AndroidManifest.xml:2:1-11:12
+MERGED from [com.takisoft.fix:colorpicker:1.0.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/colorpicker-1.0.4.aar/d3247177df1e3d4c02badc100a763b37/AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:materialize:1.1.2] /Users/mike/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/78022c66011760f03a94d72b3f4074fb/AndroidManifest.xml:2:1-12:12
+MERGED from [com.mikepenz:iconics-core:3.0.3] /Users/mike/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.3.aar/d867ced09aaf02ee425ec935e9bdc5b0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:design:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/167f5beaac5a234a4f88ca59084f451d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/77aefac5a819a8b25234e4ebb1929b09/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/50701b3b93325d18190b176f7e621d49/AndroidManifest.xml:2:1-10:12
+MERGED from [androidx.core:core-ktx:0.3] /Users/mike/.gradle/caches/transforms-1/files-1.1/core-ktx-0.3.aar/7a06095e5de13821ac4ebf8b955cd0c5/AndroidManifest.xml:2:1-7:12
+MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/7fd7115b421768837c391e463f7e2c15/AndroidManifest.xml:2:1-13:12
+MERGED from [org.koin:koin-android:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/55501bc610ab9f6f13304aa92c7d295e/AndroidManifest.xml:2:1-13:12
+MERGED from [:plugins:HoloColorPicker] /Users/mike/Documents/GitHub/Sonia390/plugins/HoloColorPicker/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.xwray:groupie:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/d4915a9ae72d30de88f6fbb4c5dbe660/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/de89096a82ca9bf3cd0874a0764bbc14/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:17:1-30:12
+MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/196260b16b6935ea50f3a44fc00667c5/AndroidManifest.xml:2:1-12:12
+MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/398c016c58908577523126a3ac8d30c0/AndroidManifest.xml:2:1-13:12
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/f38122763aad9555312f902151407789/AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/library-5.4.1.aar/a9ad1195a8cd3e06be33f1e6653944bd/AndroidManifest.xml:17:1-26:12
+MERGED from [com.mikepenz:fontawesome-typeface:5.3.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/fontawesome-typeface-5.3.1.1.aar/4006630c597e89b3412aedeade947e42/AndroidManifest.xml:2:1-11:12
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:2:1-65:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/68eb9ce2f0f804dc74e60553385efe4e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c1aeb08b1d704a9622baace51c68ba6c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/304ae4a9d0c0c94ae0c75e29ee5d41ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a43b85bab68716b9f0d6fcb4bbc37e82/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c3d6e8c0fbc5235d9bbfb893732f00a2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e099e820908897efa8cd525b11ea34a7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/0ee065315364427ee803e873939b438c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/444a4ccdf952b11033e47905d8450e7c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2afbbf6cf9eab9a9fb4e15f731ad19fa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/2f6b6e61c21971916effbe2e5249d72a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/31c6baa4ceaf3f8ba4d13cea3f94fbee/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9e465570f8dc3e7a8a371de78105e0fb/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/ffa4eb7e2e403a66fac23ba1c80c7a54/AndroidManifest.xml:17:1-22:12
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/762879df3bcbffa3e254f238a653ad1c/AndroidManifest.xml:2:1-10:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/45cbf30de99e957e1c339cbb7d93796a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/relinker-1.2.1.aar/d442e05f5fde2bac01caff91fe4a2bb4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.mikepenz:fastadapter:3.2.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.4.aar/5da382e71010bce069a23993146fa147/AndroidManifest.xml:2:1-12:12
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.4.aar/273f0764a000beb474388497831963d5/AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android:flexbox:0.3.2] /Users/mike/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.2.aar/6524287e486371fe88d0ed84df5ad86d/AndroidManifest.xml:17:1-27:12
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
 	package
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:5:5-26
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:5:5-26
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:2:1-504:12
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:3:5-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:3:5-63
 	android:installLocation
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:4:5-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:4:5-35
 uses-feature#android.hardware.touchscreen
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:7:5-9:35
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:7:5-9:35
 	android:required
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:9:9-33
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:9:9-33
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:8:9-52
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:8:9-52
 supports-screens
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:11:5-15:38
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:11:5-15:38
 	android:largeScreens
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:13:9-36
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:13:9-36
 	android:smallScreens
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:15:9-36
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:15:9-36
 	android:normalScreens
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:14:9-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:14:9-37
 	android:anyDensity
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:12:9-34
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:12:9-34
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:17:5-80
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:14:5-81
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:14:5-81
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:17:5-80
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:14:5-81
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:17:22-78
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:17:22-78
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:18:5-71
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:18:5-71
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:18:22-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:18:22-69
 uses-permission#android.permission.READ_SYNC_SETTINGS
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:19:5-76
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:19:5-76
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:19:22-74
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:19:22-74
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:22:5-72
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:22:5-72
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:22:22-70
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:22:22-70
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:24:5-78
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:13:5-79
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:13:5-79
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:24:5-78
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:13:5-79
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:13:5-79
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:24:22-76
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:24:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:25:5-66
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:25:5-66
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:25:22-64
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:25:22-64
 uses-permission#android.permission.VIBRATE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:26:5-65
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:26:5-65
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:26:22-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:26:22-63
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:27:5-67
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:12:5-68
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:12:5-68
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:27:5-67
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:12:5-68
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:12:5-68
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:27:22-65
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:27:22-65
 application
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:54:5-503:19
-MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/charleschan/k-9-master/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-20
-MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/charleschan/k-9-master/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-20
-MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/4675ca12a3c846a6a2ecaf01189a1db1/AndroidManifest.xml:8:5-20
-MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/4675ca12a3c846a6a2ecaf01189a1db1/AndroidManifest.xml:8:5-20
-MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/f6e7e09036d5592b9e896faa36fd8cb6/AndroidManifest.xml:11:5-20
-MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/f6e7e09036d5592b9e896faa36fd8cb6/AndroidManifest.xml:11:5-20
-MERGED from [org.koin:koin-android:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/e5c72f4325f80878f8aa9cf7ccd1c9d6/AndroidManifest.xml:11:5-20
-MERGED from [org.koin:koin-android:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/e5c72f4325f80878f8aa9cf7ccd1c9d6/AndroidManifest.xml:11:5-20
-MERGED from [com.xwray:groupie:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/47435d9adbeeeb32a93364e4db6d7dd7/AndroidManifest.xml:11:5-12:19
-MERGED from [com.xwray:groupie:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/47435d9adbeeeb32a93364e4db6d7dd7/AndroidManifest.xml:11:5-12:19
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:22:5-28:19
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:22:5-28:19
-MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/c365abb7b49d72142f0c30037d97b5a9/AndroidManifest.xml:10:5-20
-MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/c365abb7b49d72142f0c30037d97b5a9/AndroidManifest.xml:10:5-20
-MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/80713472dbec149476958b7fba545cf4/AndroidManifest.xml:11:5-20
-MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/80713472dbec149476958b7fba545cf4/AndroidManifest.xml:11:5-20
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/36b172f7d7d07d7e8eabeb13de69c3ed/AndroidManifest.xml:10:5-20
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/36b172f7d7d07d7e8eabeb13de69c3ed/AndroidManifest.xml:10:5-20
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:16:5-63:19
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:16:5-63:19
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/4187144de6bb6994cc3b10171a883d82/AndroidManifest.xml:8:5-20
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/4187144de6bb6994cc3b10171a883d82/AndroidManifest.xml:8:5-20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:54:5-503:19
+MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/mike/Documents/GitHub/Sonia390/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-20
+MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/mike/Documents/GitHub/Sonia390/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/50701b3b93325d18190b176f7e621d49/AndroidManifest.xml:8:5-20
+MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/50701b3b93325d18190b176f7e621d49/AndroidManifest.xml:8:5-20
+MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/7fd7115b421768837c391e463f7e2c15/AndroidManifest.xml:11:5-20
+MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/7fd7115b421768837c391e463f7e2c15/AndroidManifest.xml:11:5-20
+MERGED from [org.koin:koin-android:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/55501bc610ab9f6f13304aa92c7d295e/AndroidManifest.xml:11:5-20
+MERGED from [org.koin:koin-android:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/55501bc610ab9f6f13304aa92c7d295e/AndroidManifest.xml:11:5-20
+MERGED from [com.xwray:groupie:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/d4915a9ae72d30de88f6fbb4c5dbe660/AndroidManifest.xml:11:5-12:19
+MERGED from [com.xwray:groupie:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/d4915a9ae72d30de88f6fbb4c5dbe660/AndroidManifest.xml:11:5-12:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:22:5-28:19
+MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/196260b16b6935ea50f3a44fc00667c5/AndroidManifest.xml:10:5-20
+MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/196260b16b6935ea50f3a44fc00667c5/AndroidManifest.xml:10:5-20
+MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/398c016c58908577523126a3ac8d30c0/AndroidManifest.xml:11:5-20
+MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/398c016c58908577523126a3ac8d30c0/AndroidManifest.xml:11:5-20
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/f38122763aad9555312f902151407789/AndroidManifest.xml:10:5-20
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/f38122763aad9555312f902151407789/AndroidManifest.xml:10:5-20
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:16:5-63:19
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:16:5-63:19
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/762879df3bcbffa3e254f238a653ad1c/AndroidManifest.xml:8:5-20
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/762879df3bcbffa3e254f238a653ad1c/AndroidManifest.xml:8:5-20
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:59:9-41
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:59:9-41
 	android:resizeableActivity
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:61:9-42
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:61:9-42
 	tools:ignore
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:16:18-44
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:16:18-44
 	android:roundIcon
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:58:9-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:58:9-56
 	android:allowTaskReparenting
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:56:9-45
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:56:9-45
 	android:icon
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:57:9-45
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:57:9-45
 	android:allowBackup
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:62:9-36
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:62:9-36
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:60:9-48
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:60:9-48
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:55:9-39
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:55:9-39
 meta-data#android.app.default_searchable
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:64:9-66:58
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:64:9-66:58
 	android:value
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:66:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:66:13-56
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:65:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:65:13-58
 meta-data#com.lge.support.SPLIT_WINDOW
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:69:9-71:35
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:69:9-71:35
 	android:value
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:71:13-33
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:71:13-33
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:70:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:70:13-56
 uses-library#com.sec.android.app.multiwindow
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:72:9-74:39
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:72:9-74:39
 	android:required
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:74:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:74:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:73:13-59
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:73:13-59
 meta-data#com.sec.android.support.multiwindow
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:75:9-77:35
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:75:9-77:35
 	android:value
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:77:13-33
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:77:13-33
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:76:13-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:76:13-63
 meta-data#com.samsung.android.sdk.multiwindow.penwindow.enable
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:78:9-80:35
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:78:9-80:35
 	android:value
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:80:13-33
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:80:13-33
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:79:13-80
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:79:13-80
 activity#com.fsck.k9.activity.Accounts
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:82:9-98:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:82:9-98:20
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:85:13-45
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:85:13-45
 	android:launchMode
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:86:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:86:13-43
 	android:uiOptions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:87:13-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:87:13-57
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:84:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:84:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:83:13-46
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:83:13-46
 intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.LAUNCHER+android.intent.category.MULTIWINDOW_LAUNCHER+android.intent.category.PENWINDOW_LAUNCHER
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:88:13-97:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:88:13-97:29
 action#android.intent.action.MAIN
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:89:17-68
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:89:17-68
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:89:25-66
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:89:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:91:17-75
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:91:17-75
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:91:27-73
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:91:27-73
 category#android.intent.category.LAUNCHER
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:92:17-76
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:92:17-76
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:92:27-74
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:92:27-74
 category#android.intent.category.MULTIWINDOW_LAUNCHER
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:95:17-88
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:95:17-88
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:95:27-86
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:95:27-86
 category#android.intent.category.PENWINDOW_LAUNCHER
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:96:17-86
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:96:17-86
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:96:27-84
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:96:27-84
 activity#com.fsck.k9.activity.setup.WelcomeMessage
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:100:9-103:60
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:100:9-103:60
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:103:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:103:13-58
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:102:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:102:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:101:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:101:13-58
 activity#com.fsck.k9.ui.settings.account.OpenPgpAppSelectDialog
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:105:9-109:15
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:105:9-109:15
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:107:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:107:13-43
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:108:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:108:13-56
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:106:13-71
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:106:13-71
 activity#com.fsck.k9.activity.setup.FontSizeSettings
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:111:9-114:63
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:111:9-114:63
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:114:13-61
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:114:13-61
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:113:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:113:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:112:13-60
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:112:13-60
 activity#com.fsck.k9.activity.setup.AccountSetupBasics
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:116:9-119:65
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:116:9-119:65
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:119:13-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:119:13-63
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:118:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:118:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:117:13-62
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:117:13-62
 activity#com.fsck.k9.activity.setup.AccountSetupAccountType
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:121:9-124:71
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:121:9-124:71
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:124:13-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:124:13-69
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:123:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:123:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:122:13-67
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:122:13-67
 activity#com.fsck.k9.activity.setup.AccountSetupIncoming
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:126:9-129:67
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:126:9-129:67
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:129:13-65
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:129:13-65
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:128:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:128:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:127:13-64
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:127:13-64
 activity#com.fsck.k9.activity.setup.AccountSetupComposition
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:131:9-134:73
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:131:9-134:73
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:134:13-71
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:134:13-71
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:133:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:133:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:132:13-67
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:132:13-67
 activity#com.fsck.k9.activity.setup.AccountSetupOutgoing
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:136:9-139:67
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:136:9-139:67
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:139:13-65
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:139:13-65
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:138:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:138:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:137:13-64
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:137:13-64
 activity#com.fsck.k9.activity.setup.AccountSetupOptions
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:141:9-144:66
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:141:9-144:66
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:144:13-64
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:144:13-64
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:143:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:143:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:142:13-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:142:13-63
 activity#com.fsck.k9.activity.setup.AccountSetupNames
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:146:9-149:64
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:146:9-149:64
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:149:13-62
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:149:13-62
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:148:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:148:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:147:13-61
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:147:13-61
 activity#com.fsck.k9.activity.ChooseAccount
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:151:9-156:52
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:151:9-156:52
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:154:13-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:154:13-57
 	android:noHistory
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:155:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:155:13-37
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:153:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:153:13-43
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:156:13-50
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:156:13-50
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:152:13-51
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:152:13-51
 activity#com.fsck.k9.activity.ChooseFolder
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:158:9-163:52
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:158:9-163:52
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:161:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:161:13-56
 	android:noHistory
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:162:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:162:13-37
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:160:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:160:13-43
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:163:13-50
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:163:13-50
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:159:13-50
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:159:13-50
 activity#com.fsck.k9.activity.ChooseIdentity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:165:9-169:52
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:165:9-169:52
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:168:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:168:13-58
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:167:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:167:13-43
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:169:13-50
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:169:13-50
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:166:13-52
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:166:13-52
 activity#com.fsck.k9.activity.ManageIdentities
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:171:9-174:62
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:171:9-174:62
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:174:13-60
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:174:13-60
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:173:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:173:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:172:13-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:172:13-54
 activity#com.fsck.k9.activity.EditIdentity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:176:9-179:58
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:176:9-179:58
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:179:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:179:13-56
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:178:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:178:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:177:13-50
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:177:13-50
 activity#com.fsck.k9.activity.NotificationDeleteConfirmation
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:181:9-186:74
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:181:9-186:74
 	android:excludeFromRecents
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:183:13-46
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:183:13-46
 	android:launchMode
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:184:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:184:13-43
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:186:13-72
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:186:13-72
 	android:taskAffinity
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:185:13-36
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:185:13-36
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:182:13-68
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:182:13-68
 activity#com.fsck.k9.activity.setup.AccountSetupCheckSettings
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:190:9-193:73
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:190:9-193:73
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:193:13-71
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:193:13-71
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:192:13-70
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:192:13-70
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:191:13-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:191:13-69
 activity#com.fsck.k9.activity.setup.FolderSettings
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:195:9-199:58
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:195:9-199:58
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:198:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:198:13-58
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:197:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:197:13-43
 	android:theme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:199:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:199:13-56
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:196:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:196:13-58
 activity#com.fsck.k9.ui.endtoend.AutocryptKeyTransferActivity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:201:9-205:15
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:201:9-205:15
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:204:13-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:204:13-54
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:203:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:203:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:202:13-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:202:13-69
 activity#com.fsck.k9.activity.FolderList
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:207:9-215:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:207:9-215:20
 	android:uiOptions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:210:13-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:210:13-57
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:209:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:209:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:208:13-48
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:208:13-48
 intent-filter#android.intent.action.MAIN
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:211:13-214:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:211:13-214:29
 activity#com.fsck.k9.activity.MessageList
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:217:9-233:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:217:9-233:20
 	android:launchMode
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:220:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:220:13-43
 	android:uiOptions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:221:13-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:221:13-57
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:219:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:219:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:218:13-49
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:218:13-49
 intent-filter#android.intent.action.VIEW+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:226:13-232:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:226:13-232:29
 action#android.intent.action.VIEW
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:227:17-68
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:227:17-68
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:227:25-66
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:227:25-66
 data
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:228:17-230:45
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:228:17-230:45
 	android:host
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:229:21-44
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:229:21-44
 	android:scheme
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:230:21-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:230:21-43
 	android:mimeType
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:247:23-45
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:247:23-45
 activity#com.fsck.k9.activity.MessageCompose
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:235:9-270:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:235:9-270:20
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:238:13-36
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:238:13-36
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:239:13-45
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:239:13-45
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:237:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:237:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:236:13-52
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:236:13-52
 intent-filter#android.intent.action.SENDTO+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:240:13-244:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:240:13-244:29
 action#android.intent.action.SENDTO
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:241:17-70
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:241:17-70
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:241:25-68
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:241:25-68
 intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:245:13-249:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:245:13-249:29
 action#android.intent.action.SEND
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:246:17-68
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:246:17-68
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:246:25-66
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:246:25-66
 intent-filter#android.intent.action.SEND_MULTIPLE+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:250:13-254:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:250:13-254:29
 action#android.intent.action.SEND_MULTIPLE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:251:17-77
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:251:17-77
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:251:25-75
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:251:25-75
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:255:13-261:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:255:13-261:29
 category#android.intent.category.BROWSABLE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:260:17-77
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:260:17-77
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:260:27-75
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:260:27-75
 intent-filter#android.intent.category.DEFAULT+org.autocrypt.PEER_ACTION
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:262:13-265:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:262:13-265:29
 action#org.autocrypt.PEER_ACTION
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:263:17-67
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:263:17-67
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:263:25-65
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:263:25-65
 meta-data#android.service.chooser.chooser_target_service
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:267:13-269:78
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:267:13-269:78
 	android:value
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:269:17-75
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:269:17-75
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:268:17-78
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:268:17-78
 activity#com.fsck.k9.activity.Search
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:273:9-285:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:273:9-285:20
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:276:13-50
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:276:13-50
 	android:uiOptions
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:277:13-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:277:13-57
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:275:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:275:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:274:13-44
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:274:13-44
 intent-filter#android.intent.action.SEARCH+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:278:13-281:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:278:13-281:29
 action#android.intent.action.SEARCH
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:279:17-70
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:279:17-70
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:279:25-68
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:279:25-68
 meta-data#android.app.searchable
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:282:13-284:53
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:282:13-284:53
 	android:resource
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:284:17-51
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:284:17-51
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:283:17-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:283:17-54
 activity#com.fsck.k9.activity.LauncherShortcuts
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:287:9-295:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:287:9-295:20
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:290:13-52
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:290:13-52
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:289:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:289:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:288:13-55
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:288:13-55
 intent-filter#android.intent.action.CREATE_SHORTCUT+android.intent.category.DEFAULT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:291:13-294:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:291:13-294:29
 action#android.intent.action.CREATE_SHORTCUT
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:292:17-79
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:292:17-79
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:292:25-77
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:292:25-77
 activity#com.fsck.k9.activity.EmailAddressList
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:297:9-299:45
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:297:9-299:45
 	android:configChanges
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:299:13-43
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:299:13-43
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:298:13-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:298:13-54
 activity#com.fsck.k9.widget.unread.UnreadWidgetConfigurationActivity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:301:9-305:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:301:9-305:20
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:301:19-82
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:301:19-82
 intent-filter#android.appwidget.action.APPWIDGET_CONFIGURE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:302:13-304:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:302:13-304:29
 action#android.appwidget.action.APPWIDGET_CONFIGURE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:303:17-86
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:303:17-86
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:303:25-84
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:303:25-84
 activity#com.fsck.k9.activity.UpgradeDatabases
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:307:9-309:62
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:307:9-309:62
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:309:13-60
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:309:13-60
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:308:13-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:308:13-54
 activity#com.fsck.k9.ui.settings.SettingsActivity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:311:9-313:51
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:311:9-313:51
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:313:13-48
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:313:13-48
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:312:13-57
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:312:13-57
 activity#com.fsck.k9.ui.settings.AboutActivity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:315:9-317:52
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:315:9-317:52
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:317:13-49
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:317:13-49
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:316:13-54
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:316:13-54
 activity#com.fsck.k9.ui.settings.general.GeneralSettingsActivity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:319:9-321:62
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:319:9-321:62
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:321:13-59
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:321:13-59
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:320:13-72
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:320:13-72
 activity#com.fsck.k9.ui.settings.account.AccountSettingsActivity
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:323:9-325:66
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:323:9-325:66
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:325:13-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:325:13-63
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:324:13-72
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:324:13-72
 receiver#com.fsck.k9.service.BootReceiver
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:327:9-339:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:327:9-339:20
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:329:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:329:13-35
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:328:13-49
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:328:13-49
 intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:330:13-332:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:330:13-332:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:331:17-78
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:331:17-78
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:331:25-76
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:331:25-76
 intent-filter#android.net.conn.BACKGROUND_DATA_SETTING_CHANGED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:333:13-335:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:333:13-335:29
 action#android.net.conn.BACKGROUND_DATA_SETTING_CHANGED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:334:17-90
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:334:17-90
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:334:25-88
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:334:25-88
 intent-filter#com.android.sync.SYNC_CONN_STATUS_CHANGED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:336:13-338:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:336:13-338:29
 action#com.android.sync.SYNC_CONN_STATUS_CHANGED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:337:17-83
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:337:17-83
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:337:25-81
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:337:25-81
 receiver#com.fsck.k9.service.CoreReceiver
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:353:9-355:39
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:353:9-355:39
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:355:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:355:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:354:13-49
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:354:13-49
 receiver#com.fsck.k9.service.StorageReceiver
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:357:9-379:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:357:9-379:20
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:359:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:359:13-35
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:358:13-52
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:358:13-52
 intent-filter#android.intent.action.MEDIA_MOUNTED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:360:13-378:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:360:13-378:29
 action#android.intent.action.MEDIA_MOUNTED
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:370:17-77
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:370:17-77
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:370:25-75
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:370:25-75
 receiver#com.fsck.k9.widget.unread.UnreadWidgetProvider
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:381:9-391:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:381:9-391:20
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:384:13-56
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:384:13-56
 	android:icon
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:383:13-49
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:383:13-49
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:382:13-63
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:382:13-63
 intent-filter#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:385:13-387:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:385:13-387:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:386:17-83
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:386:17-83
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:386:25-81
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:386:25-81
 meta-data#android.appwidget.provider
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:388:13-390:61
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:388:13-390:61
 	android:resource
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:390:17-59
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:390:17-59
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:389:17-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:389:17-58
 receiver#com.fsck.k9.widget.list.MessageListWidgetProvider
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:393:9-403:20
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:393:9-403:20
 	android:label
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:396:13-58
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:396:13-58
 	android:icon
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:395:13-65
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:395:13-65
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:394:13-66
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:394:13-66
 service#com.fsck.k9.widget.list.MessageListWidgetService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:405:9-408:72
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:405:9-408:72
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:407:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:407:13-35
 	android:permission
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:408:13-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:408:13-69
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:406:13-65
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:406:13-65
 service#com.fsck.k9.notification.NotificationActionService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:410:9-412:37
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:410:9-412:37
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:412:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:412:13-35
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:411:13-67
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:411:13-67
 service#com.fsck.k9.service.PushService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:414:9-416:37
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:414:9-416:37
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:416:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:416:13-35
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:415:13-48
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:415:13-48
 service#com.fsck.k9.service.SleepService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:423:9-425:37
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:423:9-425:37
 	android:enabled
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:425:13-35
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:425:13-35
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:424:13-49
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:424:13-49
 service#com.fsck.k9.service.DatabaseUpgradeService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:427:9-429:39
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:427:9-429:39
 	android:exported
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:429:13-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:429:13-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:428:13-59
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:428:13-59
 service#com.fsck.k9.directshare.K9ChooserTargetService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:432:9-438:19
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:432:9-438:19
 	android:permission
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:434:13-80
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:434:13-80
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:433:13-74
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:433:13-74
 intent-filter#android.service.chooser.ChooserTargetService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:435:13-437:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:435:13-437:29
 action#android.service.chooser.ChooserTargetService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:436:17-87
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:436:17-87
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:436:25-84
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:436:25-84
 service#com.fsck.k9.account.AccountRemoverService
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:440:9-442:71
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:440:9-442:71
 	android:permission
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:442:13-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:442:13-69
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:441:13-69
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:441:13-69
 uses-sdk
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-MERGED from [:app:ui] /Users/charleschan/k-9-master/app/ui/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:app:ui] /Users/charleschan/k-9-master/app/ui/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:app:storage] /Users/charleschan/k-9-master/app/storage/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:app:storage] /Users/charleschan/k-9-master/app/storage/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:app:crypto-openpgp] /Users/charleschan/k-9-master/app/crypto-openpgp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:app:crypto-openpgp] /Users/charleschan/k-9-master/app/crypto-openpgp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:app:core] /Users/charleschan/k-9-master/app/core/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:app:core] /Users/charleschan/k-9-master/app/core/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
-MERGED from [:backend:imap] /Users/charleschan/k-9-master/backend/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:imap] /Users/charleschan/k-9-master/backend/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:pop3] /Users/charleschan/k-9-master/backend/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:pop3] /Users/charleschan/k-9-master/backend/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:webdav] /Users/charleschan/k-9-master/backend/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:webdav] /Users/charleschan/k-9-master/backend/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:api] /Users/charleschan/k-9-master/backend/api/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:backend:api] /Users/charleschan/k-9-master/backend/api/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:imap] /Users/charleschan/k-9-master/mail/protocols/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:imap] /Users/charleschan/k-9-master/mail/protocols/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:smtp] /Users/charleschan/k-9-master/mail/protocols/smtp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:smtp] /Users/charleschan/k-9-master/mail/protocols/smtp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:pop3] /Users/charleschan/k-9-master/mail/protocols/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:pop3] /Users/charleschan/k-9-master/mail/protocols/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:webdav] /Users/charleschan/k-9-master/mail/protocols/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:protocols:webdav] /Users/charleschan/k-9-master/mail/protocols/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:common] /Users/charleschan/k-9-master/mail/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [:mail:common] /Users/charleschan/k-9-master/mail/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
-MERGED from [com.xwray:groupie-kotlin-android-extensions:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-kotlin-android-extensions-2.1.0.aar/401d545fa79984abf9c802e8c5fdf45e/AndroidManifest.xml:7:5-9:41
-MERGED from [com.xwray:groupie-kotlin-android-extensions:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-kotlin-android-extensions-2.1.0.aar/401d545fa79984abf9c802e8c5fdf45e/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:preference-v7-colorpicker:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-colorpicker-27.1.1.1.aar/b9def42fc96d92894541f9f914cd1309/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:preference-v7-colorpicker:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-colorpicker-27.1.1.1.aar/b9def42fc96d92894541f9f914cd1309/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:preference-v7-ringtone:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-ringtone-27.1.1.1.aar/02cb3a36a69ffefe75de70ac9f050a7d/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:preference-v7-ringtone:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-ringtone-27.1.1.1.aar/02cb3a36a69ffefe75de70ac9f050a7d/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mikepenz:materialdrawer:6.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/2c2ea376af21e4bb8ad40b06e808ad1a/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mikepenz:materialdrawer:6.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/2c2ea376af21e4bb8ad40b06e808ad1a/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.ByteHamster:SearchPreference:v1.1.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/a0f0c4e245c231ab83c2d6331735cda6/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.ByteHamster:SearchPreference:v1.1.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/a0f0c4e245c231ab83c2d6331735cda6/AndroidManifest.xml:5:5-7:41
-MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/charleschan/k-9-master/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-44
-MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/charleschan/k-9-master/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-44
-MERGED from [com.takisoft.fix:preference-v7-datetimepicker:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-datetimepicker-27.1.1.1.aar/913aef2e1544ab9919d82e71f2c24de2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:preference-v7-datetimepicker:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-datetimepicker-27.1.1.1.aar/913aef2e1544ab9919d82e71f2c24de2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/a91d460f7c909c5f5e6a2cc8fd80b2a7/AndroidManifest.xml:8:5-12:335
-MERGED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/a91d460f7c909c5f5e6a2cc8fd80b2a7/AndroidManifest.xml:8:5-12:335
-MERGED from [com.android.support:preference-v14:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v14-27.1.1.aar/338858cd3803151d7472dc239c8978ae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v14:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v14-27.1.1.aar/338858cd3803151d7472dc239c8978ae/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/7c944357e9790f2d8a7ee667d9abde8d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/7c944357e9790f2d8a7ee667d9abde8d/AndroidManifest.xml:20:5-44
-MERGED from [com.takisoft.fix:datetimepicker:1.0.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/7485037f39a6c0e26152b45eb1dd6113/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:datetimepicker:1.0.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/7485037f39a6c0e26152b45eb1dd6113/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:colorpicker:1.0.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/colorpicker-1.0.4.aar/24c7edf54a0fc2c3b2258bdd6d57d2b7/AndroidManifest.xml:7:5-9:41
-MERGED from [com.takisoft.fix:colorpicker:1.0.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/colorpicker-1.0.4.aar/24c7edf54a0fc2c3b2258bdd6d57d2b7/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mikepenz:materialize:1.1.2] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/0cb873a65228a163ff219f27a4536170/AndroidManifest.xml:8:5-10:41
-MERGED from [com.mikepenz:materialize:1.1.2] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/0cb873a65228a163ff219f27a4536170/AndroidManifest.xml:8:5-10:41
-MERGED from [com.mikepenz:iconics-core:3.0.3] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.3.aar/7caa30d9c132d1dbeccf1d057ea8e1b8/AndroidManifest.xml:8:5-10:41
-MERGED from [com.mikepenz:iconics-core:3.0.3] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.3.aar/7caa30d9c132d1dbeccf1d057ea8e1b8/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:design:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/e6badce508c8fb76260d02a3ee0fe8dc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/e6badce508c8fb76260d02a3ee0fe8dc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c860d3d9192ff6add1129ea9d736e56e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c860d3d9192ff6add1129ea9d736e56e/AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/4675ca12a3c846a6a2ecaf01189a1db1/AndroidManifest.xml:6:5-43
-MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/4675ca12a3c846a6a2ecaf01189a1db1/AndroidManifest.xml:6:5-43
-MERGED from [androidx.core:core-ktx:0.3] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/core-ktx-0.3.aar/46b4267e40f9c95248da4372073cd378/AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:0.3] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/core-ktx-0.3.aar/46b4267e40f9c95248da4372073cd378/AndroidManifest.xml:5:5-44
-MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/f6e7e09036d5592b9e896faa36fd8cb6/AndroidManifest.xml:7:5-9:41
-MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/f6e7e09036d5592b9e896faa36fd8cb6/AndroidManifest.xml:7:5-9:41
-MERGED from [org.koin:koin-android:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/e5c72f4325f80878f8aa9cf7ccd1c9d6/AndroidManifest.xml:7:5-9:41
-MERGED from [org.koin:koin-android:0.9.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/e5c72f4325f80878f8aa9cf7ccd1c9d6/AndroidManifest.xml:7:5-9:41
-MERGED from [:plugins:HoloColorPicker] /Users/charleschan/k-9-master/plugins/HoloColorPicker/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:plugins:HoloColorPicker] /Users/charleschan/k-9-master/plugins/HoloColorPicker/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.xwray:groupie:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/47435d9adbeeeb32a93364e4db6d7dd7/AndroidManifest.xml:7:5-9:41
-MERGED from [com.xwray:groupie:2.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/47435d9adbeeeb32a93364e4db6d7dd7/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/746f858b30907004442b087f6192fdd0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/746f858b30907004442b087f6192fdd0/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:20:5-44
-MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/c365abb7b49d72142f0c30037d97b5a9/AndroidManifest.xml:6:5-8:41
-MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/c365abb7b49d72142f0c30037d97b5a9/AndroidManifest.xml:6:5-8:41
-MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/80713472dbec149476958b7fba545cf4/AndroidManifest.xml:7:5-9:41
-MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/80713472dbec149476958b7fba545cf4/AndroidManifest.xml:7:5-9:41
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/36b172f7d7d07d7e8eabeb13de69c3ed/AndroidManifest.xml:6:5-8:65
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/36b172f7d7d07d7e8eabeb13de69c3ed/AndroidManifest.xml:6:5-8:65
-MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/library-5.4.1.aar/25b8838873b45b36827a3b1be3af35c9/AndroidManifest.xml:22:5-24:41
-MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/library-5.4.1.aar/25b8838873b45b36827a3b1be3af35c9/AndroidManifest.xml:22:5-24:41
-MERGED from [com.mikepenz:fontawesome-typeface:5.3.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fontawesome-typeface-5.3.1.1.aar/0f72bd72cb809ac1320a1d5a9f06687a/AndroidManifest.xml:7:5-9:41
-MERGED from [com.mikepenz:fontawesome-typeface:5.3.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fontawesome-typeface-5.3.1.1.aar/0f72bd72cb809ac1320a1d5a9f06687a/AndroidManifest.xml:7:5-9:41
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:8:5-10:41
-MERGED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:support-v4:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/a47b85222967d645b9cd8af760760f3b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/a47b85222967d645b9cd8af760760f3b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/71c98b3ec6ce10a0a0f75c6e00890cf0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/71c98b3ec6ce10a0a0f75c6e00890cf0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/af9ee144a4243d3d0a1b68baf888a2b4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/af9ee144a4243d3d0a1b68baf888a2b4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/dcc4ace6cc95139b60abe741020c9488/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/dcc4ace6cc95139b60abe741020c9488/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/643706ec0062a071f3cb78d3ea118e97/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/643706ec0062a071f3cb78d3ea118e97/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/08462f634bc885fefeb590fa06bd471f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/08462f634bc885fefeb590fa06bd471f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/13e297e059edbadb8bbe79c81395ea42/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/13e297e059edbadb8bbe79c81395ea42/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/098054f764c27391f3936b05ea82429f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/098054f764c27391f3936b05ea82429f/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/67c46a4ad29f085687181c20e91fa4ad/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/67c46a4ad29f085687181c20e91fa4ad/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/691a15c9806ec6d3ff3c774c7a8b4bc2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/691a15c9806ec6d3ff3c774c7a8b4bc2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/d59b63c856e844e1497a701595708efc/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/d59b63c856e844e1497a701595708efc/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e53bb65bcd1203521098fc018580de49/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e53bb65bcd1203521098fc018580de49/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/f46197cbe05e60174a3d5fbc8ae020c8/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/f46197cbe05e60174a3d5fbc8ae020c8/AndroidManifest.xml:20:5-44
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/4187144de6bb6994cc3b10171a883d82/AndroidManifest.xml:6:5-44
-MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/4187144de6bb6994cc3b10171a883d82/AndroidManifest.xml:6:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/12cfee3c531dcb242b8178fd4374d5ac/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/12cfee3c531dcb242b8178fd4374d5ac/AndroidManifest.xml:20:5-44
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/relinker-1.2.1.aar/9a140f46d62f997a79fe7bef09b8e923/AndroidManifest.xml:7:5-43
-MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/relinker-1.2.1.aar/9a140f46d62f997a79fe7bef09b8e923/AndroidManifest.xml:7:5-43
-MERGED from [com.mikepenz:fastadapter:3.2.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.4.aar/716ccf13e6169d7c2c50cb3e6307c327/AndroidManifest.xml:8:5-10:41
-MERGED from [com.mikepenz:fastadapter:3.2.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.4.aar/716ccf13e6169d7c2c50cb3e6307c327/AndroidManifest.xml:8:5-10:41
-MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.4.aar/9de67986cb5171603e9d5abebd841943/AndroidManifest.xml:8:5-10:41
-MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.4] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.4.aar/9de67986cb5171603e9d5abebd841943/AndroidManifest.xml:8:5-10:41
-MERGED from [com.google.android:flexbox:0.3.2] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.2.aar/149ff89b59eecd43af4a95536d8cc90f/AndroidManifest.xml:23:5-25:41
-MERGED from [com.google.android:flexbox:0.3.2] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.2.aar/149ff89b59eecd43af4a95536d8cc90f/AndroidManifest.xml:23:5-25:41
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+MERGED from [:app:ui] /Users/mike/Documents/GitHub/Sonia390/app/ui/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:app:ui] /Users/mike/Documents/GitHub/Sonia390/app/ui/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:app:storage] /Users/mike/Documents/GitHub/Sonia390/app/storage/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:app:storage] /Users/mike/Documents/GitHub/Sonia390/app/storage/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:app:crypto-openpgp] /Users/mike/Documents/GitHub/Sonia390/app/crypto-openpgp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:app:crypto-openpgp] /Users/mike/Documents/GitHub/Sonia390/app/crypto-openpgp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:app:core] /Users/mike/Documents/GitHub/Sonia390/app/core/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:app:core] /Users/mike/Documents/GitHub/Sonia390/app/core/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:backend:imap] /Users/mike/Documents/GitHub/Sonia390/backend/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:imap] /Users/mike/Documents/GitHub/Sonia390/backend/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:pop3] /Users/mike/Documents/GitHub/Sonia390/backend/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:pop3] /Users/mike/Documents/GitHub/Sonia390/backend/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:webdav] /Users/mike/Documents/GitHub/Sonia390/backend/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:webdav] /Users/mike/Documents/GitHub/Sonia390/backend/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:api] /Users/mike/Documents/GitHub/Sonia390/backend/api/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:backend:api] /Users/mike/Documents/GitHub/Sonia390/backend/api/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:imap] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:imap] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/imap/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:smtp] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/smtp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:smtp] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/smtp/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:pop3] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:pop3] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/pop3/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:webdav] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:protocols:webdav] /Users/mike/Documents/GitHub/Sonia390/mail/protocols/webdav/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:common] /Users/mike/Documents/GitHub/Sonia390/mail/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [:mail:common] /Users/mike/Documents/GitHub/Sonia390/mail/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:6:5-44
+MERGED from [com.xwray:groupie-kotlin-android-extensions:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-kotlin-android-extensions-2.1.0.aar/346d498edc21ba6a90ba94be3aa15226/AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie-kotlin-android-extensions:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-kotlin-android-extensions-2.1.0.aar/346d498edc21ba6a90ba94be3aa15226/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:preference-v7-colorpicker:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-colorpicker-27.1.1.1.aar/4d42e15d1734734ffa3835a6f01a157d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:preference-v7-colorpicker:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-colorpicker-27.1.1.1.aar/4d42e15d1734734ffa3835a6f01a157d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:preference-v7-ringtone:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-ringtone-27.1.1.1.aar/aafc74d07c9b48bf11ee5da2e265c42d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:preference-v7-ringtone:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-ringtone-27.1.1.1.aar/aafc74d07c9b48bf11ee5da2e265c42d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:materialdrawer:6.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/3fd1ff403193805553c99322a8d0fc7c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:materialdrawer:6.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/3fd1ff403193805553c99322a8d0fc7c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.ByteHamster:SearchPreference:v1.1.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/2b8a6903115e3027b6acc87c6fe0d9fb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ByteHamster:SearchPreference:v1.1.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/SearchPreference-v1.1.4.aar/2b8a6903115e3027b6acc87c6fe0d9fb/AndroidManifest.xml:5:5-7:41
+MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/mike/Documents/GitHub/Sonia390/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-44
+MERGED from [:plugins:openpgp-api-lib:openpgp-api] /Users/mike/Documents/GitHub/Sonia390/plugins/openpgp-api-lib/openpgp-api/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-44
+MERGED from [com.takisoft.fix:preference-v7-datetimepicker:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-datetimepicker-27.1.1.1.aar/04603ffbae05238545581ce0e87a77be/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:preference-v7-datetimepicker:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-datetimepicker-27.1.1.1.aar/04603ffbae05238545581ce0e87a77be/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/c08f90d34e3783e581f7be10a6fcc468/AndroidManifest.xml:8:5-12:335
+MERGED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/c08f90d34e3783e581f7be10a6fcc468/AndroidManifest.xml:8:5-12:335
+MERGED from [com.android.support:preference-v14:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v14-27.1.1.aar/7342ee914a1b0e7f85e3d76708de7672/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v14-27.1.1.aar/7342ee914a1b0e7f85e3d76708de7672/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/75e20894a41333e7c865e8096b5fc8ce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/75e20894a41333e7c865e8096b5fc8ce/AndroidManifest.xml:20:5-44
+MERGED from [com.takisoft.fix:datetimepicker:1.0.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/6521b2dc0d3c7d2fb61bed2a6607ac1b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:datetimepicker:1.0.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/6521b2dc0d3c7d2fb61bed2a6607ac1b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:colorpicker:1.0.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/colorpicker-1.0.4.aar/d3247177df1e3d4c02badc100a763b37/AndroidManifest.xml:7:5-9:41
+MERGED from [com.takisoft.fix:colorpicker:1.0.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/colorpicker-1.0.4.aar/d3247177df1e3d4c02badc100a763b37/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:materialize:1.1.2] /Users/mike/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/78022c66011760f03a94d72b3f4074fb/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:materialize:1.1.2] /Users/mike/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/78022c66011760f03a94d72b3f4074fb/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:iconics-core:3.0.3] /Users/mike/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.3.aar/d867ced09aaf02ee425ec935e9bdc5b0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:iconics-core:3.0.3] /Users/mike/.gradle/caches/transforms-1/files-1.1/iconics-core-3.0.3.aar/d867ced09aaf02ee425ec935e9bdc5b0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/167f5beaac5a234a4f88ca59084f451d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/167f5beaac5a234a4f88ca59084f451d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/77aefac5a819a8b25234e4ebb1929b09/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/77aefac5a819a8b25234e4ebb1929b09/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/50701b3b93325d18190b176f7e621d49/AndroidManifest.xml:6:5-43
+MERGED from [com.jakewharton.timber:timber:4.5.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/timber-4.5.1.aar/50701b3b93325d18190b176f7e621d49/AndroidManifest.xml:6:5-43
+MERGED from [androidx.core:core-ktx:0.3] /Users/mike/.gradle/caches/transforms-1/files-1.1/core-ktx-0.3.aar/7a06095e5de13821ac4ebf8b955cd0c5/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:0.3] /Users/mike/.gradle/caches/transforms-1/files-1.1/core-ktx-0.3.aar/7a06095e5de13821ac4ebf8b955cd0c5/AndroidManifest.xml:5:5-44
+MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/7fd7115b421768837c391e463f7e2c15/AndroidManifest.xml:7:5-9:41
+MERGED from [org.koin:koin-android-architecture:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-architecture-0.9.1.aar/7fd7115b421768837c391e463f7e2c15/AndroidManifest.xml:7:5-9:41
+MERGED from [org.koin:koin-android:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/55501bc610ab9f6f13304aa92c7d295e/AndroidManifest.xml:7:5-9:41
+MERGED from [org.koin:koin-android:0.9.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/koin-android-0.9.1.aar/55501bc610ab9f6f13304aa92c7d295e/AndroidManifest.xml:7:5-9:41
+MERGED from [:plugins:HoloColorPicker] /Users/mike/Documents/GitHub/Sonia390/plugins/HoloColorPicker/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:plugins:HoloColorPicker] /Users/mike/Documents/GitHub/Sonia390/plugins/HoloColorPicker/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/d4915a9ae72d30de88f6fbb4c5dbe660/AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie:2.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/groupie-2.1.0.aar/d4915a9ae72d30de88f6fbb4c5dbe660/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/de89096a82ca9bf3cd0874a0764bbc14/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/de89096a82ca9bf3cd0874a0764bbc14/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:20:5-44
+MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/196260b16b6935ea50f3a44fc00667c5/AndroidManifest.xml:6:5-8:41
+MERGED from [de.cketti.library.changelog:ckchangelog:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/ckchangelog-1.2.1.aar/196260b16b6935ea50f3a44fc00667c5/AndroidManifest.xml:6:5-8:41
+MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/398c016c58908577523126a3ac8d30c0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.splitwise:tokenautocomplete:2.0.7] /Users/mike/.gradle/caches/transforms-1/files-1.1/tokenautocomplete-2.0.7.aar/398c016c58908577523126a3ac8d30c0/AndroidManifest.xml:7:5-9:41
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/f38122763aad9555312f902151407789/AndroidManifest.xml:6:5-8:65
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v14-0.9.0.aar/f38122763aad9555312f902151407789/AndroidManifest.xml:6:5-8:65
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/library-5.4.1.aar/a9ad1195a8cd3e06be33f1e6653944bd/AndroidManifest.xml:22:5-24:41
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/library-5.4.1.aar/a9ad1195a8cd3e06be33f1e6653944bd/AndroidManifest.xml:22:5-24:41
+MERGED from [com.mikepenz:fontawesome-typeface:5.3.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/fontawesome-typeface-5.3.1.1.aar/4006630c597e89b3412aedeade947e42/AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fontawesome-typeface:5.3.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/fontawesome-typeface-5.3.1.1.aar/4006630c597e89b3412aedeade947e42/AndroidManifest.xml:7:5-9:41
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:8:5-10:41
+MERGED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/68eb9ce2f0f804dc74e60553385efe4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/68eb9ce2f0f804dc74e60553385efe4e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c1aeb08b1d704a9622baace51c68ba6c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c1aeb08b1d704a9622baace51c68ba6c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/304ae4a9d0c0c94ae0c75e29ee5d41ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/304ae4a9d0c0c94ae0c75e29ee5d41ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a43b85bab68716b9f0d6fcb4bbc37e82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a43b85bab68716b9f0d6fcb4bbc37e82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c3d6e8c0fbc5235d9bbfb893732f00a2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c3d6e8c0fbc5235d9bbfb893732f00a2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e099e820908897efa8cd525b11ea34a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/e099e820908897efa8cd525b11ea34a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/0ee065315364427ee803e873939b438c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/0ee065315364427ee803e873939b438c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/444a4ccdf952b11033e47905d8450e7c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/444a4ccdf952b11033e47905d8450e7c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2afbbf6cf9eab9a9fb4e15f731ad19fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2afbbf6cf9eab9a9fb4e15f731ad19fa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/2f6b6e61c21971916effbe2e5249d72a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/livedata-1.1.0.aar/2f6b6e61c21971916effbe2e5249d72a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/31c6baa4ceaf3f8ba4d13cea3f94fbee/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/31c6baa4ceaf3f8ba4d13cea3f94fbee/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9e465570f8dc3e7a8a371de78105e0fb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/9e465570f8dc3e7a8a371de78105e0fb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/ffa4eb7e2e403a66fac23ba1c80c7a54/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/ffa4eb7e2e403a66fac23ba1c80c7a54/AndroidManifest.xml:20:5-44
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/762879df3bcbffa3e254f238a653ad1c/AndroidManifest.xml:6:5-44
+MERGED from [de.cketti.safecontentresolver:safe-content-resolver-v21:0.9.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/safe-content-resolver-v21-0.9.0.aar/762879df3bcbffa3e254f238a653ad1c/AndroidManifest.xml:6:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/45cbf30de99e957e1c339cbb7d93796a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/45cbf30de99e957e1c339cbb7d93796a/AndroidManifest.xml:20:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/relinker-1.2.1.aar/d442e05f5fde2bac01caff91fe4a2bb4/AndroidManifest.xml:7:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/relinker-1.2.1.aar/d442e05f5fde2bac01caff91fe4a2bb4/AndroidManifest.xml:7:5-43
+MERGED from [com.mikepenz:fastadapter:3.2.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.4.aar/5da382e71010bce069a23993146fa147/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:fastadapter:3.2.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/fastadapter-3.2.4.aar/5da382e71010bce069a23993146fa147/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.4.aar/273f0764a000beb474388497831963d5/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.4] /Users/mike/.gradle/caches/transforms-1/files-1.1/fastadapter-extensions-expandable-3.2.4.aar/273f0764a000beb474388497831963d5/AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android:flexbox:0.3.2] /Users/mike/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.2.aar/6524287e486371fe88d0ed84df5ad86d/AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android:flexbox:0.3.2] /Users/mike/.gradle/caches/transforms-1/files-1.1/flexbox-0.3.2.aar/6524287e486371fe88d0ed84df5ad86d/AndroidManifest.xml:23:5-25:41
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/a91d460f7c909c5f5e6a2cc8fd80b2a7/AndroidManifest.xml:12:9-332
+		ADDED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/c08f90d34e3783e581f7be10a6fcc468/AndroidManifest.xml:12:9-332
 	xmlns:tools
-		ADDED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/a91d460f7c909c5f5e6a2cc8fd80b2a7/AndroidManifest.xml:9:9-55
+		ADDED from [com.takisoft.fix:preference-v7:27.1.1.1] /Users/mike/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.1.aar/c08f90d34e3783e581f7be10a6fcc468/AndroidManifest.xml:9:9-55
 	android:targetSdkVersion
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
-		INJECTED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
+		INJECTED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml
 intent-filter#com.fsck.k9.debug.K9RemoteControl.set
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:345:13-347:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:345:13-347:29
 intent-filter#com.fsck.k9.debug.K9RemoteControl.requestAccounts
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:348:13-350:29
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:348:13-350:29
 meta-data#de.cketti.safecontentresolver.ALLOW_INTERNAL_ACCESS
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:450:13-452:40
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:450:13-452:40
 	android:value
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:452:17-37
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:452:17-37
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:451:17-83
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:451:17-83
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:487:13-489:73
+ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:487:13-489:73
 	android:resource
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:489:17-70
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:489:17-70
 	android:name
-		ADDED from /Users/charleschan/k-9-master/app/k9mail/src/main/AndroidManifest.xml:488:17-67
+		ADDED from /Users/mike/Documents/GitHub/Sonia390/app/k9mail/src/main/AndroidManifest.xml:488:17-67
 provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:23:9-27:43
+ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:23:9-27:43
 	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:25:13-68
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:25:13-68
 	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:27:13-40
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:27:13-40
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:26:13-37
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/6815cc84c87e8e149f88972c530ee11b/AndroidManifest.xml:24:13-83
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] /Users/mike/.gradle/caches/transforms-1/files-1.1/extensions-1.1.0.aar/bd85abc9c37a7dc24aa73e3970a0ea69/AndroidManifest.xml:24:13-83
 service#com.evernote.android.job.v21.PlatformJobService
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:17:9-20:72
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:17:9-20:72
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:19:13-37
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:19:13-37
 	android:permission
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:20:13-69
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:20:13-69
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:18:13-75
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:18:13-75
 service#com.evernote.android.job.v14.PlatformAlarmService
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:21:9-24:72
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:21:9-24:72
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:23:13-37
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:23:13-37
 	android:permission
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:24:13-69
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:24:13-69
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:22:13-77
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:22:13-77
 service#com.evernote.android.job.v14.PlatformAlarmServiceExact
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:25:9-27:40
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:27:13-37
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:26:13-82
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:26:13-82
 receiver#com.evernote.android.job.v14.PlatformAlarmReceiver
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:29:9-38:20
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:29:9-38:20
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:31:13-37
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:30:13-78
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:30:13-78
 intent-filter#com.evernote.android.job.v14.RUN_JOB+net.vrallev.android.job.v14.RUN_JOB
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:32:13-37:29
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:32:13-37:29
 action#com.evernote.android.job.v14.RUN_JOB
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:35:17-79
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:35:17-79
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:35:25-76
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:35:25-76
 action#net.vrallev.android.job.v14.RUN_JOB
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:36:17-78
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:36:17-78
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:36:25-75
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:36:25-75
 receiver#com.evernote.android.job.JobBootReceiver
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:39:9-48:20
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:39:9-48:20
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:41:13-37
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:40:13-68
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:40:13-68
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.MY_PACKAGE_REPLACED+android.intent.action.QUICKBOOT_POWERON+com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:42:13-47:29
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:42:13-47:29
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:44:17-82
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:44:17-82
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:44:25-79
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:44:25-79
 action#com.htc.intent.action.QUICKBOOT_POWERON
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:45:17-82
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:45:17-82
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:45:25-79
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:45:25-79
 action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:46:17-84
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:46:17-84
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:46:25-81
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:46:25-81
 service#com.evernote.android.job.gcm.PlatformGcmService
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:50:9-58:19
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:50:9-58:19
 	android:enabled
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:52:13-36
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:52:13-36
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:53:13-36
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:53:13-36
 	android:permission
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:54:13-93
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:54:13-93
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:51:13-75
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:51:13-75
 intent-filter#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:55:13-57:29
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:55:13-57:29
 action#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:56:17-87
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:56:17-87
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:56:25-84
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:56:25-84
 service#com.evernote.android.job.JobRescheduleService
-ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:59:9-62:72
+ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:59:9-62:72
 	android:exported
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:61:13-37
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:61:13-37
 	android:permission
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:62:13-69
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:62:13-69
 	android:name
-		ADDED from [com.evernote:android-job:1.2.6] /Users/charleschan/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/7c184dbb72a7378c33ed684a21fd348e/AndroidManifest.xml:60:13-73
+		ADDED from [com.evernote:android-job:1.2.6] /Users/mike/.gradle/caches/transforms-1/files-1.1/android-job-1.2.6.aar/c05f451c6d6f8a07adbb119c5153e846/AndroidManifest.xml:60:13-73

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/charleschan/k-9-master/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rST/values-pt-rST.xml",
+            "outputFile": "/Users/mike/Documents/GitHub/Sonia390/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rST/values-pt-rST.xml",
             "map": [
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/7485037f39a6c0e26152b45eb1dd6113/res/values-pt-rST/values-pt-rST.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/datetimepicker-1.0.6.aar/6521b2dc0d3c7d2fb61bed2a6607ac1b/res/values-pt-rST/values-pt-rST.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",

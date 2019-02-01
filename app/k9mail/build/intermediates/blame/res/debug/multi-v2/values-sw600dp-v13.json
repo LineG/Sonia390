@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/charleschan/k-9-master/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/Users/mike/Documents/GitHub/Sonia390/app/k9mail/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/e6badce508c8fb76260d02a3ee0fe8dc/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/77aefac5a819a8b25234e4ebb1929b09/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/167f5beaac5a234a4f88ca59084f451d/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,17 +33,7 @@
                     }
                 },
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/c860d3d9192ff6add1129ea9d736e56e/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/2c2ea376af21e4bb8ad40b06e808ad1a/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/materialdrawer-6.0.7.aar/3fd1ff403193805553c99322a8d0fc7c/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -50,7 +50,7 @@
                     }
                 },
                 {
-                    "source": "/Users/charleschan/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/0cb873a65228a163ff219f27a4536170/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/mike/.gradle/caches/transforms-1/files-1.1/materialize-1.1.2.aar/78022c66011760f03a94d72b3f4074fb/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

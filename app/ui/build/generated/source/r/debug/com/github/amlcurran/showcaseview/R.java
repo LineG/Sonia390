@@ -40,16 +40,16 @@ public final class R {
         public static int hand = 0x7f090086;
     }
     public static final class id {
-        public static int showcase_button = 0x7f0c0207;
-        public static int showcase_sub_text = 0x7f0c0208;
-        public static int showcase_title_text = 0x7f0c0209;
+        public static int showcase_button = 0x7f0c0208;
+        public static int showcase_sub_text = 0x7f0c0209;
+        public static int showcase_title_text = 0x7f0c020a;
     }
     public static final class layout {
         public static int handy = 0x7f0f005a;
         public static int showcase_button = 0x7f0f00b7;
     }
     public static final class string {
-        public static int ok = 0x7f1503c4;
+        public static int ok = 0x7f1503c6;
     }
     public static final class style {
         public static int ShowcaseButton = 0x7f160133;

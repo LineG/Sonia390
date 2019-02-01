@@ -513,6 +513,15 @@
         <item>168</item>
         <item>365</item>
     </string-array>
+    <string-array name="message_compose_templates">
+        <item>Professor</item>
+        <item>Boss</item>
+        <item>Landlord</item>
+        <item>Significant other</item>
+        <item>Friends</item>
+        <item>Parent</item>
+        <item>Children</item>
+    </string-array>
     <string-array name="message_format_entries">
         <item>@string/account_settings_message_format_text</item>
         <item>@string/account_settings_message_format_html</item>
@@ -2556,6 +2565,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="app_webpage_url">https://k9mail.github.io/</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="application_id" translatable="false">com.fsck.k9.debug</string>
+    <string name="apply_template">Apply Template</string>
     <string name="archive_action">Archive</string>
     <string name="archive_folder_label">Archive folder</string>
     <string name="attachment_save_desc">No file browser found. Where would you like to save this attachment?</string>
@@ -3030,6 +3040,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_description_delete_quoted_text">Remove quoted text</string>
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
     <string name="message_compose_error_no_recipients">You must add at least one recipient.</string>
+    <string name="message_compose_greeting1">Greeting 1</string>
     <string name="message_compose_quote_header_cc">Cc:</string>
     <string name="message_compose_quote_header_from">From:</string>
     <string name="message_compose_quote_header_send_date">Sent:</string>
@@ -3330,6 +3341,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="switch_off">Off</string>
     <string name="switch_on">On</string>
     <string name="tap_hint">Tap circle or star for unread or starred messages</string>
+    <string name="template_title">Templates</string>
     <string name="time_picker_decrement_hour_button">Decrease hour</string>
     <string name="time_picker_decrement_minute_button">Decrease minute</string>
     <string name="time_picker_decrement_set_am_button">Set AM</string>
