@@ -362,7 +362,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 else if(position == 7){
                     greetingText="Children";
                 }
-                Toast.makeText(parent.getContext(), greetingText, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -376,7 +375,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         applyTemplateButtonView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), greetingText+"Apply", Toast.LENGTH_SHORT).show();
                 messageContentView.setText(greetingText);
             }
         });
