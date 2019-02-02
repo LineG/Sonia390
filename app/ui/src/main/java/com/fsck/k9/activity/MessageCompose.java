@@ -346,7 +346,13 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                     + "\n\n" + "I hope to hear from you soon. Thank you  very much for your time.\n\n Best regard,\n\n(name)";
                 }
                 else if(position == 2){
-                    greetingText="Boss";
+                    greetingText="Hi {First Name},\n" +
+                            "\n" +
+                            "It was nice to meet you at {Occasion where you met}. I loved learning more about {Something discussed}." +
+                            " I’m really interested to hear more about your role as {Job title} at {Company}, as {Reason why you’re interested}." +
+                            " If you have time in the coming weeks, let’s {Follow up action}. I’m generally free on {Days of the week}, if that works for you?\n" +
+                            "\n" +
+                            "Looking forward to keeping in touch!";
                 }
                 else if(position == 3){
                     greetingText="(month, day year>>\n\naddress)\n\n" +
@@ -369,7 +375,11 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             "(name)";
                 }
                 else if(position == 5){
-                    greetingText="Friends";
+                    greetingText="To whom it may concern,\n"+
+                                "\n" +
+                                "\n" +
+                                "Thank you for you time\n"+
+                                "{Sign name here}";
                 }
                 else if(position == 6){
                     greetingText="Dear (name)\n\nPlease mark your calendars for the (Insert Event Name)\n\nDate:(Insert Date)\n" +
@@ -379,8 +389,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             "I hope to see you all there,\n\n(Insert name of PA rep or event sponsor)\n\nSincerely,\n\n(name).";
                 }
                 else if(position == 7){
-                    greetingText="Children";
+                    greetingText="Hello everyone!\n\nOur meeting will take place at {fill in time here} in the {fill in location}.  Please be sure to be there on time.  " +
+                                 "I look forward to seeing you all there! \n\n" +
+                                 "Thank you\n"+
+                                 "{Sign name here}";
                 }
+
 
             }
 
@@ -394,6 +408,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         applyTemplateButtonView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
                 messageContentView.setText(greetingText);
             }
         });
