@@ -9,9 +9,15 @@ All documentation is kept on the [official K-9 Mail wiki](https://k9mail.github.
 #### Team Members
 
 Charles Chan (lead)  27841523    chanc09@gmail.com
+
 Oumar Ba             40003603    oumarba221296@hotmail.fr
+
 Mikael Samvelian     40003178    mikael.samvelian@gmail.com
+
 Hassan Karimian      40004904    karimian_hassan@yahoo.ca
+
 Tyler Delaportas     29720766    tdelaportas@hotmail.com
+
 Line Ghanem          27280076    ghanemline@gmail.com
+
 Steffan Venacious    27192630    steffan_v@hotmail.com
