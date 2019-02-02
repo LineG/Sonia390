@@ -339,57 +339,56 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         templatesSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0) {
+                if (position == 0) {
                     greetingText = "";
                 }
-                else if(position == 1) {
-                    greetingText = "Dear Dr.(last name),\n\nMy name is <<name>> and my student ID is (student id)."
-                            + " I am sending this message in regards to (inquiry)"
-                    + "\n\n" + "I hope to hear from you soon. Thank you  very much for your time.\n\n Best regard,\n\n(name)";
+
+                else if (position == 1) {
+                    greetingText = "Dear Dr.{last name},\n\nMy name is {name} and my student ID is {student id}."
+                            + " I am sending this message in regards to {inquiry}"
+                    + "\n\n" + "I hope to hear from you soon. Thank you  very much for your time.\n\n Best regard,\n\n{name}";
                 }
 
-                else if(position == 2) {
+                else if (position == 2) {
                     greetingText = "Hi {First Name},\n" +
                             "\n" +
                             "It was nice to meet you at {Occasion where you met}. I loved learning more about {Something discussed}." +
-                            " I’m really interested to hear more about your role as {Job title} at {Company}, as {Reason why you’re interested}." +
-                            " If you have time in the coming weeks, let’s {Follow up action}. I’m generally free on {Days of the week}, if that works for you?\n" +
+                            " I’m really interested to hear more about your role as {Job title} at {Company}, as " +
+                            "{Reason why you’re interested}." +
+                            " If you have time in the coming weeks, let’s {Follow up action}. " +
+                            "I’m generally free on {Days of the week}, if that works for you?\n" +
                             "\n" +
                             "Looking forward to keeping in touch!";
                 }
 
-                else if(position == 2) {
-                    greetingText = "Boss";
-
-                }
-                else if(position == 3) {
-                    greetingText = "(month, day year>>\n\naddress)\n\n" +
-                            "Dear Mr.(last name),\n\nI am writing to apply for the (position) advertised in the (advertisement). " +
-                            "I enclosed a completed job application, my certification, my resume and (number) references.\n\n" +
+                else if (position == 3) {
+                    greetingText = "{month, day year}\n\n{address}\n\n" +
+                            "Dear Mr.{last name},\n\nI am writing to apply for the {position} advertised in the {advertisement}." +
+                            "I enclosed a completed job application, my certification, my resume and {number} references.\n\n" +
                             "The role is very appealing to me, and I believe that my strong technical experience and education" +
                             "make me a highly competitive candidate for this position. " +
-                            "My key strengths that would support my success in this position include:\n\n(insert key strengths)\n\n" +
-                            "With a (academic degree), I have a comprehensive understanding of this domain." +
-                            " I also have experience in (experiences)." +
+                            "My key strengths that would support my success in this position include:\n\n{insert key strengths}\n\n" +
+                            "With a {academic degree}, I have a comprehensive understanding of this domain." +
+                            " I also have experience in {experiences}." +
                             " Please see my resume for additional information on my experience.\n\n " +
-                            "I can be reached anytime via email at (email) or by cell phone, (number).\n\n" +
+                            "I can be reached anytime via email at {email} or by cell phone, {number}.\n\n" +
                             "Thank you for your time and consideration." +
-                            " I look forward to speaking with you about this employment opportunity.\n\nSincerely,\n\n(name)";
+                            " I look forward to speaking with you about this employment opportunity.\n\nSincerely,\n\n{name}";
                 }
-                else if(position == 4) {
+                else if (position == 4) {
                     greetingText =
-                            "Dear Mr/Ms.(last name)\n\n" +
-                            "My name is (first and last name) and this letter is in reference to vacancy at your residency at (address)." +
-                                    " I am (academic degree) from a reputable institution.\n" +
+                            "Dear Mr/Ms.{last name}\n\n" +
+                            "My name is {first and last name} and this letter is in reference to vacancy at your residency at {address}." +
+                                    " I am {academic degree} from a reputable institution.\n" +
                             "I would like to inquire about the conditions for rental and the monthly rental fee.\n\n " +
-                            "I am looking for a place to stay at least (number) years as I take my (studies/job)." +
-                                    " I would be checking out your (apartment/house) as soon as I receive a positive reply from you. " +
-                                    "Please send your reply via email or you may contact me at (number). Thank you for your time\n\n" +
+                            "I am looking for a place to stay at least {number} years as I take my {studies/job}." +
+                                    " I would be checking out your {apartment/house} as soon as I receive a positive reply from you. " +
+                                    "Please send your reply via email or you may contact me at {number}. Thank you for your time\n\n" +
                             "Sincerely,\n\n" +
-                            "(name)";
+                            "{name}";
                 }
 
-                else if(position == 5) {
+                else if (position == 5) {
                     greetingText = "To whom it may concern,\n" +
                             "\n" +
                             "\n" +
@@ -397,31 +396,24 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             "{Sign name here}";
                 }
 
-                else if(position == 5) {
-                    greetingText = "Friends";
-
-                }
-                else if(position == 6) {
-                    greetingText = "Dear (name)\n\nPlease mark your calendars for the (Insert Event Name)\n\nDate:(Insert Date)\n" +
-                            "Time:(Insert Time)\nLocation:(Insert Location)\n\n" +
-                            "(Insert ant details including what they need to bring, if anything, and " +
-                            "if siblings/parents/grade level kids only are invited, etc.)" +
-                            "\n\nPlease RSVP no later than (insert RSVP by date) by replying" +
-                            "to this message, calling me at (number), or emailing me at (email)" +
-                            "\n\n(Insert any other personalizations)\n\n" +
-                            "I hope to see you all there,\n\n(Insert name of PA rep or event sponsor)\n\nSincerely,\n\n(name).";
+                else if (position == 6) {
+                    greetingText = "Dear {name}\n\nPlease mark your calendars for the {Insert Event Name}\n\nDate:{Insert Date}\n" +
+                            "Time:{Insert Time}\nLocation:{Insert Location}\n\n" +
+                            "{Insert ant details including what they need to bring, if anything, and " +
+                            "if siblings/parents/grade level kids only are invited, etc.}" +
+                            "\n\nPlease RSVP no later than {insert RSVP by date} by replying" +
+                            "to this message, calling me at {number}, or emailing me at {email}" +
+                            "\n\n{Insert any other personalization}\n\n" +
+                            "I hope to see you all there,\n\n{Insert name of PA rep or event sponsor}\n\nSincerely,\n\n{name}.";
                 }
 
-                else if(position == 7){
-                    greetingText="Hello everyone!\n\nOur meeting will take place at {fill in time here} in the {fill in location}.  Please be sure to be there on time.  " +
+                else if (position == 7) {
+                    greetingText = "Hello everyone!\n\nOur meeting will take place at {fill in time here} in the {fill in location}.  " +
+                                 "Please be sure to be there on time.  " +
                                  "I look forward to seeing you all there! \n\n" +
-                                 "Thank you\n"+
+                                 "Thank you\n" +
                                  "{Sign name here}";
                 }
-
-                else if(position == 7) greetingText = "Children";
-
-
 
             }
 
