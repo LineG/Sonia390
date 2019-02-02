@@ -357,7 +357,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             "The role is very appealing to me, and I believe that my strong technical experience and education" +
                             "make me a highly competitive candidate for this position. " +
                             "My key strengths that would support my success in this position include:\n\n(insert key strengths)\n\n" +
-                            "With a (academic degree), I have a comprehensive understanding of this domain. I also have experience in (experiences)."+
+                            "With a (academic degree), I have a comprehensive understanding of this domain." +
+                            " I also have experience in (experiences)." +
                             " Please see my resume for additional information on my experience.\n\n " +
                             "I can be reached anytime via email at (email) or by cell phone, (number).\n\n" +
                             "Thank you for your time and consideration." +
@@ -366,7 +367,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 else if(position == 4) {
                     greetingText =
                             "Dear Mr/Ms.(last name)\n\n" +
-                            "My name is (first and last name) and this letter is in reference to vacancy at your residency at (address)."+
+                            "My name is (first and last name) and this letter is in reference to vacancy at your residency at (address)." +
                                     " I am (academic degree) from a reputable institution.\n" +
                             "I would like to inquire about the conditions for rental and the monthly rental fee.\n\n " +
                             "I am looking for a place to stay at least (number) years as I take my (studies/job)." +
@@ -388,9 +389,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             "\n\n(Insert any other personalizations)\n\n" +
                             "I hope to see you all there,\n\n(Insert name of PA rep or event sponsor)\n\nSincerely,\n\n(name).";
                 }
-                else if(position == 7) {
-                    greetingText = "Children";
-                }
+                else if(position == 7) greetingText = "Children";
 
             }
 
