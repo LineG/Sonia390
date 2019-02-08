@@ -38,6 +38,7 @@ import com.fsck.k9.mailstore.OutboxStateRepository;
 import com.fsck.k9.mailstore.SendState;
 import com.fsck.k9.mailstore.UnavailableStorageException;
 import com.fsck.k9.notification.NotificationController;
+import com.fsck.k9.notification.NotificationStrategy;
 import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.search.SearchAccount;
 import org.jetbrains.annotations.NotNull;
@@ -106,6 +107,8 @@ public class MessagingControllerTest extends K9RobolectricTest {
     private LocalStore localStore;
     @Mock
     private NotificationController notificationController;
+    @Mock
+    private NotificationStrategy notificationStrategy;
     @Captor
     private ArgumentCaptor<List<LocalFolder>> localFolderListCaptor;
     @Captor
@@ -147,7 +150,8 @@ public class MessagingControllerTest extends K9RobolectricTest {
         MockitoAnnotations.initMocks(this);
         appContext = RuntimeEnvironment.application;
 
-        controller = new MessagingController(appContext, notificationController, localStoreProvider, contacts,
+        controller = new MessagingController(appContext, notificationController, notificationStrategy,
+                localStoreProvider, contacts,
                 accountStatsCollector, mock(CoreResourceProvider.class), backendManager,
                 Collections.<ControllerExtension>emptyList());
 
@@ -310,27 +314,27 @@ public class MessagingControllerTest extends K9RobolectricTest {
         when(localFolder.extractNewMessages(ArgumentMatchers.<String>anyList())).thenReturn(newRemoteMessages);
         when(localFolder.getMessage("newMessageUid1")).thenReturn(localNewMessage1);
         when(localFolder.getMessage("newMessageUid2")).thenAnswer(
-            new Answer<LocalMessage>() {
-                @Override
-                public LocalMessage answer(InvocationOnMock invocation) throws Throwable {
-                    if(hasFetchedMessage) {
-                        return localNewMessage2;
+                new Answer<LocalMessage>() {
+                    @Override
+                    public LocalMessage answer(InvocationOnMock invocation) throws Throwable {
+                        if(hasFetchedMessage) {
+                            return localNewMessage2;
+                        }
+                        else
+                            return null;
                     }
-                    else
-                        return null;
                 }
-            }
         );
         doAnswer(new Answer<Void>() {
-             @Override
-             public Void answer(InvocationOnMock invocation) throws Throwable {
-                 hasFetchedMessage = true;
-                 return null;
-             }
+            @Override
+            public Void answer(InvocationOnMock invocation) throws Throwable {
+                hasFetchedMessage = true;
+                return null;
+            }
         }).when(backend).fetchMessage(
-            eq(FOLDER_NAME),
-            eq("newMessageUid2"),
-            any(FetchProfile.class));
+                eq(FOLDER_NAME),
+                eq("newMessageUid2"),
+                any(FetchProfile.class));
         reqFlags = Collections.singleton(Flag.ANSWERED);
         forbiddenFlags = Collections.singleton(Flag.DELETED);
 

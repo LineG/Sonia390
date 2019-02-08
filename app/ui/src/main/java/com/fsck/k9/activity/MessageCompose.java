@@ -1,6 +1,7 @@
 package com.fsck.k9.activity;
 
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -231,6 +232,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
    // private Button applyTemplateButtonView;
     private String greetingText;
 
+    public int[] templateArr = {0,0,0,0,0,0,0};
+
+    public int templateFunc(int[] arr, int position) {
+
+        return arr[position] += 1;
+
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -329,7 +338,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 *  We create the spinner view so that the list of templates can be viewed
 *          on the screen
 */
-
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
                                             android.R.layout.simple_list_item_1,
                                                 getResources().getStringArray(R.array.message_compose_templates));
@@ -344,12 +352,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 1) {
+                    templateFunc(templateArr, 0);
                     greetingText = "Dear Dr.{last name},\n\nMy name is {name} and my student ID is {student id}."
                             + " I am sending this message in regards to {inquiry}"
                     + "\n\n" + "I hope to hear from you soon. Thank you  very much for your time.\n\n Best regard,\n\n{name}";
                 }
 
                 else if (position == 2) {
+                    templateFunc(templateArr, 1);
                     greetingText = "Hi {First Name},\n" +
                             "\n" +
                             "It was nice to meet you at {Occasion where you met}. I loved learning more about {Something discussed}." +
@@ -362,6 +372,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 3) {
+                    templateFunc(templateArr, 2);
                     greetingText = "{month, day year}\n\n{address}\n\n" +
                             "Dear Mr.{last name},\n\nI am writing to apply for the {position} advertised in the {advertisement}." +
                             "I enclosed a completed job application, my certification, my resume and {number} references.\n\n" +
@@ -376,6 +387,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             " I look forward to speaking with you about this employment opportunity.\n\nSincerely,\n\n{name}";
                 }
                 else if (position == 4) {
+                    templateFunc(templateArr, 3);
                     greetingText =
                             "Dear Mr/Ms.{last name}\n\n" +
                             "My name is {first and last name} and this letter is in reference to vacancy at your residency at {address}." +
@@ -389,6 +401,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 5) {
+                    templateFunc(templateArr, 4);
                     greetingText = "To whom it may concern,\n" +
                             "\n" +
                             "\n" +
@@ -397,6 +410,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 6) {
+                    templateFunc(templateArr, 5);
                     greetingText = "Dear {name}\n\nPlease mark your calendars for the {Insert Event Name}\n\nDate:{Insert Date}\n" +
                             "Time:{Insert Time}\nLocation:{Insert Location}\n\n" +
                             "{Insert ant details including what they need to bring, if anything, and " +
@@ -408,6 +422,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 7) {
+                    templateFunc(templateArr, 6);
                     greetingText = "Hello everyone!\n\nOur meeting will take place at {fill in time here} in the {fill in location}.  " +
                                  "Please be sure to be there on time.  " +
                                  "I look forward to seeing you all there! \n\n" +
