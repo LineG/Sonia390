@@ -1,6 +1,7 @@
 package com.fsck.k9.activity;
 
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -227,9 +228,17 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private boolean navigateUp;
 
     // Greeting spinner and button
-   // private Spinner templatesSpinnerView;
-   // private Button applyTemplateButtonView;
+    // private Spinner templatesSpinnerView;
+    // private Button applyTemplateButtonView;
     private String greetingText;
+
+    public int[] templateArr = {0,0,0,0,0,0,0};
+
+    public int templateFunc(int[] arr, int position) {
+
+        return arr[position] += 1;
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -249,7 +258,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             ContextThemeWrapper themeContext = new ContextThemeWrapper(this,
                     K9ActivityCommon.getK9ThemeResourceId(K9.getK9ComposerTheme()));
             @SuppressLint("InflateParams") // this is the top level activity element, it has no root
-            View v = LayoutInflater.from(themeContext).inflate(R.layout.message_compose, null);
+                    View v = LayoutInflater.from(themeContext).inflate(R.layout.message_compose, null);
             TypedValue outValue = new TypedValue();
             // background color needs to be forced
             themeContext.getTheme().resolveAttribute(R.attr.messageViewBackgroundColor, outValue, true);
@@ -326,13 +335,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         applyTemplateButtonView = (Button) findViewById(R.id.apply_template);
 
 /**
-*  We create the spinner view so that the list of templates can be viewed
-*          on the screen
-*/
-
+ *  We create the spinner view so that the list of templates can be viewed
+ *          on the screen
+ */
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
-                                            android.R.layout.simple_list_item_1,
-                                                getResources().getStringArray(R.array.message_compose_templates));
+                android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.message_compose_templates));
         templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         templatesSpinnerView.setAdapter(templatesAdapter);
         greetingText = "";
@@ -344,12 +352,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 1) {
+                    templateFunc(templateArr, 0);
                     greetingText = "Dear Dr.{last name},\n\nMy name is {name} and my student ID is {student id}."
                             + " I am sending this message in regards to {inquiry}"
-                    + "\n\n" + "I hope to hear from you soon. Thank you  very much for your time.\n\n Best regard,\n\n{name}";
+                            + "\n\n" + "I hope to hear from you soon. Thank you  very much for your time.\n\n Best regard,\n\n{name}";
                 }
 
                 else if (position == 2) {
+                    templateFunc(templateArr, 1);
                     greetingText = "Hi {First Name},\n" +
                             "\n" +
                             "It was nice to meet you at {Occasion where you met}. I loved learning more about {Something discussed}." +
@@ -362,6 +372,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 3) {
+                    templateFunc(templateArr, 2);
                     greetingText = "{month, day year}\n\n{address}\n\n" +
                             "Dear Mr.{last name},\n\nI am writing to apply for the {position} advertised in the {advertisement}." +
                             "I enclosed a completed job application, my certification, my resume and {number} references.\n\n" +
@@ -376,19 +387,21 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                             " I look forward to speaking with you about this employment opportunity.\n\nSincerely,\n\n{name}";
                 }
                 else if (position == 4) {
+                    templateFunc(templateArr, 3);
                     greetingText =
                             "Dear Mr/Ms.{last name}\n\n" +
-                            "My name is {first and last name} and this letter is in reference to vacancy at your residency at {address}." +
+                                    "My name is {first and last name} and this letter is in reference to vacancy at your residency at {address}." +
                                     " I am {academic degree} from a reputable institution.\n" +
-                            "I would like to inquire about the conditions for rental and the monthly rental fee.\n\n " +
-                            "I am looking for a place to stay at least {number} years as I take my {studies/job}." +
+                                    "I would like to inquire about the conditions for rental and the monthly rental fee.\n\n " +
+                                    "I am looking for a place to stay at least {number} years as I take my {studies/job}." +
                                     " I would be checking out your {apartment/house} as soon as I receive a positive reply from you. " +
                                     "Please send your reply via email or you may contact me at {number}. Thank you for your time\n\n" +
-                            "Sincerely,\n\n" +
-                            "{name}";
+                                    "Sincerely,\n\n" +
+                                    "{name}";
                 }
 
                 else if (position == 5) {
+                    templateFunc(templateArr, 4);
                     greetingText = "To whom it may concern,\n" +
                             "\n" +
                             "\n" +
@@ -397,6 +410,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 6) {
+                    templateFunc(templateArr, 5);
                     greetingText = "Dear {name}\n\nPlease mark your calendars for the {Insert Event Name}\n\nDate:{Insert Date}\n" +
                             "Time:{Insert Time}\nLocation:{Insert Location}\n\n" +
                             "{Insert ant details including what they need to bring, if anything, and " +
@@ -408,11 +422,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 }
 
                 else if (position == 7) {
+                    templateFunc(templateArr, 6);
                     greetingText = "Hello everyone!\n\nOur meeting will take place at {fill in time here} in the {fill in location}.  " +
-                                 "Please be sure to be there on time.  " +
-                                 "I look forward to seeing you all there! \n\n" +
-                                 "Thank you\n" +
-                                 "{Sign name here}";
+                            "Please be sure to be there on time.  " +
+                            "I look forward to seeing you all there! \n\n" +
+                            "Thank you\n" +
+                            "{Sign name here}";
                 }
 
             }
@@ -1521,7 +1536,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         final MessageReference messageReference;
 
         SendMessageTask(Context context, Account account, Contacts contacts, Message message,
-                Long draftId, String plaintextSubject, MessageReference messageReference) {
+                        Long draftId, String plaintextSubject, MessageReference messageReference) {
             this.context = context;
             this.account = account;
             this.contacts = contacts;
@@ -1745,7 +1760,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         @Override
         public void startIntentSenderForMessageLoaderHelper(IntentSender si, int requestCode, Intent fillIntent,
-                int flagsMask, int flagValues, int extraFlags) {
+                                                            int flagsMask, int flagValues, int extraFlags) {
             try {
                 requestCode |= REQUEST_MASK_LOADER_HELPER;
                 startIntentSenderForResult(si, requestCode, fillIntent, flagsMask, flagValues, extraFlags);

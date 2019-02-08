@@ -286,7 +286,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
     <string name="template_title">Templates</string>
     <string-array name="message_compose_templates">
-        <item>None</item>
+        <item>Select One</item>
         <item>Professor</item>
         <item>Nice to meet you</item>
         <item>Job</item>
