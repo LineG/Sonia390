@@ -1,7 +1,5 @@
 package com.fsck.k9.activity;
 
-
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -232,11 +230,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     // private Button applyTemplateButtonView;
     private String greetingText;
 
-    public int[] templateArr = {0,0,0,0,0,0,0};
+    public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
 
     public int templateFunc(int[] arr, int position) {
-
-        return arr[position] += 1;
+        
+        arr[position] += 1;
+        return arr[position];
 
     }
 
