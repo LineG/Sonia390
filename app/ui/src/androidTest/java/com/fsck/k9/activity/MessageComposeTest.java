@@ -1,6 +1,5 @@
 package com.fsck.k9.activity;
 
-import com.fsck.k9.activity.MessageCompose;
 import com.fsck.k9.ui.R;
 
 import org.junit.Rule;
