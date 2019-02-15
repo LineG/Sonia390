@@ -43,6 +43,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Spinner;
+import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 
 import com.fsck.k9.Account;
 import com.fsck.k9.Account.MessageFormat;
@@ -219,9 +223,30 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private boolean navigateUp;
 
+    /**
+     * Sonia changes
+     */
+    private String greetingText;
+    public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
+    private Spinner templatesSpinnerView;
+    private Button applyTemplateButtonView;
+
+    public int templateFunc(int[] arr, int position) {
+
+        arr[position] += 1;
+        return arr[position];
+
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /**
+         * Sonia changes
+         */
+        Spinner templatesSpinnerView;
+        Button applyTemplateButtonView;
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -303,6 +328,79 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         messageContentView.getInputExtras(true).putBoolean("allowEmoji", true);
 
         attachmentsView = (LinearLayout) findViewById(R.id.attachments);
+
+        /**
+         * Sonia changes
+         * We create the spinner view so that the list of templates can be viewed
+         * on the screen
+         *
+         */
+        templatesSpinnerView  = (Spinner) findViewById(R.id.templates);
+        applyTemplateButtonView = (Button) findViewById(R.id.apply_template);
+
+        ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.message_compose_templates));
+        //templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        templatesSpinnerView.setAdapter(templatesAdapter);
+        greetingText = "";
+        templatesSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    greetingText = "";
+                }
+
+                else if (position == 1) {
+                    templateFunc(templateArr, 0);
+                    greetingText = getString(R.string.template1);;
+                }
+
+                else if (position == 2) {
+                    templateFunc(templateArr, 1);
+                    greetingText = getString(R.string.template2);;
+                }
+
+                else if (position == 3) {
+                    templateFunc(templateArr, 2);
+                    greetingText = getString(R.string.template3);;
+                }
+                else if (position == 4) {
+                    templateFunc(templateArr, 3);
+                    greetingText = getString(R.string.template4);;
+                }
+
+                else if (position == 5) {
+                    templateFunc(templateArr, 4);
+                    greetingText = getString(R.string.template5);;
+                }
+
+                else if (position == 6) {
+                    templateFunc(templateArr, 5);
+                    greetingText = getString(R.string.template6);;
+                }
+
+                else if (position == 7) {
+                    templateFunc(templateArr, 6);
+                    greetingText = getString(R.string.template7);;
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+                // sometimes you need nothing here
+            }
+        });
+
+        applyTemplateButtonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                messageContentView.setText(greetingText);
+            }
+        });
 
         TextWatcher draftNeedsChangingTextWatcher = new SimpleTextWatcher() {
             @Override
