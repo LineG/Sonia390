@@ -12,3 +12,10 @@ before_install:
 - yes | sdkmanager "platforms;android-27"
 
 script: ./gradlew testDebug
+
+jobs:
+ include:
+ - stage: build
+   script: ./gradlew build
+ - stage: test
+   script: ./gradlew test
