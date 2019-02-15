@@ -21,3 +21,7 @@ Tyler Delaportas     29720766    tdelaportas@hotmail.com
 Line Ghanem          27280076    ghanemline@gmail.com
 
 Steffan Venacious    27192630    steffan_v@hotmail.com
+
+#### Rules for passing merge requests
+
+All pull requests are considered passing if all the checks are green. This includes all travis tests and the codacy check. 
