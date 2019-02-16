@@ -353,36 +353,36 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
                 else if (position == 1) {
                     templateFunc(templateArr, 0);
-                    greetingText = getString(R.string.template1);;
+                    greetingText = getString(R.string.template1);
                 }
 
                 else if (position == 2) {
                     templateFunc(templateArr, 1);
-                    greetingText = getString(R.string.template2);;
+                    greetingText = getString(R.string.template2);
                 }
 
                 else if (position == 3) {
                     templateFunc(templateArr, 2);
-                    greetingText = getString(R.string.template3);;
+                    greetingText = getString(R.string.template3);
                 }
                 else if (position == 4) {
                     templateFunc(templateArr, 3);
-                    greetingText = getString(R.string.template4);;
+                    greetingText = getString(R.string.template4);
                 }
 
                 else if (position == 5) {
                     templateFunc(templateArr, 4);
-                    greetingText = getString(R.string.template5);;
+                    greetingText = getString(R.string.template5);
                 }
 
                 else if (position == 6) {
                     templateFunc(templateArr, 5);
-                    greetingText = getString(R.string.template6);;
+                    greetingText = getString(R.string.template6);
                 }
 
                 else if (position == 7) {
                     templateFunc(templateArr, 6);
-                    greetingText = getString(R.string.template7);;
+                    greetingText = getString(R.string.template7);
                 }
 
             }
