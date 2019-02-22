@@ -1,8 +1,10 @@
 package com.fsck.k9.activity;
 
 
+import java.net.URL;
 import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -20,6 +22,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import timber.log.Timber;
+
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -28,6 +33,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,10 +49,22 @@ import com.fsck.k9.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
 import com.fsck.k9.activity.setup.AccountSettings;
 import com.fsck.k9.activity.setup.FolderSettings;
 import com.fsck.k9.activity.setup.Prefs;
+import com.fsck.k9.controller.imap.ImapMessageStore;
 import com.fsck.k9.fragment.MessageListFragment;
 import com.fsck.k9.fragment.MessageListFragment.MessageListFragmentListener;
 import com.fsck.k9.helper.ParcelableUtil;
+import com.fsck.k9.mail.Body;
+import com.fsck.k9.mail.BodyPart;
+import com.fsck.k9.mail.Message;
+import com.fsck.k9.mail.internet.MimeMessage;
+import com.fsck.k9.mailstore.LocalBodyPart;
+import com.fsck.k9.mailstore.LocalMessage;
+import com.fsck.k9.mailstore.LocalStore;
+import com.fsck.k9.mailstore.MessageViewInfo;
+import com.fsck.k9.mailstore.MessageViewInfoExtractor;
 import com.fsck.k9.mailstore.StorageManager;
+import com.fsck.k9.message.extractors.BodyTextExtractor;
+import com.fsck.k9.message.html.EmailSectionExtractor;
 import com.fsck.k9.preferences.StorageEditor;
 import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.search.SearchAccount;
@@ -54,10 +72,12 @@ import com.fsck.k9.search.SearchSpecification;
 import com.fsck.k9.search.SearchSpecification.Attribute;
 import com.fsck.k9.search.SearchSpecification.SearchCondition;
 import com.fsck.k9.search.SearchSpecification.SearchField;
+import com.fsck.k9.ui.message.LocalMessageExtractorLoader;
 import com.fsck.k9.ui.messageview.MessageViewFragment;
 import com.fsck.k9.ui.messageview.MessageViewFragment.MessageViewFragmentListener;
 import com.fsck.k9.view.MessageHeader;
 import com.fsck.k9.view.MessageTitleView;
+import com.fsck.k9.view.MessageWebView;
 import com.fsck.k9.view.ViewSwitcher;
 import com.fsck.k9.view.ViewSwitcher.OnSwitchCompleteListener;
 import de.cketti.library.changelog.ChangeLog;
@@ -70,7 +90,7 @@ import de.cketti.library.changelog.ChangeLog;
  */
 public class MessageList extends K9Activity implements MessageListFragmentListener,
         MessageViewFragmentListener, OnBackStackChangedListener, OnSwipeGestureListener,
-        OnSwitchCompleteListener {
+        OnSwitchCompleteListener,TextToSpeech.OnInitListener {
 
     private static final String EXTRA_SEARCH = "search_bytes";
     private static final String EXTRA_NO_THREADING = "no_threading";
@@ -93,6 +113,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     private static final int NEXT = 2;
 
     public static final int REQUEST_MASK_PENDING_INTENT = 1 << 15;
+    private MessageViewFragment viewFragment;
 
     public static void actionDisplaySearch(Context context, SearchSpecification search,
             boolean noThreading, boolean newTask) {
@@ -157,9 +178,12 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     private TextView actionBarSubTitle;
     private TextView actionBarUnread;
     private Menu menu;
+    private TextToSpeech tts;
+    private String text ;
 
     private ViewGroup messageViewContainer;
     private View messageViewPlaceHolder;
+
 
     private MessageListFragment messageListFragment;
     private MessageViewFragment messageViewFragment;
@@ -235,6 +259,8 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         if (cl.isFirstRun()) {
             cl.getLogDialog().show();
         }
+
+        tts = new TextToSpeech(this,this);
     }
 
     @Override
@@ -937,6 +963,14 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 updateMenu();
                 return true;
             }
+            case R.id.reading_bot:
+            {
+
+
+                speakOut();
+                text = "";
+                return true; // for now nothing implemented just return
+            }
         }
 
         if (!singleFolderMode) {
@@ -1031,6 +1065,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             menu.findItem(R.id.toggle_message_view_theme).setVisible(false);
             menu.findItem(R.id.show_headers).setVisible(false);
             menu.findItem(R.id.hide_headers).setVisible(false);
+            menu.findItem(R.id.reading_bot).setVisible(false);  // not showing the Bot in list view
         } else {
             // hide prev/next buttons in split mode
             if (displayMode != DisplayMode.MESSAGE_VIEW) {
@@ -1232,6 +1267,39 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 showMessageView();
             }
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        // Don't forget to shutdown tts!
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    public void onInit(int status) {
+
+        if (status == TextToSpeech.SUCCESS) {
+
+            int result = tts.setLanguage(Locale.US);
+
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "This Language is not supported");
+            }
+
+        } else {
+            Log.e("TTS", "Initilization Failed!");
+        }
+
+    }
+
+    private void speakOut() {
+
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     @Override
