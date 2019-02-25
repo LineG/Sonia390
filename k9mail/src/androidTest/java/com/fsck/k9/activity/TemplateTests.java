@@ -94,6 +94,36 @@ public class TemplateTests {
         onView(withId(R.id.apply_template)).perform(click());
         onView(withId(R.id.message_content)).check(matches(withText(R.string.template1)));
 
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(2).perform(click());
+        onView(withId(R.id.apply_template)).perform(click());
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template2)));
+
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(3).perform(click());
+        onView(withId(R.id.apply_template)).perform(click());
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template3)));
+
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(4).perform(click());
+        onView(withId(R.id.apply_template)).perform(click());
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template4)));
+
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(5).perform(click());
+        onView(withId(R.id.apply_template)).perform(click());
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template5)));
+
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(6).perform(click());
+        onView(withId(R.id.apply_template)).perform(click());
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template6)));
+
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(7).perform(click());
+        onView(withId(R.id.apply_template)).perform(click());
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template7)));
+
     }
     }
 
