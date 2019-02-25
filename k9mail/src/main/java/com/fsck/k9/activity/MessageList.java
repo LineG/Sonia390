@@ -968,7 +968,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
 
 
                 speakOut();
-                text = "";
+                text = "Hello World";
                 return true; // for now nothing implemented just return
             }
         }
@@ -1271,7 +1271,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
 
     @Override
     public void onDestroy() {
-        // Don't forget to shutdown tts!
+        // shutdown tts
         if (tts != null) {
             tts.stop();
             tts.shutdown();
@@ -1279,6 +1279,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         super.onDestroy();
     }
 
+    //TTS
     @Override
     public void onInit(int status) {
 
