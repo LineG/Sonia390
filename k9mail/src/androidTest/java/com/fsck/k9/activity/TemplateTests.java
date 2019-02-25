@@ -19,6 +19,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.provider.Settings.Global.getString;
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -53,6 +54,36 @@ public class TemplateTests {
         onView(withId(R.id.templates)).perform(click());
         onData(anything()).atPosition(1).perform(click());
         onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Professor"))));
+
+        // Check that spinner at position(2) matches the right string
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(2).perform(click());
+        onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Nice to meet you"))));
+
+        // Check that spinner at position(1) matches the right string
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(3).perform(click());
+        onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Job"))));
+
+        // Check that spinner at position(1) matches the right string
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(4).perform(click());
+        onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Apartment Inquiry"))));
+
+        // Check that spinner at position(1) matches the right string
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(5).perform(click());
+        onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Formal non-specific"))));
+
+        // Check that spinner at position(1) matches the right string
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(6).perform(click());
+        onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Event"))));
+
+        // Check that spinner at position(1) matches the right string
+        onView(withId(R.id.templates)).perform(click());
+        onData(anything()).atPosition(7).perform(click());
+        onView(withId(R.id.templates)).check(matches(withSpinnerText(containsString("Team Meeting"))));
     }
 
     @Test
@@ -61,7 +92,7 @@ public class TemplateTests {
         onView(withId(R.id.templates)).perform(click());
         onData(anything()).atPosition(1).perform(click());
         onView(withId(R.id.apply_template)).perform(click());
-        onView(withId(R.id.message_content)).check(matches(withText(containsString(""))));
+        onView(withId(R.id.message_content)).check(matches(withText(R.string.template1)));
 
     }
     }
