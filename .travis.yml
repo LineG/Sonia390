@@ -26,5 +26,5 @@ jobs:
       script: ./gradlew build
     - stage: test
       script: ./gradlew test
-              ./gradlew jacocoTestReport
-              #- ./gradlew clean assembleDebug test lint
+              #./gradlew jacocoTestReport
+              #./gradlew clean assembleDebug test lint
