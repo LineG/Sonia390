@@ -11,6 +11,15 @@ jdk: oraclejdk8
 before_install:
 - yes | sdkmanager "platforms;android-27"
 
+before_cache:
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+ directories:
+ - $HOME/.gradle/4.5.1
+ - $HOME/.gradle/buildOutputCleanup
+ - $HOME/.gradle/vcsWorkingDirs
+
 script:
         - ./gradlew build
         - ./gradlew test
