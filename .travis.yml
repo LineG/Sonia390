@@ -24,3 +24,4 @@ script:
         - ./gradlew build
         - ./gradlew test
         - ./gradlew jacocoTestReport
+        - ./gradlew clean assembleDebug test lint
