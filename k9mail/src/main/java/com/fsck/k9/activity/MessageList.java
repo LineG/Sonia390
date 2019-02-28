@@ -788,6 +788,13 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         AccountSettings.actionSettings(this, account);
     }
 
+    private void onBot() {
+        Intent intent = new Intent(this, BotActivity.class);
+        startActivity(intent);
+        finish();
+        return;
+    }
+
     @Override
     public boolean onSearchRequested() {
         return messageListFragment.onSearchRequested();
@@ -935,6 +942,10 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             case R.id.hide_headers: {
                 messageViewFragment.onToggleAllHeadersView();
                 updateMenu();
+                return true;
+            }
+            case R.id.bot_redirect:{
+                onBot();
                 return true;
             }
         }
