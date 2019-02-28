@@ -28,4 +28,4 @@ jobs:
       script:
         - ./gradlew test
         - ./gradlew jacocoTestReport
-              #./gradlew clean assembleDebug test lint
+        - ./gradlew clean assembleDebug test lint
