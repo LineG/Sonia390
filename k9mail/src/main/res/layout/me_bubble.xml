@@ -18,5 +18,4 @@
         android:text="Hi hello world"
         android:background="@drawable/me_bubble"
         android:textSize="20sp" />
-
 </RelativeLayout>
