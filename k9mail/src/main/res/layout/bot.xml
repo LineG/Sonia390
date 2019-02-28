@@ -30,4 +30,5 @@
         android:imeOptions="actionSend"
         android:textColorHint="#fff"
         android:textSize="20sp"/>
+
 </RelativeLayout>
