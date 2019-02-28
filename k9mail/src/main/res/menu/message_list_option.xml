@@ -28,6 +28,13 @@
 
     <!-- MessageList -->
     <item
+        android:id="@+id/bot_redirect"
+        android:icon="?attr/iconActionSearch"
+        android:showAsAction="always"
+        android:title="@string/search_action"/>
+
+    <!-- MessageList -->
+    <item
         android:id="@+id/search"
         android:icon="?attr/iconActionSearch"
         android:showAsAction="always"

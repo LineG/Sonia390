@@ -7,4 +7,9 @@
     <color name="message_list_widget_text_read">#444444</color>
     <color name="message_list_widget_text_unread">#000000</color>
     <color name="light_black">#444444</color>
+    <color name="colorPrimaryDark">#18276e</color>
+    <color name="colorPrimaryCenter">#214D9E</color>
+    <color name="colorPrimary">#449af5</color>
+    <color name="colorAccent">#ffff</color>
+
 </resources>

@@ -59,4 +59,3 @@ public class BotActivity extends AppCompatActivity {
         return (pos >= numItems);
     }
 }
-
