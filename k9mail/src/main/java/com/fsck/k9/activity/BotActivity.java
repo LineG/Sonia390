@@ -13,8 +13,8 @@ import java.util.List;
 import com.fsck.k9.R;
 
 
-import com.fsck.k9.BotMessageAdapter;
 import com.fsck.k9.ResponseMessage;
+import com.fsck.k9.BotMessageAdapter;
 
 public class BotActivity extends AppCompatActivity {
     EditText userInput;
@@ -55,48 +55,4 @@ public class BotActivity extends AppCompatActivity {
         int numItems = recyclerView.getAdapter().getItemCount();
         return (pos >= numItems);
     }
-
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.bot);
-//    }
-//    EditText userInput;
-//    RecyclerView recyclerView;
-//    BotMessageAdapter messageAdapter;
-//    List<ResponseMessage> responseMessageList;
-//
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.empty_message_view);
-//        userInput = findViewById(R.id.empty_trash);
-//        recyclerView = findViewById(R.id.empty_trash);
-//        responseMessageList = new ArrayList<>();
-//        messageAdapter = new BotMessageAdapter(responseMessageList, this);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
-//        recyclerView.setAdapter(messageAdapter);
-//
-//        userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-//                if (i == EditorInfo.IME_ACTION_SEND) {
-//                    ResponseMessage responseMessage = new ResponseMessage(userInput.getText().toString(), true);
-//                    responseMessageList.add(responseMessage);
-//                    ResponseMessage responseMessage2 = new ResponseMessage(userInput.getText().toString(), false);
-//                    responseMessageList.add(responseMessage2);
-//                    messageAdapter.notifyDataSetChanged();
-//                    if (!isLastVisible())
-//                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1);
-//                }
-//                return false;
-//            }
-//        });
-//    }
-//    boolean isLastVisible() {
-//        LinearLayoutManager layoutManager = ((LinearLayoutManager) recyclerView.getLayoutManager());
-//        int pos = layoutManager.findLastCompletelyVisibleItemPosition();
-//        int numItems = recyclerView.getAdapter().getItemCount();
-//        return (pos >= numItems);
-//    }
 }

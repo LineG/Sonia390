@@ -6,13 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.fsck.k9.R;
+
 import java.util.List;
 
 
 
+/**
+ * Created by deathcode on 26/01/18.
+ */
 
-
-public class BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.CustomViewHolder> {
+public class  BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.CustomViewHolder> {
 
     List<ResponseMessage> responseMessages;
     Context context;
@@ -20,7 +24,7 @@ public class BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.Cu
         TextView textView;
         public CustomViewHolder(View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.about);
+            textView = itemView.findViewById(R.id.textMessage);
         }
     }
 
@@ -32,9 +36,9 @@ public class BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.Cu
     @Override
     public int getItemViewType(int position) {
         if(responseMessages.get(position).isMe()){
-            return R.layout.account_list;
+            return R.layout.me_bubble;
         }
-        return R.layout.account_list;
+        return R.layout.bot_bubble;
     }
 
     @Override
