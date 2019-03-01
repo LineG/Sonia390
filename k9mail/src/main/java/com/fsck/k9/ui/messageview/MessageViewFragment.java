@@ -253,8 +253,7 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
     }
 
     //Sonia changes TTS
-    public String getTextMessage()
-    {
+    public String getTextMessage() {
         return mMessage.getPreview();
     }
 

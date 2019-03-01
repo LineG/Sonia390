@@ -74,7 +74,7 @@ import de.cketti.library.changelog.ChangeLog;
  */
 public class MessageList extends K9Activity implements MessageListFragmentListener,
         MessageViewFragmentListener, OnBackStackChangedListener, OnSwipeGestureListener,
-        OnSwitchCompleteListener,TextToSpeech.OnInitListener {
+        OnSwitchCompleteListener, TextToSpeech.OnInitListener {
 
     private static final String EXTRA_SEARCH = "search_bytes";
     private static final String EXTRA_NO_THREADING = "no_threading";
@@ -97,7 +97,6 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     private static final int NEXT = 2;
 
     public static final int REQUEST_MASK_PENDING_INTENT = 1 << 15;
-    private MessageViewFragment viewFragment;
 
     public static void actionDisplaySearch(Context context, SearchSpecification search,
             boolean noThreading, boolean newTask) {
@@ -163,7 +162,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     private TextView actionBarUnread;
     private Menu menu;
     private TextToSpeech tts;
-    private String text ;
+    private String text;
 
     private ViewGroup messageViewContainer;
     private View messageViewPlaceHolder;
@@ -244,7 +243,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             cl.getLogDialog().show();
         }
 
-        tts = new TextToSpeech(this,this);
+        tts = new TextToSpeech(this, this);
     }
 
     @Override
@@ -949,8 +948,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             }
 
             //Sonia changes TTS
-            case R.id.reading_bot:
-            {
+            case R.id.reading_bot: {
                 text = messageViewFragment.getTextMessage();
                 speakOut();
                 return true; // for now nothing implemented just return
