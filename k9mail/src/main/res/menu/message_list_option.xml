@@ -28,13 +28,6 @@
 
     <!-- MessageList -->
     <item
-        android:id="@+id/bot_redirect"
-        android:icon="?attr/iconActionSearch"
-        android:showAsAction="always"
-        android:title="@string/search_action"/>
-
-    <!-- MessageList -->
-    <item
         android:id="@+id/search"
         android:icon="?attr/iconActionSearch"
         android:showAsAction="always"
@@ -55,6 +48,13 @@
         android:icon="?attr/iconActionRefresh"
         android:showAsAction="always"
         android:title="@string/check_mail_action"/>
+    <!-- MessageList -->
+
+    <item
+        android:id="@+id/bot_redirect"
+        android:icon="@drawable/ic_adb_black_24dp"
+        android:showAsAction="always"
+        android:title="@string/search_action"/>
 
     <!-- MessageView -->
     <item
