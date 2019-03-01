@@ -11,7 +11,7 @@ import static com.fsck.k9.mail.internet.MimeUtility.isSameMimeType;
 
 
 class PreviewTextExtractor {
-    private static final int MAX_PREVIEW_LENGTH = 512;
+    private static final int MAX_PREVIEW_LENGTH = 1512;
     private static final int MAX_CHARACTERS_CHECKED_FOR_PREVIEW = 8192;
 
 
