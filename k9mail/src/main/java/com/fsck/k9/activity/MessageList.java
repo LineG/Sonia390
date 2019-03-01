@@ -1,16 +1,11 @@
 package com.fsck.k9.activity;
 
 
-import java.net.URL;
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
-import java.util.Scanner;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.FragmentManager;
 import android.app.FragmentManager.OnBackStackChangedListener;
@@ -37,8 +32,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.webkit.ValueCallback;
-import android.webkit.WebView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,23 +47,10 @@ import com.fsck.k9.activity.misc.SwipeGestureDetector.OnSwipeGestureListener;
 import com.fsck.k9.activity.setup.AccountSettings;
 import com.fsck.k9.activity.setup.FolderSettings;
 import com.fsck.k9.activity.setup.Prefs;
-import com.fsck.k9.controller.imap.ImapMessageStore;
 import com.fsck.k9.fragment.MessageListFragment;
 import com.fsck.k9.fragment.MessageListFragment.MessageListFragmentListener;
 import com.fsck.k9.helper.ParcelableUtil;
-import com.fsck.k9.mail.Body;
-import com.fsck.k9.mail.BodyPart;
-import com.fsck.k9.mail.Message;
-import com.fsck.k9.mail.internet.MimeMessage;
-import com.fsck.k9.mail.internet.Viewable;
-import com.fsck.k9.mailstore.LocalBodyPart;
-import com.fsck.k9.mailstore.LocalMessage;
-import com.fsck.k9.mailstore.LocalStore;
-import com.fsck.k9.mailstore.MessageViewInfo;
-import com.fsck.k9.mailstore.MessageViewInfoExtractor;
 import com.fsck.k9.mailstore.StorageManager;
-import com.fsck.k9.message.extractors.BodyTextExtractor;
-import com.fsck.k9.message.html.EmailSectionExtractor;
 import com.fsck.k9.preferences.StorageEditor;
 import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.search.SearchAccount;
@@ -78,13 +58,10 @@ import com.fsck.k9.search.SearchSpecification;
 import com.fsck.k9.search.SearchSpecification.Attribute;
 import com.fsck.k9.search.SearchSpecification.SearchCondition;
 import com.fsck.k9.search.SearchSpecification.SearchField;
-import com.fsck.k9.ui.EolConvertingEditText;
-import com.fsck.k9.ui.message.LocalMessageExtractorLoader;
 import com.fsck.k9.ui.messageview.MessageViewFragment;
 import com.fsck.k9.ui.messageview.MessageViewFragment.MessageViewFragmentListener;
 import com.fsck.k9.view.MessageHeader;
 import com.fsck.k9.view.MessageTitleView;
-import com.fsck.k9.view.MessageWebView;
 import com.fsck.k9.view.ViewSwitcher;
 import com.fsck.k9.view.ViewSwitcher.OnSwitchCompleteListener;
 import de.cketti.library.changelog.ChangeLog;
@@ -970,6 +947,8 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 updateMenu();
                 return true;
             }
+
+            //Sonia changes TTS
             case R.id.reading_bot:
             {
                 text = messageViewFragment.getTextMessage();
@@ -1284,7 +1263,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         super.onDestroy();
     }
 
-    //TTS
+    //Sonia changes TTS
     @Override
     public void onInit(int status) {
 
