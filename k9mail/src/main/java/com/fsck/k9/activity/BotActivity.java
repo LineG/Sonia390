@@ -34,12 +34,7 @@ public class BotActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         recyclerView.setAdapter(messageAdapter);
 
-        ResponseMessage initialBotMessage = new ResponseMessage("Here is a list of built in commands \n" +
-                " '!cm mc': redirects to message compose \n"+
-                " '!cm ml': redirects to message list \n"+
-                " '!cm faq2': BOT gives us faqs \n"+
-                " '!cm faq': Frequently asked questions\n\n" +
-                "Enter a command or just say hi :D", false);
+        ResponseMessage initialBotMessage = new ResponseMessage(getString(R.string.bot_initial_message), false);
         responseMessageList.add(initialBotMessage);
         messageAdapter.notifyDataSetChanged();
 
@@ -91,11 +86,7 @@ public class BotActivity extends AppCompatActivity {
             return "write faq in order and with numbers so that the user chooses a question by choosing a number";
         }
         else if(choice.equalsIgnoreCase("Hello") || choice.equalsIgnoreCase("Hi")){
-            choice = "Hello I'm K9BOT :) \nPlease enter one of my built-in commands\n"+
-                    "Here is a list of built in commands \n" +
-                    " '!cm mc': redirects to message compose \n"+
-                    " '!cm ml': redirects to message list \n"+
-                    " '!cm faq': Frequently asked questions";
+            choice = getString(R.string.bot_hello_message);
             return choice;
         }
         else{

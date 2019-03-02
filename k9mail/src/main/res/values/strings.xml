@@ -365,6 +365,22 @@ Please submit bug reports, contribute new features and ask questions at
         Thank you\n
         {Sign name here}"
     </string>
+    <string name="bot_initial_message">
+        Here is a list of built in commands \n
+        \'cm mc\': redirects to message compose \n
+        \'cm ml\': redirects to message list \n
+        \'cm faq\': BOT gives us faqs \n
+        \'cm faq\': Frequently asked questions\n\n
+        Enter a command or just say hi :D
+    </string>
+    <string name="bot_hello_message">
+        Hello I am K9BOT :) \n
+        Please enter one of my built-in commands\n
+        Here is a list of built in commands \n
+        \'cm mc\': redirects to message compose \n
+        \'cm ml\': redirects to message list \n
+        \'cm faq\': Frequently asked questions
+    </string>
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>
     <string name="message_to_label">To:</string>
