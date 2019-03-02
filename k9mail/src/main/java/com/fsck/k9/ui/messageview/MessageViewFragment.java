@@ -252,6 +252,11 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
         }
     }
 
+    //Sonia changes TTS
+    public String getTextMessage() {
+        return mMessage.getPreview();
+    }
+
     private void displayHeaderForLoadingMessage(LocalMessage message) {
         mMessageView.setHeaders(message, mAccount);
         if (K9.isOpenPgpProviderConfigured()) {

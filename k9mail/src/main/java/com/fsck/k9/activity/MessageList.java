@@ -3,6 +3,7 @@ package com.fsck.k9.activity;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -20,6 +21,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import timber.log.Timber;
+
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -70,7 +74,7 @@ import de.cketti.library.changelog.ChangeLog;
  */
 public class MessageList extends K9Activity implements MessageListFragmentListener,
         MessageViewFragmentListener, OnBackStackChangedListener, OnSwipeGestureListener,
-        OnSwitchCompleteListener {
+        OnSwitchCompleteListener, TextToSpeech.OnInitListener {
 
     private static final String EXTRA_SEARCH = "search_bytes";
     private static final String EXTRA_NO_THREADING = "no_threading";
@@ -157,9 +161,12 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     private TextView actionBarSubTitle;
     private TextView actionBarUnread;
     private Menu menu;
+    private TextToSpeech tts;
+    private String text;
 
     private ViewGroup messageViewContainer;
     private View messageViewPlaceHolder;
+
 
     private MessageListFragment messageListFragment;
     private MessageViewFragment messageViewFragment;
@@ -235,6 +242,8 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         if (cl.isFirstRun()) {
             cl.getLogDialog().show();
         }
+
+        tts = new TextToSpeech(this, this);
     }
 
     @Override
@@ -937,6 +946,13 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 updateMenu();
                 return true;
             }
+
+            //Sonia changes TTS
+            case R.id.reading_bot: {
+                text = messageViewFragment.getTextMessage();
+                speakOut();
+                return true; // for now nothing implemented just return
+            }
         }
 
         if (!singleFolderMode) {
@@ -1031,6 +1047,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             menu.findItem(R.id.toggle_message_view_theme).setVisible(false);
             menu.findItem(R.id.show_headers).setVisible(false);
             menu.findItem(R.id.hide_headers).setVisible(false);
+            menu.findItem(R.id.reading_bot).setVisible(false);  // not showing the Bot in list view
         } else {
             // hide prev/next buttons in split mode
             if (displayMode != DisplayMode.MESSAGE_VIEW) {
@@ -1232,6 +1249,40 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 showMessageView();
             }
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        // shutdown tts
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
+    }
+
+    //Sonia changes TTS
+    @Override
+    public void onInit(int status) {
+
+        if (status == TextToSpeech.SUCCESS) {
+
+            int result = tts.setLanguage(Locale.US);
+
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "This Language is not supported");
+            }
+
+        } else {
+            Log.e("TTS", "Initilization Failed!");
+        }
+
+    }
+
+    private void speakOut() {
+
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     @Override
