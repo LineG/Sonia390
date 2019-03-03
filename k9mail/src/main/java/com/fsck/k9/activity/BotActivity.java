@@ -84,27 +84,27 @@ public class BotActivity extends AppCompatActivity {
             choice = getString(R.string.bot_hello_message);
             return choice;
         }
-        else if(choice.equals("account overview")){ //the bot explains
+        else if(choice.equalsIgnoreCase("account overview")){ //the bot explains
             choice = getString(R.string.account_overview);
             return choice;
         }
-        else if(choice.equals("configure folders")){ //the bot explains
+        else if(choice.equalsIgnoreCase("configure folders")){ //the bot explains
             choice = getString(R.string.configure_folders);
             return choice;
         }
-        else if(choice.equals("additional mails")){ //the bot explains
+        else if(choice.equalsIgnoreCase("additional mails")){ //the bot explains
             choice = getString(R.string.additional_mail);
             return choice;
         }
-        else if(choice.equals("save settings")){ //the bot explains
+        else if(choice.equalsIgnoreCase("save settings")){ //the bot explains
             choice = getString(R.string.save_settings);
             return choice;
         }
-        else if(choice.equals("signature")){ //the bot explains
+        else if(choice.equalsIgnoreCase("signature")){ //the bot explains
             choice = getString(R.string.signature);
             return choice;
         }
-        else if(choice.equals("about")){ //the bot explains
+        else if(choice.equalsIgnoreCase("about")){ //the bot explains
             choice = getString(R.string.about);
             return choice;
         }
