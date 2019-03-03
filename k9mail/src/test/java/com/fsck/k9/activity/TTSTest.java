@@ -15,28 +15,26 @@ import static org.mockito.Mockito.when;
 @RunWith(K9RobolectricTestRunner.class)
 public class TTSTest {
 
-    MessageViewFragment messageViewFragment1;
-    LocalMessage lmMock1;
-    LocalMessage lmMock2;
-    MessageReference mrMock1;
-    MessageReference mrMock2;
+    private MessageViewFragment messageViewFragment1;
+    private LocalMessage lmMock1;
+    private LocalMessage lmMock2;
+    private MessageReference mrMock1;
 
     @Before
-    public void Setup() {
+    public void setup() {
         mrMock1 = mock(MessageReference.class);
         messageViewFragment1 = MessageViewFragment.newInstance(mrMock1);
         lmMock1 = mock(LocalMessage.class);
         when(lmMock1.getPreview()).thenReturn("TTS test");
         messageViewFragment1.setLocalMessage(lmMock1);
 
-        mrMock2 = mock(MessageReference.class);
         lmMock2 = mock(LocalMessage.class);
         when(lmMock2.getPreview()).thenReturn("");
 
     }
 
     @Test
-    public void TestPreview() {
+    public void testPreview() {
         String preview1 = messageViewFragment1.getTextMessage();
         Assert.assertEquals("TTS test", preview1);
         verify(lmMock1).getPreview();
@@ -44,7 +42,7 @@ public class TTSTest {
     }
 
     @Test
-    public void TestPreviewEmpty() {
+    public void testPreviewEmpty() {
         messageViewFragment1.setLocalMessage(lmMock2);
         String preview2 = messageViewFragment1.getTextMessage();
         Assert.assertEquals("", preview2);
