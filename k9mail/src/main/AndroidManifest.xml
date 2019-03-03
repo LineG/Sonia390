@@ -57,8 +57,6 @@
         android:label="@string/app_name"
         android:resizeableActivity="true"
         android:theme="@style/Theme.K9.Startup">
-        <activity android:name=".activity.FrequentlyAskedQuestions"
-            android:theme="@style/Theme.AppCompat.Light"></activity>
         <activity
             android:name=".activity.BotActivity"
             android:theme="@style/Theme.AppCompat.Light" />

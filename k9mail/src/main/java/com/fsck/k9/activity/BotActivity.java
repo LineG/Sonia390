@@ -77,16 +77,35 @@ public class BotActivity extends AppCompatActivity {
             return choice;
         }
         else if(choice.equals("!cm faq")){ // redirects to page
-            Intent intent = new Intent(this, FrequentlyAskedQuestions.class);
-            startActivity(intent);
-            finish();
+            choice = getString(R.string.frequently_asked_questions);
             return choice;
-        }
-        else if(choice.equals("!cm faq2")){ //the bot explains
-            return "write faq in order and with numbers so that the user chooses a question by choosing a number";
         }
         else if(choice.equalsIgnoreCase("Hello") || choice.equalsIgnoreCase("Hi")){
             choice = getString(R.string.bot_hello_message);
+            return choice;
+        }
+        else if(choice.equals("account overview")){ //the bot explains
+            choice = getString(R.string.account_overview);
+            return choice;
+        }
+        else if(choice.equals("configure folders")){ //the bot explains
+            choice = getString(R.string.configure_folders);
+            return choice;
+        }
+        else if(choice.equals("additional mails")){ //the bot explains
+            choice = getString(R.string.additional_mail);
+            return choice;
+        }
+        else if(choice.equals("save settings")){ //the bot explains
+            choice = getString(R.string.save_settings);
+            return choice;
+        }
+        else if(choice.equals("signature")){ //the bot explains
+            choice = getString(R.string.signature);
+            return choice;
+        }
+        else if(choice.equals("about")){ //the bot explains
+            choice = getString(R.string.about);
             return choice;
         }
         else{
