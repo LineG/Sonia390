@@ -18,10 +18,12 @@ public class TTSTest {
     private MessageViewFragment messageViewFragment1;
     private LocalMessage lmMock1;
     private LocalMessage lmMock2;
-    private MessageReference mrMock1;
+    private LocalMessage lmMock3;
+
 
     @Before
-    public void setup() {
+    public void setUp() {
+        MessageReference mrMock1;
         mrMock1 = mock(MessageReference.class);
         messageViewFragment1 = MessageViewFragment.newInstance(mrMock1);
         lmMock1 = mock(LocalMessage.class);
@@ -30,6 +32,9 @@ public class TTSTest {
 
         lmMock2 = mock(LocalMessage.class);
         when(lmMock2.getPreview()).thenReturn("");
+
+        lmMock3 = mock(LocalMessage.class);
+        when(lmMock3.getPreview()).thenReturn("@#$%^&*");
 
     }
 
@@ -47,6 +52,15 @@ public class TTSTest {
         String preview2 = messageViewFragment1.getTextMessage();
         Assert.assertEquals("", preview2);
         verify(lmMock2).getPreview();
+
+    }
+
+    @Test
+    public void testPreviewSpecialChar() {
+        messageViewFragment1.setLocalMessage(lmMock3);
+        String preview3 = messageViewFragment1.getTextMessage();
+        Assert.assertEquals("@#$%^&*", preview3);
+        verify(lmMock3).getPreview();
 
     }
 }

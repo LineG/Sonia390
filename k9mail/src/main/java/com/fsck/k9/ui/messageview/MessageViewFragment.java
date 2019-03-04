@@ -258,7 +258,7 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
     }
 
     //Sonia changes for TTS testing
-    public void setLocalMessage(LocalMessage m){
+    public void setLocalMessage(LocalMessage m) {
         mMessage = m;
     }
 
