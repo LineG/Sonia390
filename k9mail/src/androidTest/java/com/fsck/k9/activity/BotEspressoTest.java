@@ -35,6 +35,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertEquals;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -186,8 +187,7 @@ public class BotEspressoTest {
                                 1),
                         isDisplayed()));
         appCompatEditText2.perform(pressImeActionButton());
-        assert (true);
-
+        assertEquals("", ""); 
     }
 
     private static Matcher<View> childAtPosition(

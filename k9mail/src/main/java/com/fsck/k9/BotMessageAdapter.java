@@ -34,7 +34,7 @@ public class  BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.C
 
     @Override
     public int getItemViewType(int position) {
-        if(responseMessages.get(position).isMe()) {
+        if (responseMessages.get(position).isMe()) {
             return R.layout.me_bubble;
         }
         return R.layout.bot_bubble;
