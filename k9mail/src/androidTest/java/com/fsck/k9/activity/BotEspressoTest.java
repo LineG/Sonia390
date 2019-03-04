@@ -186,7 +186,7 @@ public class BotEspressoTest {
                                 1),
                         isDisplayed()));
         appCompatEditText2.perform(pressImeActionButton());
-        assert(true);
+        assert (true);
 
     }
 
