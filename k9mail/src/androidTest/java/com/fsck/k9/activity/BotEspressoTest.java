@@ -47,6 +47,116 @@ public class BotEspressoTest {
     @Test
     public void botEspressoTest() {
 
+        ViewInteraction button = onView(
+                allOf(withId(R.id.next), withText("Next"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        2),
+                                1),
+                        isDisplayed()));
+        button.perform(click());
+
+        ViewInteraction editText = onView(
+                allOf(withId(R.id.account_email),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                0)));
+        editText.perform(scrollTo(), replaceText("390soen@gmail.com"), closeSoftKeyboard());
+
+        ViewInteraction editText2 = onView(
+                allOf(withId(R.id.account_password),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                1)));
+        editText2.perform(scrollTo(), replaceText("minicapstone390"), closeSoftKeyboard());
+
+        ViewInteraction button2 = onView(
+                allOf(withId(R.id.next), withText("Next"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        2),
+                                1),
+                        isDisplayed()));
+        button2.perform(click());
+
+        ViewInteraction editText3 = onView(
+                allOf(withId(R.id.account_description), withContentDescription("Give this account a name (optional):"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                0)));
+        editText3.perform(scrollTo(), replaceText("t"), closeSoftKeyboard());
+
+        ViewInteraction editText4 = onView(
+                allOf(withId(R.id.account_name), withContentDescription("Type your name (displays on outgoing messages):"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                1)));
+        editText4.perform(scrollTo(), replaceText("t"), closeSoftKeyboard());
+
+        ViewInteraction editText5 = onView(
+                allOf(withId(R.id.account_name), withText("t"), withContentDescription("Type your name (displays on outgoing messages):"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                1)));
+        editText5.perform(pressImeActionButton());
+
+        ViewInteraction button3 = onView(
+                allOf(withId(R.id.done), withText("Done"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        2),
+                                1),
+                        isDisplayed()));
+        button3.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction button4 = onView(
+                allOf(withId(android.R.id.button1), withText("OK"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        0),
+                                2),
+                        isDisplayed()));
+        button4.perform(click());
+
+        DataInteraction linearLayout = onData(anything())
+                .inAdapterView(allOf(withId(android.R.id.list),
+                        childAtPosition(
+                                withClassName(is("android.widget.LinearLayout")),
+                                0)))
+                .atPosition(2);
+        linearLayout.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         ViewInteraction actionMenuItemView = onView(
                 allOf(withId(R.id.bot_redirect), withContentDescription("Bot"),
