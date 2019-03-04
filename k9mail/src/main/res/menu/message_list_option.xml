@@ -54,7 +54,7 @@
         android:id="@+id/bot_redirect"
         android:icon="@drawable/ic_adb_black_24dp"
         android:showAsAction="always"
-        android:title="@string/search_action"/>
+        android:title="@string/bot_action"/>
 
     <!-- MessageView -->
     <item
