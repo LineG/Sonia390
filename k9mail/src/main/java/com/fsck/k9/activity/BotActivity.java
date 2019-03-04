@@ -44,7 +44,7 @@ public class BotActivity extends AppCompatActivity {
                 if (i == EditorInfo.IME_ACTION_SEND) {
                     ResponseMessage responseMessage = new ResponseMessage(userInput.getText().toString(), true);
                     responseMessageList.add(responseMessage);
-//                    ResponseMessage responseMessage2 = new ResponseMessage(userInput.getText().toString(), false);
+
                     ResponseMessage responseMessage2 = new ResponseMessage(commandChoice(userInput.getText().toString()), false);
                     responseMessageList.add(responseMessage2);
                     messageAdapter.notifyDataSetChanged();
