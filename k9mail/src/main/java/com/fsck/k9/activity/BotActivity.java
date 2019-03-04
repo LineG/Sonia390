@@ -63,52 +63,52 @@ public class BotActivity extends AppCompatActivity {
         return (pos >= numItems);
     }
 
-    String commandChoice(String choice){
-        if(choice.equals("!cm mc")){
+    String commandChoice(String choice) {
+        if(choice.equals("!cm mc")) {
             Intent intent = new Intent(this, MessageCompose.class);
             startActivity(intent);
             finish();
             return choice;
         }
-        else if(choice.equals("!cm ml")){
+        else if(choice.equals("!cm ml")) {
             Intent intent = new Intent(this, Accounts.class);
             startActivity(intent);
             finish();
             return choice;
         }
-        else if(choice.equals("!cm faq")){ // redirects to page
+        else if(choice.equals("!cm faq")) { // redirects to page
             choice = getString(R.string.frequently_asked_questions);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("Hello") || choice.equalsIgnoreCase("Hi")){
+        else if(choice.equalsIgnoreCase("Hello") || choice.equalsIgnoreCase("Hi")) {
             choice = getString(R.string.bot_hello_message);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("account overview")){ //the bot explains
+        else if(choice.equalsIgnoreCase("account overview")) { //the bot explains
             choice = getString(R.string.account_overview);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("configure folders")){ //the bot explains
+        else if(choice.equalsIgnoreCase("configure folders")) { //the bot explains
             choice = getString(R.string.configure_folders);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("additional mails")){ //the bot explains
+        else if(choice.equalsIgnoreCase("additional mails")) { //the bot explains
             choice = getString(R.string.additional_mail);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("save settings")){ //the bot explains
+        else if(choice.equalsIgnoreCase("save settings")) { //the bot explains
             choice = getString(R.string.save_settings);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("signature")){ //the bot explains
+        else if(choice.equalsIgnoreCase("signature")) { //the bot explains
             choice = getString(R.string.signature);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("about")){ //the bot explains
+        else if(choice.equalsIgnoreCase("about")) { //the bot explains
             choice = getString(R.string.about);
             return choice;
         }
-        else{
+        else {
             return choice+" is not a command";
         }
     }

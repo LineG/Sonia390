@@ -954,10 +954,10 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 return true;
             }
 
-            case R.id.bot_redirect:{
+            case R.id.bot_redirect: {
                 onBot();
                 return true;
-
+            }
             //Sonia changes TTS
             case R.id.reading_bot: {
                 text = messageViewFragment.getTextMessage();

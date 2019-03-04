@@ -20,7 +20,7 @@ public class  BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.C
 
     List<ResponseMessage> responseMessages;
     Context context;
-    class CustomViewHolder extends RecyclerView.ViewHolder{
+    class CustomViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         public CustomViewHolder(View itemView) {
             super(itemView);
@@ -35,7 +35,7 @@ public class  BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.C
 
     @Override
     public int getItemViewType(int position) {
-        if(responseMessages.get(position).isMe()){
+        if(responseMessages.get(position).isMe()) {
             return R.layout.me_bubble;
         }
         return R.layout.bot_bubble;
