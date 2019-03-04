@@ -801,7 +801,6 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         Intent intent = new Intent(this, BotActivity.class);
         startActivity(intent);
         finish();
-        return;
     }
 
     @Override

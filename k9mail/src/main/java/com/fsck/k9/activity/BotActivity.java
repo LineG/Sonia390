@@ -49,34 +49,34 @@ public class BotActivity extends AppCompatActivity {
                     responseMessageList.add(responseMessage2);
                     messageAdapter.notifyDataSetChanged();
                     userInput.setText("");
-                    if (!isLastVisible()){
-                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1);}
+                    if (!isLastVisible()) {
+                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1); }
                 }
                 return false;
             }
         });
     }
-    boolean isLastVisible() {
+    protected boolean isLastVisible() {
         LinearLayoutManager layoutManager = ((LinearLayoutManager) recyclerView.getLayoutManager());
         int pos = layoutManager.findLastCompletelyVisibleItemPosition();
         int numItems = recyclerView.getAdapter().getItemCount();
         return (pos >= numItems);
     }
 
-    String commandChoice(String choice) {
-        if(choice.equals("!cm mc")) {
+    protected String commandChoice(String choice) {
+        if("!cm mc".equals(choice)) {
             Intent intent = new Intent(this, MessageCompose.class);
             startActivity(intent);
             finish();
             return choice;
         }
-        else if(choice.equals("!cm ml")) {
+        else if("!cm ml".equals(choice)) {
             Intent intent = new Intent(this, Accounts.class);
             startActivity(intent);
             finish();
             return choice;
         }
-        else if(choice.equals("!cm faq")) {  // redirects to page
+        else if("!cm faq".equals(choice)) {  // redirects to page
             choice = getString(R.string.frequently_asked_questions);
             return choice;
         }

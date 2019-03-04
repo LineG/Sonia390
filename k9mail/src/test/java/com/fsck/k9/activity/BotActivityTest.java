@@ -54,9 +54,9 @@ import org.robolectric.annotation.Config;
     }
 
     @Test
-    public void acitivityThrown(){
+    public void acitivityThrown() {
         assertNotNull(activity);
-    } 
+    }
 
     @Test
     public void commandChoice() {
@@ -73,13 +73,14 @@ import org.robolectric.annotation.Config;
 
 
         assertEquals(initialString, initialMessage);
-        assertEquals(faqString, faqMessage );
+        assertEquals(faqString, faqMessage);
         assertEquals(helloString, helloMessage);
-        assertEquals(accountOverviewString, accountOverviewMessage );
+        assertEquals(accountOverviewString, accountOverviewMessage);
         assertEquals(configureString, configureSettingsMessage);
         assertEquals(additionalMailString, additionalMailMessage);
         assertEquals(saveSettingsString, saveSettingsMessage);
-        assertEquals(signatureString, signatureMessage );
+        assertEquals(signatureString, signatureMessage);
         assertEquals(aboutString, aboutMessage);
     }
 }
+

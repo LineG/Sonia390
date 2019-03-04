@@ -187,6 +187,7 @@ public class BotEspressoTest {
                         isDisplayed()));
         appCompatEditText2.perform(pressImeActionButton());
         assert(true);
+
     }
 
     private static Matcher<View> childAtPosition(
