@@ -50,7 +50,7 @@ public class BotActivity extends AppCompatActivity {
                     messageAdapter.notifyDataSetChanged();
                     userInput.setText("");
                     if (!isLastVisible()){
-                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1)};
+                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1);}
                 }
                 return false;
             }

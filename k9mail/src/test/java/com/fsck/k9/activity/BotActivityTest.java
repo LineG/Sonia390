@@ -3,7 +3,7 @@ package com.fsck.k9.activity;
 
 
 import android.app.Activity;
-import android.content.res.Resources;
+
 
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.R;
@@ -25,23 +25,23 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class)
     public class BotActivityTest {
 
-    Activity activity;
-    String faqString;
-    String initialString;
-    String helloString;
-    String aboutString;
-    String accountOverviewString;
-    String configureString;
-    String additionalMailString;
-    String saveSettingsString;
-    String signatureString;
+    protected Activity activity;
+    protected String faqString;
+    protected String initialString;
+    protected String helloString;
+    protected String aboutString;
+    protected String accountOverviewString;
+    protected String configureString;
+    protected String additionalMailString;
+    protected String saveSettingsString;
+    protected String signatureString;
     @Before
-    public void Setup() {
+    public void setUp() {
         activity = Robolectric.buildActivity(BotActivity.class)
                 .create()
                 .resume()
                 .get();
-        initialString =((BotActivity) activity).responseMessageList.get(0).getText();
+        initialString = ((BotActivity) activity).responseMessageList.get(0).getText();
         faqString = ((BotActivity) activity).commandChoice("!cm faq");
         helloString = ((BotActivity) activity).commandChoice("hello");
         accountOverviewString = ((BotActivity) activity).commandChoice("account overview");
@@ -56,7 +56,7 @@ import org.robolectric.annotation.Config;
     @Test
     public void acitivityThrown(){
         assertNotNull(activity);
-    }
+    } 
 
     @Test
     public void commandChoice() {
