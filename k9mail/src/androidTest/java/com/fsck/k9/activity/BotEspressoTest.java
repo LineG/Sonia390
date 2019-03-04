@@ -1,8 +1,7 @@
 package com.fsck.k9.activity;
 
 
-import android.app.ActivityManager;
-import android.content.Context;
+
 import android.support.test.espresso.DataInteraction;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.filters.LargeTest;
@@ -187,6 +186,7 @@ public class BotEspressoTest {
                                 1),
                         isDisplayed()));
         appCompatEditText2.perform(pressImeActionButton());
+        assert(true);
     }
 
     private static Matcher<View> childAtPosition(

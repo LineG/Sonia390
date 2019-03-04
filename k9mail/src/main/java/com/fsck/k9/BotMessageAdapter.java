@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.fsck.k9.R;
 
 import java.util.List;
 
@@ -18,11 +17,11 @@ import java.util.List;
 
 public class  BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.CustomViewHolder> {
 
-    List<ResponseMessage> responseMessages;
-    Context context;
+    protected List<ResponseMessage> responseMessages;
+    protected Context context;
     class CustomViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
-        public CustomViewHolder(View itemView) {
+        protected TextView textView;
+            CustomViewHolder(View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.textMessage);
         }
@@ -56,4 +55,8 @@ public class  BotMessageAdapter extends RecyclerView.Adapter<BotMessageAdapter.C
     public void onBindViewHolder(CustomViewHolder holder, int position) {
         holder.textView.setText(responseMessages.get(position).getText());
     }
+
 }
+
+
+

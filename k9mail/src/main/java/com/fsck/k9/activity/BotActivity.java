@@ -18,10 +18,10 @@ import com.fsck.k9.ResponseMessage;
 import com.fsck.k9.BotMessageAdapter;
 
 public class BotActivity extends AppCompatActivity {
-    EditText userInput;
-    RecyclerView recyclerView;
-    BotMessageAdapter messageAdapter;
-    List<ResponseMessage> responseMessageList;
+    protected EditText userInput;
+    protected RecyclerView recyclerView;
+    protected BotMessageAdapter messageAdapter;
+    protected List<ResponseMessage> responseMessageList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class BotActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.conversation);
         responseMessageList = new ArrayList<>();
         messageAdapter = new BotMessageAdapter(responseMessageList, this);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(messageAdapter);
 
         ResponseMessage initialBotMessage = new ResponseMessage(getString(R.string.bot_initial_message), false);
@@ -49,8 +49,8 @@ public class BotActivity extends AppCompatActivity {
                     responseMessageList.add(responseMessage2);
                     messageAdapter.notifyDataSetChanged();
                     userInput.setText("");
-                    if (!isLastVisible())
-                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1);
+                    if (!isLastVisible()){
+                        recyclerView.smoothScrollToPosition(messageAdapter.getItemCount() - 1)};
                 }
                 return false;
             }
@@ -76,7 +76,7 @@ public class BotActivity extends AppCompatActivity {
             finish();
             return choice;
         }
-        else if(choice.equals("!cm faq")) { // redirects to page
+        else if(choice.equals("!cm faq")) {  // redirects to page
             choice = getString(R.string.frequently_asked_questions);
             return choice;
         }
@@ -84,19 +84,19 @@ public class BotActivity extends AppCompatActivity {
             choice = getString(R.string.bot_hello_message);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("account overview")) { //the bot explains
+        else if(choice.equalsIgnoreCase("account overview")) {  //the bot explains
             choice = getString(R.string.account_overview);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("configure folders")) { //the bot explains
+        else if(choice.equalsIgnoreCase("configure folders")) {  //the bot explains
             choice = getString(R.string.configure_folders);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("additional mails")) { //the bot explains
+        else if(choice.equalsIgnoreCase("additional mails")) {  //the bot explains
             choice = getString(R.string.additional_mail);
             return choice;
         }
-        else if(choice.equalsIgnoreCase("save settings")) { //the bot explains
+        else if(choice.equalsIgnoreCase("save settings")) {  //the bot explains
             choice = getString(R.string.save_settings);
             return choice;
         }
@@ -111,5 +111,8 @@ public class BotActivity extends AppCompatActivity {
         else {
             return choice+" is not a command";
         }
+
     }
+
 }
+

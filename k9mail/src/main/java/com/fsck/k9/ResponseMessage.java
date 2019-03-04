@@ -2,8 +2,8 @@ package com.fsck.k9;
 
 public class ResponseMessage {
 
-        String text;
-        boolean isMe;
+        protected String text;
+        protected boolean isMe;
 
         public ResponseMessage(String text, boolean isMe) {
             this.text = text;
