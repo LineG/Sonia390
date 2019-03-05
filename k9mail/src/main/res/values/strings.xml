@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- === App-specific strings ============================================================= -->
 
     <!-- This should make it easier for forks to change the branding -->
@@ -141,6 +142,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="add_account_action">Add account</string>
     <string name="compose_action">Compose</string>
     <string name="search_action">Search</string>
+    <string name="bot_action">Bot</string>
     <string name="search_results">Search results</string>
     <string name="preferences_action">Settings</string>
     <string name="account_settings_action">Account settings</string>
@@ -278,6 +280,7 @@ Please submit bug reports, contribute new features and ask questions at
     <string name="message_compose_description_delete_quoted_text">Remove quoted text</string>
     <string name="message_compose_description_edit_quoted_text">Edit quoted text</string>
 
+    <!-- Message templates -->
     <string name="template_title">Templates</string>
     <string-array name="message_compose_templates">
         <item>Select One</item>
@@ -365,6 +368,84 @@ Please submit bug reports, contribute new features and ask questions at
         Thank you\n
         {Sign name here}"
     </string>
+
+    <!-- chatbot responses  -->
+    <string name="bot_initial_message">
+        Here is a list of built in commands \n
+        \'!cm mc\': redirects to message compose \n
+        \'!cm ml\': redirects to message list \n
+        \'!cm faq\': BOT gives us faqs \n\n
+        Enter a command or just say hi :D
+    </string>
+    <string name="bot_hello_message">
+        Hello I am K9BOT :) \n\n
+        Please enter one of my built-in commands\n
+        Here is a list of built in commands \n\n
+        \'!cm mc\': redirects to message compose \n
+        \'!cm ml\': redirects to message list \n
+        \'!cm faq\': Frequently asked questions
+    </string>
+    <string name="frequently_asked_questions">
+        Here are some of the most common questions.
+        Enter one of them \n\n
+        \'About\' \n
+        \'account overview\' \n
+        \'configure folders\' \n
+        \'additional mails\' \n
+        \'save settings\' \n
+        \'signature\'
+    </string>
+    <string name="account_overview">
+        How do I get back to the accounts overview screen? \n\n
+        If you see a list of mails inside of a folder
+        and you want to get back to the overview screen, you have to \n\n
+        \t ->Press the menu button \n
+        \t ->Select “More” \n
+        \t ->Select “Accounts” \n
+    </string>
+    <string name="configure_folders">
+        How can I configure the Archive, Drafts, Sent, Spam and Trash folders? \n\n
+        \t ->“Account settings” \n
+        \t -> “Folders”
+    </string>
+    <string name="additional_mail">
+        How do I add additional Mail Accounts? \n\n
+        1) At the top to left of the word Inbox
+        there is the Dog Icon and to Left of that is a small
+        (less than symbol once) \n\n
+        2) Tap once brings you to folders \n\n
+        3) Tap it a second time brings you to Accounts \n\n
+        4) Now from that screen you can tap the menu button
+        (left of home button on G3). That will pop a menu where the first
+        item is “Add Account”)
+    </string>
+    <string name="save_settings">
+        Why are my settings not saved? \n\n
+        Please use the Back key to leave all settings
+        screens in order to trigger settings save.
+    </string>
+    <string name="signature">
+        How do I change my Signature?\n\n
+        Do the following to replace default signature in K-9 with your
+        personal signature for any email account or stop K-9
+        default signature for that particular account: \n\n
+        \t Open K-9, select email account in which you wish to create a signature. \n\n
+        Key Sequence: Menu/Settings/Account Settings/Sending Mail/Composition Defaults
+        \tIn this dialog, you can enter Your Name, Your Email Address,
+        Bcc all messages to, CHECK (or uncheck) USE SIGNATURE, enter your
+        signature using correct syntax of top line of signature with –
+        followed by a line break, and enter your desired signature.
+        Choose radio button to place Signature position before or after quoted text.
+    </string>
+    <string name="about">
+        Where did the name ‘K-9’ come from? What’s with that icon?  \n\n
+        In some incarnations, Doctor Who had a robotic dog named “K-9”
+        The dog was, in effect, an android mutt. When Jesse first created K-9,
+        his goal was to create an Android mail client as good as the UNIX mail
+        client mutt. The name was a natural fit. \n
+        K-9’s icon is a picture of…well, of K-9.
+    </string>
+
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>
     <string name="message_to_label">To:</string>

@@ -797,6 +797,12 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         AccountSettings.actionSettings(this, account);
     }
 
+    private void onBot() {
+        Intent intent = new Intent(this, BotActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @Override
     public boolean onSearchRequested() {
         return messageListFragment.onSearchRequested();
@@ -947,6 +953,10 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 return true;
             }
 
+            case R.id.bot_redirect: {
+                onBot();
+                return true;
+            }
             //Sonia changes TTS
             case R.id.reading_bot: {
                 text = messageViewFragment.getTextMessage();
