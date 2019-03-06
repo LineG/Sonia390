@@ -86,6 +86,42 @@
                     android:layout_width="match_parent"/>
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#509f1a71"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentBottom="true"
+                android:text="Bold" />
+
+            <Button
+                android:id="@+id/underline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Underline"
+                android:layout_toRightOf="@id/bold"
+                android:layout_alignParentBottom="true" />
+
+            <Button
+                android:id="@+id/italics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italics"
+                android:layout_toRightOf="@id/bold"
+                android:layout_alignParentBottom="true" />
+
+        </LinearLayout>
+
+
+
             <view
                 class="com.fsck.k9.ui.EolConvertingEditText"
                 android:id="@+id/message_content"
