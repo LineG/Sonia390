@@ -3,23 +3,26 @@ package com.fsck.k9.activity;
 
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Intent;
 
 
+import com.fsck.k9.Account;
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.R;
 import org.junit.Before;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-
-
-
-
+import org.robolectric.shadows.ShadowActivity;
 
 
 @RunWith(RobolectricTestRunner.class)
@@ -36,6 +39,7 @@ import org.robolectric.annotation.Config;
     protected String additionalMailString;
     protected String saveSettingsString;
     protected String signatureString;
+
     @Before
     public void setUp() {
         activity = Robolectric.buildActivity(BotActivity.class)
@@ -55,12 +59,26 @@ import org.robolectric.annotation.Config;
     }
 
     @Test
-    public void acitivityThrown() {
+    public void activityThrown() {
+
         assertNotNull(activity);
     }
 
+
     @Test
     public void commandChoice() {
+
+        ((BotActivity) activity).commandChoice("!cm mc");
+        ((BotActivity) activity).commandChoice("!cm ml");
+
+        Intent intentMC = new Intent(activity, MessageCompose.class);
+        Intent intentAcc = new Intent(activity, Accounts.class);
+        ShadowActivity shadowMC = Shadows.shadowOf(activity);
+        ShadowActivity shadowAcc = Shadows.shadowOf(activity);
+
+        assertNotNull(activity);
+        assertTrue(shadowMC.getNextStartedActivity().filterEquals(intentMC));
+        assertTrue(shadowAcc.getNextStartedActivity().filterEquals(intentAcc));
 
        String initialMessage = RuntimeEnvironment.application.getString(R.string.bot_initial_message);
        String faqMessage = RuntimeEnvironment.application.getString(R.string.frequently_asked_questions);
@@ -82,6 +100,8 @@ import org.robolectric.annotation.Config;
         assertEquals(saveSettingsString, saveSettingsMessage);
         assertEquals(signatureString, signatureMessage);
         assertEquals(aboutString, aboutMessage);
+
+        assertFalse(((BotActivity) activity).isLastVisible());
     }
 }
 
