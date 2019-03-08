@@ -3,11 +3,7 @@ package com.fsck.k9.activity;
 
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Intent;
-
-
-import com.fsck.k9.Account;
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.R;
 import org.junit.Before;
