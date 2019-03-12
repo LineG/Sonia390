@@ -9,6 +9,8 @@ import android.app.DialogFragment;
 import android.app.DownloadManager;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -502,6 +504,27 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
             displayMessageSubject(subject);
             mFragmentListener.updateMenu();
         }
+    }
+
+    //Sonia Reminder email logic: marks message as unread and sends a remainder to user
+    public void reminder(){
+        mController.setFlag(mAccount, mMessage.getFolder().getName(),
+                Collections.singletonList(mMessage), Flag.SEEN, !mMessage.isSet(Flag.SEEN));
+        mMessageView.setHeaders(mMessage, mAccount);
+        String subject = mMessage.getSubject();
+        String body = mMessage.getPreview();
+        displayMessageSubject(subject);
+        mFragmentListener.updateMenu();
+
+
+        NotificationManager notification =(NotificationManager)getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification notify = new Notification.Builder(getApplicationContext())
+                .setContentTitle("Reminder email: " + subject)
+                .setContentText(body)
+                .setSmallIcon(R.drawable.unread_widget_icon)
+                .build();
+        notify.flags |= Notification.FLAG_AUTO_CANCEL;
+        notification.notify(0,notify);
     }
 
     private void setProgress(boolean enable) {
