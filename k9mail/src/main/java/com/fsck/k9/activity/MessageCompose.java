@@ -9,6 +9,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -601,8 +602,10 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     }
 
     private boolean checkPermissionFromDevice() {
-        int write_external_storage_result = ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        int record_audio_result = ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO);
+        String writeExternalStoragePermission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+        String recordAudioPermission = Manifest.permission.RECORD_AUDIO;
+        int write_external_storage_result = ContextCompat.checkSelfPermission(this, writeExternalStoragePermission);
+        int record_audio_result = ContextCompat.checkSelfPermission(this, recordAudioPermission);
         return write_external_storage_result == PackageManager.PERMISSION_GRANTED
                 && record_audio_result == PackageManager.PERMISSION_GRANTED;
     }
