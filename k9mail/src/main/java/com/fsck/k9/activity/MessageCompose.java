@@ -241,7 +241,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private int counter = 0;
     private MediaPlayer mp;
     private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/recording.3gp";
-    private final int REQUEST_PERMISSION_CODE = 1000;
+    private final int requestPermissionCode = 1000;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -582,12 +582,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         ActivityCompat.requestPermissions(this, new String[] {
                 android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 android.Manifest.permission.RECORD_AUDIO
-        }, REQUEST_PERMISSION_CODE);
+        }, requestPermissionCode);
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
-            case REQUEST_PERMISSION_CODE: {
+            case requestPermissionCode: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 } else {
@@ -602,12 +602,10 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     }
 
     private boolean checkPermissionFromDevice() {
-        String writeExternalStoragePermission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
-        String recordAudioPermission = Manifest.permission.RECORD_AUDIO;
-        int write_external_storage_result = ContextCompat.checkSelfPermission(this, writeExternalStoragePermission);
-        int record_audio_result = ContextCompat.checkSelfPermission(this, recordAudioPermission);
-        return write_external_storage_result == PackageManager.PERMISSION_GRANTED
-                && record_audio_result == PackageManager.PERMISSION_GRANTED;
+        int writeExternalStorageResult = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int recordAudioResult = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
+        return writeExternalStorageResult == PackageManager.PERMISSION_GRANTED
+                && recordAudioResult == PackageManager.PERMISSION_GRANTED;
     }
 
     private void recordAudio() {
