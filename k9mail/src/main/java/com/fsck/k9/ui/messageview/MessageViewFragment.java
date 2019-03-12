@@ -507,7 +507,7 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
     }
 
     //Sonia Reminder email logic: marks message as unread and sends a remainder to user
-    public void reminder(){
+    public void reminder() {
         mController.setFlag(mAccount, mMessage.getFolder().getName(),
                 Collections.singletonList(mMessage), Flag.SEEN, !mMessage.isSet(Flag.SEEN));
         mMessageView.setHeaders(mMessage, mAccount);
@@ -515,16 +515,14 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
         String body = mMessage.getPreview();
         displayMessageSubject(subject);
         mFragmentListener.updateMenu();
-
-
-        NotificationManager notification =(NotificationManager)getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager notification = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
         Notification notify = new Notification.Builder(getApplicationContext())
                 .setContentTitle("Reminder email: " + subject)
                 .setContentText(body)
                 .setSmallIcon(R.drawable.unread_widget_icon)
                 .build();
         notify.flags |= Notification.FLAG_AUTO_CANCEL;
-        notification.notify(0,notify);
+        notification.notify(0, notify);
     }
 
     private void setProgress(boolean enable) {
