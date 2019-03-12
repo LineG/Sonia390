@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/play_audio"
+        android:alphabeticShortcut="r"
+        android:title="@string/record_audio"
+        android:icon="@drawable/record_mic"
+        android:showAsAction="always"
+        />
+
+    <item
         android:id="@+id/record_audio"
         android:alphabeticShortcut="r"
         android:title="@string/record_audio"
