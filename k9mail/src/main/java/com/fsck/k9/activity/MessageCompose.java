@@ -1,7 +1,6 @@
 package com.fsck.k9.activity;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
@@ -16,7 +15,6 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.app.PendingIntent;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,7 +30,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
-import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.ActivityCompat;
@@ -61,7 +58,6 @@ import com.fsck.k9.Account;
 import com.fsck.k9.Account.MessageFormat;
 import com.fsck.k9.Identity;
 import com.fsck.k9.K9;
-import com.fsck.k9.Manifest;
 import com.fsck.k9.Preferences;
 import com.fsck.k9.R;
 import com.fsck.k9.activity.MessageLoaderHelper.MessageLoaderCallbacks;
@@ -240,11 +236,11 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
-    private Button applySendAudio;
     private MediaRecorder mediaRecorder;
     private int counter = 0;
-    private Button playAudio;
     private MediaPlayer mp;
+    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/recording.3gp";
+    private final int REQUEST_PERMISSION_CODE = 1000;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -413,7 +409,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         //sonia changes
         mediaRecorder = new MediaRecorder();
 
-        if(!checkPermissionFromDevice()) {
+        if (!checkPermissionFromDevice()) {
             requestPermission();
         }
 
@@ -580,8 +576,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
      * Sonia changes
      * Media recorder
      */
-    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/recording.3gp";
-    final int REQUEST_PERMISSION_CODE = 1000;
 
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[] {
@@ -593,20 +587,24 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case REQUEST_PERMISSION_CODE: {
-                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
                 }
                 break;
             }
+
+            default:
+                break;
         }
     }
 
     private boolean checkPermissionFromDevice() {
         int write_external_storage_result = ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int record_audio_result = ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO);
-        return write_external_storage_result == PackageManager.PERMISSION_GRANTED && record_audio_result == PackageManager.PERMISSION_GRANTED;
+        return write_external_storage_result == PackageManager.PERMISSION_GRANTED
+                && record_audio_result == PackageManager.PERMISSION_GRANTED;
     }
 
     private void recordAudio() {
@@ -622,9 +620,10 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             mediaRecorder.start();
 
         } catch (IllegalStateException ise) {
+            ise.getMessage();
 
         } catch (IOException io) {
-
+            io.getMessage();
         }
     }
 
@@ -643,7 +642,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
 
         } catch (IOException io) {
-
+            io.getMessage();
         }
 
         mp.start();
@@ -1191,21 +1190,21 @@ public class MessageCompose extends K9Activity implements OnClickListener,
              * record audio
              */
             case R.id.record_audio:
-                if(counter == 0) {
+                if (counter == 0) {
 
                     recordAudio();
-                    counter ++;
+                    counter++;
 
                 } else {
 
                     stopAudio();
-                    counter --;
+                    counter--;
 
                 }
                 break;
             case R.id.play_audio:
                 mp = new MediaPlayer();
-                if(mp.isPlaying()) {
+                if (mp.isPlaying()) {
                     mp.stop();
                     mp.release();
                 }
