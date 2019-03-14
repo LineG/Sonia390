@@ -1199,6 +1199,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 } else {
 
                     stopAudio();
+                    //Attach file after recording ends
+                    attachmentPresenter.addAttachment(Uri.parse(filePath), "3gp");
                     counter--;
 
                 }
