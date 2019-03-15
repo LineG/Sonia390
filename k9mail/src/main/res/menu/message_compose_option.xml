@@ -3,18 +3,15 @@
     <item
         android:id="@+id/play_audio"
         android:alphabeticShortcut="r"
-        android:title="@string/record_audio"
-        android:icon="@drawable/record_mic"
+        android:icon="@drawable/play_recorded"
         android:showAsAction="always"
-        />
-
+        android:title="@string/record_audio" />
     <item
         android:id="@+id/record_audio"
         android:alphabeticShortcut="r"
-        android:title="@string/record_audio"
         android:icon="@drawable/record_mic"
         android:showAsAction="always"
-        />
+        android:title="@string/record_audio" />
     <item
         android:id="@+id/add_attachment"
         android:alphabeticShortcut="n"
