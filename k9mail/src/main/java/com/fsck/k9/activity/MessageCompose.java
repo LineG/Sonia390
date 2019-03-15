@@ -1,6 +1,7 @@
 package com.fsck.k9.activity;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
@@ -611,7 +612,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private void recordAudio() {
 
         //set to microphone
-        //mediaRecorder = new MediaRecorder();
+
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
@@ -636,7 +637,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     }
 
     private void playAudio() {
-        //mp = new MediaPlayer();
+
         try {
             mp.setDataSource(filePath);
             mp.prepare();
@@ -1200,7 +1201,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
                     stopAudio();
                     //Attach file after recording ends
-                    attachmentPresenter.addAttachment(Uri.parse(filePath), "3gp");
+                    attachmentPresenter.addAttachment(Uri.fromFile(new File(filePath)), "3gp");
                     counter--;
 
                 }
