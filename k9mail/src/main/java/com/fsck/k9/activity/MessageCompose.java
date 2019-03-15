@@ -3,6 +3,7 @@ package com.fsck.k9.activity;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -242,7 +243,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
-    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/recording.3gp";
+    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private Date currentTime;
     private final int requestPermissionCode = 1000;
 
     public int templateFunc(int[] arr, int position) {
@@ -612,12 +614,15 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private void recordAudio() {
 
+        //get current time
+        currentTime = Calendar.getInstance().getTime();
+
         //set to microphone
 
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-        mediaRecorder.setOutputFile(filePath);
+        mediaRecorder.setOutputFile(filePath + "/" + currentTime + "recording.3gp");
         try {
             mediaRecorder.prepare();
             mediaRecorder.start();
@@ -632,15 +637,13 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private void stopAudio() {
         mediaRecorder.stop();
-        mediaRecorder.release();
-        mediaRecorder = null;
 
     }
 
     private void playAudio() {
 
         try {
-            mp.setDataSource(filePath);
+            mp.setDataSource(filePath + "/" + currentTime + "recording.3gp");
             mp.prepare();
 
 
@@ -1204,7 +1207,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                     item.setIcon(myDrawable);
                     stopAudio();
                     //Attach file after recording ends
-                    attachmentPresenter.addAttachment(Uri.fromFile(new File(filePath)), "3gp");
+                    attachmentPresenter.addAttachment(Uri.fromFile(new File(filePath + "/" + currentTime + "recording.3gp")), "3gp");
                     counter--;
 
                 }
