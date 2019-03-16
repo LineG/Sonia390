@@ -47,7 +47,7 @@ public class ReminderTest {
     public ActivityTestRule<Accounts> mActivityTestRule = new ActivityTestRule<>(Accounts.class);
 
     @Test
-    public void ReminderTest() {
+    public void reminderTest() {
         ViewInteraction button = onView(
                 allOf(withId(R.id.next), withText("Next"),
                         childAtPosition(
