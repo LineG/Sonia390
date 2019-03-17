@@ -3,6 +3,7 @@ package com.fsck.k9.activity;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -24,6 +25,7 @@ import android.content.IntentSender;
 import android.content.IntentSender.SendIntentException;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
@@ -241,7 +243,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
-    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/recording.3gp";
+    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private Date currentTime;
     private final int requestPermissionCode = 1000;
 
     public int templateFunc(int[] arr, int position) {
@@ -572,6 +575,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         if (recipientPresenter != null) {
             recipientPresenter.onActivityDestroy();
         }
+
+        if (mp != null) {
+            mp.release();
+            mp = null;
+        }
+
+        if (mediaRecorder != null) {
+            mediaRecorder.release();
+            mediaRecorder = null;
+        }
     }
 
     /**
@@ -611,12 +624,15 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private void recordAudio() {
 
+        //get current time
+        currentTime = Calendar.getInstance().getTime();
+
         //set to microphone
 
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-        mediaRecorder.setOutputFile(filePath);
+        mediaRecorder.setOutputFile(filePath + "/" + currentTime + "recording.3gp");
         try {
             mediaRecorder.prepare();
             mediaRecorder.start();
@@ -631,15 +647,13 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     private void stopAudio() {
         mediaRecorder.stop();
-        mediaRecorder.release();
-        mediaRecorder = null;
 
     }
 
     private void playAudio() {
 
         try {
-            mp.setDataSource(filePath);
+            mp.setDataSource(filePath + "/" + currentTime + "recording.3gp");
             mp.prepare();
 
 
@@ -1193,15 +1207,17 @@ public class MessageCompose extends K9Activity implements OnClickListener,
              */
             case R.id.record_audio:
                 if (counter == 0) {
-
+                    Drawable myDrawable = getResources().getDrawable(R.drawable.stop_mic);
+                    item.setIcon(myDrawable);
                     recordAudio();
                     counter++;
 
                 } else {
-
+                    Drawable myDrawable = getResources().getDrawable(R.drawable.record_mic);
+                    item.setIcon(myDrawable);
                     stopAudio();
                     //Attach file after recording ends
-                    attachmentPresenter.addAttachment(Uri.fromFile(new File(filePath)), "3gp");
+                    attachmentPresenter.addAttachment(Uri.fromFile(new File(filePath + "/" + currentTime + "recording.3gp")), "3gp");
                     counter--;
 
                 }
