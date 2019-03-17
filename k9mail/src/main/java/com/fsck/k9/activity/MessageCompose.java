@@ -575,6 +575,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         if (recipientPresenter != null) {
             recipientPresenter.onActivityDestroy();
         }
+
+        if (mp != null) {
+            mp.release();
+            mp = null;
+        }
+
+        if (mediaRecorder != null) {
+            mediaRecorder.release();
+            mediaRecorder = null;
+        }
     }
 
     /**
