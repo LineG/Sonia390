@@ -240,9 +240,9 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
-    private MediaRecorder mediaRecorder;
+    public MediaRecorder mediaRecorder;
     private int counter = 0;
-    private MediaPlayer mp;
+    public MediaPlayer mp;
     private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private Date currentTime;
     private final int requestPermissionCode = 1000;
@@ -622,7 +622,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 && recordAudioResult == PackageManager.PERMISSION_GRANTED;
     }
 
-    private void recordAudio() {
+    public void recordAudio() {
 
         //get current time
         currentTime = Calendar.getInstance().getTime();
@@ -645,12 +645,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         }
     }
 
-    private void stopAudio() {
+    public void stopAudio() {
         mediaRecorder.stop();
 
     }
 
-    private void playAudio() {
+    public void playAudio() {
 
         try {
             mp.setDataSource(filePath + "/" + currentTime + "recording.3gp");
