@@ -242,8 +242,6 @@ public class RecordAudioTest {
                                 3),
                         isDisplayed()));
         actionMenuItemView4.perform(click());
-
-        Assert.assertTrue(true);
     }
 
     private static Matcher<View> childAtPosition(
