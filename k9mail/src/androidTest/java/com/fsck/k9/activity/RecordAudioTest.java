@@ -40,7 +40,7 @@ public class RecordAudioTest {
     public ActivityTestRule<Accounts> mActivityTestRule = new ActivityTestRule<>(Accounts.class);
 
     @Test
-    public void RecordAudio() {
+    public void recordAudioTest() {
         ViewInteraction button = onView(
                 allOf(withId(R.id.next), withText("Next"),
                         childAtPosition(
