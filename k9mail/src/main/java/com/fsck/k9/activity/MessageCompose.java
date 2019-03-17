@@ -240,9 +240,9 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
-    public MediaRecorder mediaRecorder;
+    private MediaRecorder mediaRecorder;
     private int counter = 0;
-    public MediaPlayer mp;
+    private MediaPlayer mp;
     private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private Date currentTime;
     private final int requestPermissionCode = 1000;
@@ -662,6 +662,15 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         }
 
         mp.start();
+    }
+
+    // For testing purposes
+    public void setMediaRecorder(MediaRecorder mr) {
+        mediaRecorder = mr;
+    }
+
+    public void setMediaPlayer(MediaPlayer mPlayer) {
+        mp = mPlayer;
     }
 
     /**
