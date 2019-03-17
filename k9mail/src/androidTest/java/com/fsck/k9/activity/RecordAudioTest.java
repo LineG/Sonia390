@@ -14,6 +14,7 @@ import com.fsck.k9.R;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,7 +40,7 @@ public class RecordAudioTest {
     public ActivityTestRule<Accounts> mActivityTestRule = new ActivityTestRule<>(Accounts.class);
 
     @Test
-    public void templateTest2() {
+    public void RecordAudio() {
         ViewInteraction button = onView(
                 allOf(withId(R.id.next), withText("Next"),
                         childAtPosition(
@@ -241,6 +242,8 @@ public class RecordAudioTest {
                                 3),
                         isDisplayed()));
         actionMenuItemView4.perform(click());
+
+        Assert.assertTrue(true);
     }
 
     private static Matcher<View> childAtPosition(
