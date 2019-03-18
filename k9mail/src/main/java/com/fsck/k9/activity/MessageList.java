@@ -243,6 +243,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             cl.getLogDialog().show();
         }
 
+        //Sonia changes
         tts = new TextToSpeech(this, this);
     }
 
