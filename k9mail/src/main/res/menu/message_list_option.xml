@@ -157,6 +157,13 @@
         android:title="Reading Bot"
         />
 
+    <!--Sonia added reminder option in the message list option-->
+    <item
+        android:id="@+id/reminder_button"
+        android:showAsAction="never"
+        android:title="Reminder"
+        />
+
     <item android:id="@+id/hide_headers"
           android:showAsAction="never"
           android:title="@string/hide_headers_action"/>

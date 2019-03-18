@@ -809,9 +809,14 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         return messageListFragment.onSearchRequested();
     }
 
+    public void setMessageViewFragment(MessageViewFragment mock) {
+
+        messageViewFragment = mock;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
+        System.out.print(itemId);
         switch (itemId) {
             case android.R.id.home: {
                 goBack();
@@ -953,7 +958,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 updateMenu();
                 return true;
             }
-
+            //Sonia changes for support Bot
             case R.id.bot_redirect: {
                 onBot();
                 return true;
@@ -963,6 +968,11 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 text = messageViewFragment.getTextMessage();
                 speakOut();
                 return true; // for now nothing implemented just return
+            }
+            //Sonia changes for reminder email
+            case R.id.reminder_button: {
+                messageViewFragment.reminder();
+                return true;
             }
         }
 
@@ -1059,6 +1069,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             menu.findItem(R.id.show_headers).setVisible(false);
             menu.findItem(R.id.hide_headers).setVisible(false);
             menu.findItem(R.id.reading_bot).setVisible(false);  // not showing the Bot in list view
+            menu.findItem(R.id.reminder_button).setVisible(false);
         } else {
             // hide prev/next buttons in split mode
             if (displayMode != DisplayMode.MESSAGE_VIEW) {
