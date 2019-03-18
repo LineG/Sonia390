@@ -808,7 +808,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         return messageListFragment.onSearchRequested();
     }
 
-    public void setterMessageViewFragment(MessageViewFragment mock){
+    public void setMessageViewFragment(MessageViewFragment mock) {
 
         messageViewFragment = mock;
     }

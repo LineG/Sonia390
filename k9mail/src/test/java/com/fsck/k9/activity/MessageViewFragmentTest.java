@@ -2,8 +2,6 @@ package com.fsck.k9.activity;
 
 
 import android.app.Activity;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.view.MenuItem;
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.R;
@@ -14,7 +12,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -36,7 +34,7 @@ public class MessageViewFragmentTest {
                 .resume()
                 .get();
         fragmentMock = mock(MessageViewFragment.class);
-        ((MessageList) activity).setterMessageViewFragment(fragmentMock);
+        ((MessageList) activity).setMessageViewFragment(fragmentMock);
         itemMock = mock(MenuItem.class);
         when(itemMock.getItemId()).thenReturn(R.id.reminder_button);
     }
@@ -44,7 +42,8 @@ public class MessageViewFragmentTest {
     @Test
     public void reminder() {
 
-        assertEquals(activity.onOptionsItemSelected(itemMock),true);
+        assertEquals(activity.onOptionsItemSelected(itemMock), true);
         verify(fragmentMock).reminder();
     }
 }
+
