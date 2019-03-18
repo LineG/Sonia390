@@ -808,9 +808,14 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         return messageListFragment.onSearchRequested();
     }
 
+    public void setterMessageViewFragment(MessageViewFragment mock){
+
+        messageViewFragment = mock;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
+        System.out.print(itemId);
         switch (itemId) {
             case android.R.id.home: {
                 goBack();
