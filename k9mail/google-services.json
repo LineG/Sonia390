@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "489523660948",
+    "firebase_url": "https://sonia390-e62ed.firebaseio.com",
+    "project_id": "sonia390-e62ed",
+    "storage_bucket": "sonia390-e62ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489523660948:android:c5197b51b4a58381",
+        "android_client_info": {
+          "package_name": "com.fsck.k9.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489523660948-30crk2lsd7oqk39ipeabhgq052atmea1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPgLd9BbFKy3A41X5CrOCC-J_Lkq5jVcU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
