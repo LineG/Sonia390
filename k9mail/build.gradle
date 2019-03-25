@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'jacoco-android'
+apply plugin: 'com.google.gms.google-services'
 
 jacoco {
     toolVersion = "0.8.3"
@@ -42,6 +43,7 @@ dependencies {
     implementation 'org.apache.james:apache-mime4j-core:0.8.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
     testImplementation "org.robolectric:robolectric:${robolectricVersion}"
     testImplementation "junit:junit:${junitVersion}"
@@ -50,7 +52,7 @@ dependencies {
     testImplementation 'org.jdom:jdom2:2.0.6'
 
     implementation 'com.android.support:recyclerview-v7:27.1.1'
-    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
 }
 
 
@@ -143,3 +145,6 @@ if (project.hasProperty('storeFile')) {
 if (project.hasProperty('storePassword')) {
     android.signingConfigs.release.storePassword = storePassword
 }
+
+apply plugin: 'com.google.gms.google-services'
+
