@@ -1,7 +1,9 @@
 package com.fsck.k9.activity;
 
 
+import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +11,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -21,13 +24,20 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.IntentSender.SendIntentException;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.TypedValue;
@@ -230,6 +240,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
+    private MediaRecorder mediaRecorder;
+    private int counter = 0;
+    private MediaPlayer mp;
+    private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private Date currentTime;
+    private final int requestPermissionCode = 1000;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -241,12 +257,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        /**
-         * Sonia changes
-         */
-        Spinner templatesSpinnerView;
-        Button applyTemplateButtonView;
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -341,7 +351,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.message_compose_templates));
-        //templatesAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         templatesSpinnerView.setAdapter(templatesAdapter);
         greetingText = "";
         templatesSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -401,6 +410,13 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 messageContentView.setText(greetingText);
             }
         });
+
+        //sonia changes
+        mediaRecorder = new MediaRecorder();
+
+        if (!checkPermissionFromDevice()) {
+            requestPermission();
+        }
 
         TextWatcher draftNeedsChangingTextWatcher = new SimpleTextWatcher() {
             @Override
@@ -559,6 +575,102 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         if (recipientPresenter != null) {
             recipientPresenter.onActivityDestroy();
         }
+
+        if (mp != null) {
+            mp.release();
+            mp = null;
+        }
+
+        if (mediaRecorder != null) {
+            mediaRecorder.release();
+            mediaRecorder = null;
+        }
+    }
+
+    /**
+     * Sonia changes
+     * Media recorder
+     */
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[] {
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                android.Manifest.permission.RECORD_AUDIO
+        }, requestPermissionCode);
+    }
+
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case requestPermissionCode: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            }
+
+            default:
+                break;
+        }
+    }
+
+    private boolean checkPermissionFromDevice() {
+        int writeExternalStorageResult = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int recordAudioResult = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
+        return writeExternalStorageResult == PackageManager.PERMISSION_GRANTED
+                && recordAudioResult == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public void recordAudio() {
+
+        //get current time
+        currentTime = Calendar.getInstance().getTime();
+
+        //set to microphone
+
+        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+        mediaRecorder.setOutputFile(filePath + "/" + currentTime + "recording.3gp");
+        try {
+            mediaRecorder.prepare();
+            mediaRecorder.start();
+
+        } catch (IllegalStateException ise) {
+            ise.getMessage();
+
+        } catch (IOException io) {
+            io.getMessage();
+        }
+    }
+
+    public void stopAudio() {
+        mediaRecorder.stop();
+
+    }
+
+    public void playAudio() {
+
+        try {
+            mp.setDataSource(filePath + "/" + currentTime + "recording.3gp");
+            mp.prepare();
+
+
+        } catch (IOException io) {
+            io.getMessage();
+        }
+
+        mp.start();
+    }
+
+    // For testing purposes
+    public void setMediaRecorder(MediaRecorder mr) {
+        mediaRecorder = mr;
+    }
+
+    public void setMediaPlayer(MediaPlayer mPlayer) {
+        mp = mPlayer;
     }
 
     /**
@@ -1097,6 +1209,35 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 break;
             case R.id.read_receipt:
                 onReadReceipt();
+                break;
+            /**
+             * Sonia changes
+             * record audio
+             */
+            case R.id.record_audio:
+                if (counter == 0) {
+                    Drawable myDrawable = getResources().getDrawable(R.drawable.stop_mic);
+                    item.setIcon(myDrawable);
+                    recordAudio();
+                    counter++;
+
+                } else {
+                    Drawable myDrawable = getResources().getDrawable(R.drawable.record_mic);
+                    item.setIcon(myDrawable);
+                    stopAudio();
+                    //Attach file after recording ends
+                    attachmentPresenter.addAttachment(Uri.fromFile(new File(filePath + "/" + currentTime + "recording.3gp")), "3gp");
+                    counter--;
+
+                }
+                break;
+            case R.id.play_audio:
+                mp = new MediaPlayer();
+                if (mp.isPlaying()) {
+                    mp.stop();
+                    mp.release();
+                }
+                playAudio();
                 break;
             default:
                 return super.onOptionsItemSelected(item);
