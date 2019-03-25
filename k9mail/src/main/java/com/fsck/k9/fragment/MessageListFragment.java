@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
@@ -32,6 +33,8 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import timber.log.Timber;
+
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -459,6 +462,11 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         layoutInflater = inflater;
 
         View view = inflater.inflate(R.layout.message_list_fragment, container, false);
+//        View view1 = inflater.inflate(R.layout.message_list_item, container, false);
+//        TextView tag1 = (TextView) view1.findViewById(R.id.tag1);
+////        Log.d("view",view.toString());
+//        Log.d("tags1",tag1.toString());
+//        tag1.setBackgroundColor(Color.parseColor("#e242f4"));
 
         initializePullToRefresh(view);
 

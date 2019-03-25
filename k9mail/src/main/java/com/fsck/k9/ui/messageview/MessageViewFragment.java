@@ -2,7 +2,9 @@ package com.fsck.k9.ui.messageview;
 
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import android.app.Activity;
 import android.app.DialogFragment;
@@ -21,6 +23,7 @@ import android.os.Handler;
 import android.os.Parcelable;
 import android.os.SystemClock;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -53,6 +56,9 @@ import com.fsck.k9.ui.messageview.CryptoInfoDialog.OnClickShowCryptoKeyListener;
 import com.fsck.k9.ui.messageview.MessageCryptoPresenter.MessageCryptoMvpView;
 import com.fsck.k9.view.MessageCryptoDisplayStatus;
 import com.fsck.k9.view.MessageHeader;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import timber.log.Timber;
 
 
@@ -111,6 +117,8 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
 
     private AttachmentViewInfo currentAttachmentViewInfo;
 
+    private DatabaseReference tagsDb;
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -128,6 +136,7 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // This fragments adds options to the action bar
         setHasOptionsMenu(true);
@@ -523,6 +532,13 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
                 .build();
         notify.flags |= Notification.FLAG_AUTO_CANCEL;
         notification.notify(0, notify);
+    }
+
+    public void saveTag(){
+        tagsDb = FirebaseDatabase.getInstance().getReference().child(mMessageReference.getUid());
+        Map userInfo = new HashMap<>();
+        userInfo.put("Purple", "#e242f4");
+        tagsDb.updateChildren(userInfo);
     }
 
     private void setProgress(boolean enable) {

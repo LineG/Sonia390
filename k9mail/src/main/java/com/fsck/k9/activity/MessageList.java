@@ -2,8 +2,10 @@ package com.fsck.k9.activity;
 
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -32,6 +34,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,6 +53,7 @@ import com.fsck.k9.activity.setup.Prefs;
 import com.fsck.k9.fragment.MessageListFragment;
 import com.fsck.k9.fragment.MessageListFragment.MessageListFragmentListener;
 import com.fsck.k9.helper.ParcelableUtil;
+import com.fsck.k9.mail.Message;
 import com.fsck.k9.mailstore.StorageManager;
 import com.fsck.k9.preferences.StorageEditor;
 import com.fsck.k9.search.LocalSearch;
@@ -65,6 +69,8 @@ import com.fsck.k9.view.MessageTitleView;
 import com.fsck.k9.view.ViewSwitcher;
 import com.fsck.k9.view.ViewSwitcher.OnSwitchCompleteListener;
 import de.cketti.library.changelog.ChangeLog;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -99,18 +105,18 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     public static final int REQUEST_MASK_PENDING_INTENT = 1 << 15;
 
     public static void actionDisplaySearch(Context context, SearchSpecification search,
-            boolean noThreading, boolean newTask) {
+                                           boolean noThreading, boolean newTask) {
         actionDisplaySearch(context, search, noThreading, newTask, true);
     }
 
     public static void actionDisplaySearch(Context context, SearchSpecification search,
-            boolean noThreading, boolean newTask, boolean clearTop) {
+                                           boolean noThreading, boolean newTask, boolean clearTop) {
         context.startActivity(
                 intentDisplaySearch(context, search, noThreading, newTask, clearTop));
     }
 
     public static Intent intentDisplaySearch(Context context, SearchSpecification search,
-            boolean noThreading, boolean newTask, boolean clearTop) {
+                                             boolean noThreading, boolean newTask, boolean clearTop) {
         Intent intent = new Intent(context, MessageList.class);
         intent.putExtra(EXTRA_SEARCH, ParcelableUtil.marshall(search));
         intent.putExtra(EXTRA_NO_THREADING, noThreading);
@@ -136,7 +142,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     }
 
     public static Intent actionDisplayMessageIntent(Context context,
-            MessageReference messageReference) {
+                                                    MessageReference messageReference) {
         Intent intent = new Intent(context, MessageList.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra(EXTRA_MESSAGE_REFERENCE, messageReference.toIdentityString());
@@ -202,9 +208,15 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     private ViewSwitcher viewSwitcher;
 
 
+
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -243,8 +255,9 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             cl.getLogDialog().show();
         }
 
-        //Sonia changes
         tts = new TextToSpeech(this, this);
+
+
     }
 
     @Override
@@ -356,7 +369,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
 
         return (splitViewMode == SplitViewMode.ALWAYS ||
                 (splitViewMode == SplitViewMode.WHEN_IN_LANDSCAPE &&
-                orientation == Configuration.ORIENTATION_LANDSCAPE));
+                        orientation == Configuration.ORIENTATION_LANDSCAPE));
     }
 
     private void initializeLayout() {
@@ -809,14 +822,9 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         return messageListFragment.onSearchRequested();
     }
 
-    public void setMessageViewFragment(MessageViewFragment mock) {
-
-        messageViewFragment = mock;
-    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        System.out.print(itemId);
         switch (itemId) {
             case android.R.id.home: {
                 goBack();
@@ -972,6 +980,11 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             //Sonia changes for reminder email
             case R.id.reminder_button: {
                 messageViewFragment.reminder();
+                return true;
+            }
+            //Create custom tag
+            case R.id.create_custom_tag:{
+                messageViewFragment.saveTag();
                 return true;
             }
         }
@@ -1687,7 +1700,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
 
     @Override
     public void startIntentSenderForResult(IntentSender intent, int requestCode, Intent fillInIntent,
-            int flagsMask, int flagsValues, int extraFlags) throws SendIntentException {
+                                           int flagsMask, int flagsValues, int extraFlags) throws SendIntentException {
         requestCode |= REQUEST_MASK_PENDING_INTENT;
         super.startIntentSenderForResult(intent, requestCode, fillInIntent, flagsMask, flagsValues, extraFlags);
     }
