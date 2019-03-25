@@ -1,5 +1,7 @@
 package com.fsck.k9.firebasedb;
-import com.google.firebase.database.*;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class Database {
 
