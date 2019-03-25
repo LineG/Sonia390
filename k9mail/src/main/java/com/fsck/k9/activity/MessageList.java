@@ -243,6 +243,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             cl.getLogDialog().show();
         }
 
+        //Sonia changes
         tts = new TextToSpeech(this, this);
     }
 
@@ -808,9 +809,14 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         return messageListFragment.onSearchRequested();
     }
 
+    public void setMessageViewFragment(MessageViewFragment mock) {
+
+        messageViewFragment = mock;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
+        System.out.print(itemId);
         switch (itemId) {
             case android.R.id.home: {
                 goBack();
