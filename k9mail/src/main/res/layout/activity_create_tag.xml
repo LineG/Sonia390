@@ -4,14 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/create_tag_layout"
     tools:context="com.fsck.k9.activity.CreateTag">
 
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="35dp" />
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <EditText
+            android:id="@+id/tag_name"
+            android:layout_width="300dp"
+            android:layout_height="104dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Tag"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/color_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="color"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="302dp" />
+
+    </LinearLayout>
+
+
+
 </android.support.constraint.ConstraintLayout>
