@@ -63,4 +63,9 @@
         android:id="@+id/debug_delete_locally"
         android:title="@string/debug_delete_local_body"
         />
+    <!--Sonia changes for Tags-->
+    <item
+        android:id="@+id/tag"
+        android:title="Create Tag"
+        />
 </menu>

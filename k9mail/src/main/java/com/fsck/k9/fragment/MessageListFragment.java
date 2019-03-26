@@ -32,6 +32,8 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import timber.log.Timber;
+
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -786,6 +788,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
     private void onForward(MessageReference messageReference) {
         fragmentListener.onForward(messageReference);
+        Log.d("hello", messageReference.toString());
     }
 
     public void onForwardAsAttachment(MessageReference messageReference) {
@@ -1180,6 +1183,13 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
             // debug options
             case R.id.debug_delete_locally: {
                 onDebugClearLocally(getMessageAtPosition(adapterPosition));
+                break;
+            }
+
+            //            //sonia changes for tag
+            case R.id.tag: {
+                Log.d("hello", "HEELOOOOO");
+                createTag(getMessageAtPosition(adapterPosition));
                 break;
             }
         }
@@ -1634,6 +1644,12 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         computeBatchDirection();
     }
 
+    //Sonia changes for tags
+    public void createTag(MessageReference messageReference) {
+        Log.d("hello", messageReference.getUid());
+        Log.d("hello", messageReference.getAccountUuid());
+        }
+
     private void setFlagForSelected(final Flag flag, final boolean newState) {
         if (selected.isEmpty()) {
             return;
@@ -1987,6 +2003,9 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         private MenuItem mFlag;
         private MenuItem mUnflag;
 
+        //Sonia changes for tags
+        private MenuItem mTag;
+
         @Override
         public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
             mSelectAll = menu.findItem(R.id.select_all);
@@ -1994,6 +2013,9 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
             mMarkAsUnread = menu.findItem(R.id.mark_as_unread);
             mFlag = menu.findItem(R.id.flag);
             mUnflag = menu.findItem(R.id.unflag);
+
+            //Sonia changes for tags
+            mTag = menu.findItem(R.id.tag);
 
             // we don't support cross account actions atm
             if (!singleAccountMode) {
@@ -2469,6 +2491,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
     public void onToggleFlagged() {
         onToggleFlag(Flag.FLAGGED, FLAGGED_COLUMN);
+
     }
 
     public void onToggleRead() {
