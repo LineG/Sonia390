@@ -60,6 +60,7 @@ import com.fsck.k9.Preferences;
 import com.fsck.k9.R;
 import com.fsck.k9.activity.ActivityListener;
 import com.fsck.k9.activity.ChooseFolder;
+import com.fsck.k9.activity.CreateTag;
 import com.fsck.k9.activity.FolderInfoHolder;
 import com.fsck.k9.activity.MessageReference;
 import com.fsck.k9.activity.misc.ContactPictureLoader;
@@ -1186,10 +1187,12 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
                 break;
             }
 
-            //            //sonia changes for tag
+            //sonia changes for tag
             case R.id.tag: {
-                Log.d("hello", "HEELOOOOO");
-                createTag(getMessageAtPosition(adapterPosition));
+                Intent intent = new Intent(MessageListFragment.this.getActivity(), CreateTag.class);
+                intent.putExtra("messageId", getMessageAtPosition(adapterPosition).getUid());
+//                intent.putExtra("messageAccountId", getMessageAtPosition(adapterPosition).getAccountUuid());
+                startActivity(intent);
                 break;
             }
         }
@@ -1643,12 +1646,6 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
         computeBatchDirection();
     }
-
-    //Sonia changes for tags
-    public void createTag(MessageReference messageReference) {
-        Log.d("hello", messageReference.getUid());
-        Log.d("hello", messageReference.getAccountUuid());
-        }
 
     private void setFlagForSelected(final Flag flag, final boolean newState) {
         if (selected.isEmpty()) {
