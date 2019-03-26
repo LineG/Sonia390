@@ -48,6 +48,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -1102,6 +1103,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         }
 
         int adapterPosition = getPositionForUniqueId(contextMenuUniqueId);
+
         if (adapterPosition == AdapterView.INVALID_POSITION) {
             return false;
         }
@@ -1189,11 +1191,13 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
             //sonia changes for tag
             case R.id.tag: {
+
+                String emailId = (String) (getMessageAtPosition(adapterPosition).getUid());
+                String accountId = (String) (getMessageAtPosition(adapterPosition).getAccountUuid());
                 Intent intent = new Intent(MessageListFragment.this.getActivity(), CreateTag.class);
-                intent.putExtra("messageId", getMessageAtPosition(adapterPosition).getUid());
-//                intent.putExtra("messageAccountId", getMessageAtPosition(adapterPosition).getAccountUuid());
+                intent.putExtra("messageId", emailId);
+                intent.putExtra("accountId", accountId);
                 startActivity(intent);
-                break;
             }
         }
 

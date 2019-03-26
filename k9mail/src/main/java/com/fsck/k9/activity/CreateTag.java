@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+
 import com.fsck.k9.R;
 import com.fsck.k9.fragment.MessageListFragment;
 
@@ -23,6 +24,11 @@ public class CreateTag extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_tag);
+        Intent intent = getIntent();
+        String messageId = intent.getStringExtra("messageId");
+        String accountId = intent.getStringExtra("accountId");
+        Log.d("email_id", messageId);
+        Log.d("account_id", accountId);
 
         createTagLayout = (ConstraintLayout) findViewById(R.id.create_tag_layout);
         mDefaultColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
