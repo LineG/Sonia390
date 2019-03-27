@@ -17,10 +17,7 @@ import com.fsck.k9.R;
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class CreateTag extends AppCompatActivity {
-
-    private ConstraintLayout createTagLayout;
-    private int mDefaultColor;
-
+    
     private TextView tag1, tag2, tag3;
     public EditText tag1Name, tag2Name, tag3Name;
     private int tagColor;
@@ -30,7 +27,7 @@ public class CreateTag extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_tag);
 
-        Button colorPickerButton1, colorPickerButton2, colorPickerButton3;
+        Button colorPickerButton1, colorPickerButton2, colorPickerButton3, save;
 
         Intent intent = getIntent();
         String messageId = intent.getStringExtra("messageId");
@@ -43,6 +40,7 @@ public class CreateTag extends AppCompatActivity {
         colorPickerButton1 = (Button) findViewById(R.id.color_picker1);
         colorPickerButton2 = (Button) findViewById(R.id.color_picker2);
         colorPickerButton3 = (Button) findViewById(R.id.color_picker3);
+        save = (Button) findViewById(R.id.save_tags);
 
         tag1Name = (EditText) findViewById(R.id.tag1_name);
         tag2Name = (EditText) findViewById(R.id.tag2_name);
@@ -51,6 +49,9 @@ public class CreateTag extends AppCompatActivity {
         tag1 = (TextView) findViewById(R.id.tag_1);
         tag2 = (TextView) findViewById(R.id.tag_2);
         tag3 = (TextView) findViewById(R.id.tag_3);
+
+        Log.d("tagName", tag1Name.getText().toString());
+
 
 
 
@@ -73,6 +74,13 @@ public class CreateTag extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openColorPicker(3);
+            }
+        });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("tagName", tag1Name.getText().toString());
             }
         });
 
