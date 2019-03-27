@@ -13,21 +13,25 @@ import android.widget.TextView;
 
 
 import com.fsck.k9.R;
-import com.fsck.k9.fragment.MessageListFragment;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class CreateTag extends AppCompatActivity {
 
-    private Button colorPickerButton1, colorPickerButton2, colorPickerButton3;
+    private ConstraintLayout createTagLayout;
+    private int mDefaultColor;
+
     private TextView tag1, tag2, tag3;
-    private EditText tag1Name, tag2Name, tag3Name;
+    public EditText tag1Name, tag2Name, tag3Name;
     private int tagColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_tag);
+
+        Button colorPickerButton1, colorPickerButton2, colorPickerButton3;
+
         Intent intent = getIntent();
         String messageId = intent.getStringExtra("messageId");
         String accountId = intent.getStringExtra("accountId");
@@ -97,8 +101,11 @@ public class CreateTag extends AppCompatActivity {
                         break;
                     }
                     case 3: {
-                        tag1.setBackgroundColor(tagColor);
+                        tag3.setBackgroundColor(tagColor);
                         break;
+                    }
+                    default: {
+                        Log.d("ERROR", "Tag was not created");
                     }
                 }
             }
