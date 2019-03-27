@@ -1,13 +1,12 @@
 package com.fsck.k9.firebasedb;
 
-import android.graphics.Color;
-
 public class Tag {
 
-    String name;
-    Color color;
+    private String name;
+    //hexadecimal for color
+    private String color;
 
-    public Tag(String n, Color cl) {
+    public Tag(String n, String cl) {
         name = n;
         color = cl;
     }
@@ -20,13 +19,11 @@ public class Tag {
         return name;
     }
 
-    public void setColor(Color cl) {
+    public void setColor(String cl) {
         color = cl;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
-
-
 }
