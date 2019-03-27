@@ -114,12 +114,9 @@ import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.ui.EolConvertingEditText;
 import com.fsck.k9.ui.compose.QuotedMessageMvpView;
 import com.fsck.k9.ui.compose.QuotedMessagePresenter;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import org.openintents.openpgp.util.OpenPgpApi;
 import timber.log.Timber;
-import com.fsck.k9.firebasedb.Tag;
 
 
 @SuppressWarnings("deprecation") // TODO get rid of activity dialogs and indeterminate progress bars
@@ -420,29 +417,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         //sonia changes
         mediaRecorder = new MediaRecorder();
-
-        //Testing for custom tags
-//        DatabaseReference emailDb = FirebaseDatabase.getInstance().getReference().child("chanc09@gmailcom");
-//        DatabaseReference messageDb= emailDb.child("1234");
-//        DatabaseReference messageDb2= emailDb.child("1244");
-//
-//        Map userInfo = new HashMap<>();
-//        Tag tag = new Tag("Test", "Purple");
-//        Tag tag2 = new Tag("Test2", "pink");
-//        Tag tag3 = new Tag("Test3", "red");
-//
-//        Map userInfo2 = new HashMap<>();
-//        userInfo2.put("testtes", tag3);
-//
-//        userInfo.put("tag1", tag);
-//        userInfo.put("tag2", tag2);
-//        userInfo.put("tag3", tag3);
-//
-//        messageDb.updateChildren(userInfo);
-//        messageDb2.updateChildren(userInfo2);
-
-
-
 
         if (!checkPermissionFromDevice()) {
             requestPermission();

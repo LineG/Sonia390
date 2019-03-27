@@ -30,8 +30,6 @@ public class CreateTag extends AppCompatActivity {
     public EditText tag2Name;
     public EditText tag3Name;
     private int tagColor;
-    String messageId;
-    String accountId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +42,8 @@ public class CreateTag extends AppCompatActivity {
         Button save;
 
         Intent intent = getIntent();
-        messageId = intent.getStringExtra("messageId");
-        accountId = intent.getStringExtra("accountId");
+        final String messageId = intent.getStringExtra("messageId");
+        final String accountId = intent.getStringExtra("accountId");
         Log.d("email_id", messageId);
         Log.d("account_id", accountId);
 

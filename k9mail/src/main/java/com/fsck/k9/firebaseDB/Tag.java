@@ -6,7 +6,7 @@ public class Tag {
     //hexadecimal for color
     private int color;
 
-    public Tag(){
+    public Tag() {
         
     }
 
