@@ -4,13 +4,13 @@ public class Tag {
 
     private String name;
     //hexadecimal for color
-    private String color;
+    private int color;
 
     public Tag(){
         
     }
 
-    public Tag(String n, String cl) {
+    public Tag(String n, int cl) {
         name = n;
         color = cl;
     }
@@ -23,11 +23,11 @@ public class Tag {
         return name;
     }
 
-    public void setColor(String cl) {
+    public void setColor(int cl) {
         color = cl;
     }
 
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 }

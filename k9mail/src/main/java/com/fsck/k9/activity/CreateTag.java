@@ -1,7 +1,6 @@
 package com.fsck.k9.activity;
 
 import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,25 +12,40 @@ import android.widget.TextView;
 
 
 import com.fsck.k9.R;
+import com.fsck.k9.firebasedb.Tag;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class CreateTag extends AppCompatActivity {
     
-    private TextView tag1, tag2, tag3;
-    public EditText tag1Name, tag2Name, tag3Name;
+    private TextView tag1;
+    private TextView tag2;
+    private TextView tag3;
+    public EditText tag1Name;
+    public EditText tag2Name;
+    public EditText tag3Name;
     private int tagColor;
+    String messageId;
+    String accountId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_tag);
 
-        Button colorPickerButton1, colorPickerButton2, colorPickerButton3, save;
+        Button colorPickerButton1;
+        Button colorPickerButton2;
+        Button colorPickerButton3;
+        Button save;
 
         Intent intent = getIntent();
-        String messageId = intent.getStringExtra("messageId");
-        String accountId = intent.getStringExtra("accountId");
+        messageId = intent.getStringExtra("messageId");
+        accountId = intent.getStringExtra("accountId");
         Log.d("email_id", messageId);
         Log.d("account_id", accountId);
 
@@ -81,6 +95,15 @@ public class CreateTag extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("tagName", tag1Name.getText().toString());
+
+                DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(accountId).child(messageId);
+                Map userInfo = new HashMap<>();
+                Tag tag = new Tag(tag1Name.getText().toString(), tagColor);
+
+
+                userInfo.put("tag1", tag);
+
+                tagsDb.updateChildren(userInfo);
             }
         });
 
@@ -114,10 +137,13 @@ public class CreateTag extends AppCompatActivity {
                     }
                     default: {
                         Log.d("ERROR", "Tag was not created");
+                        break;
                     }
                 }
             }
         });
         colorPicker.show();
+
+
     }
 }
