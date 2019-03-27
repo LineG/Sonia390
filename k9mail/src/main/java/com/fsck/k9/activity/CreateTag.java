@@ -30,6 +30,14 @@ public class CreateTag extends AppCompatActivity {
     public EditText tag2Name;
     public EditText tag3Name;
     private int tagColor;
+    private int tag1Color;
+    private int tag2Color;
+    private int tag3Color;
+
+    private String tag1NameText;
+    private String tag2NameText;
+    private String tag3NameText;
+
     String messageId;
     String accountId;
 
@@ -96,12 +104,41 @@ public class CreateTag extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d("tagName", tag1Name.getText().toString());
 
+                tag1NameText = tag1Name.getText().toString();
+                tag2NameText = tag2Name.getText().toString();
+                tag3NameText = tag3Name.getText().toString();
+
                 DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(accountId).child(messageId);
+
                 Map userInfo = new HashMap<>();
-                Tag tag = new Tag(tag1Name.getText().toString(), tagColor);
 
+                Boolean uniqueName = ( (!tag1NameText.equals(tag2NameText)) && (!tag1NameText.equals(tag3NameText)) && (!tag2NameText.equals(tag3NameText)) );
+                Boolean uniqueColor = ( (tag1Color != tag2Color) && (tag2Color != tag3Color) && (tag1Color != tag3Color) );
 
-                userInfo.put("tag1", tag);
+                if((!tag1NameText.equals("")) && uniqueName && uniqueColor ){
+                    Tag tag1 = new Tag(tag1NameText, tag1Color);
+                    userInfo.put("tag1", tag1);
+                }
+                else{
+                    //Toast if not created
+                }
+
+                if(!tag2NameText.equals("") && uniqueName && uniqueColor ){
+                    Tag tag2 = new Tag(tag2NameText, tag2Color);
+                    userInfo.put("tag2", tag2);
+                }
+                else{
+                    //Toast if not created
+                }
+
+                if(!tag1NameText.equals("") && uniqueName && uniqueColor ){
+                    Tag tag3 = new Tag(tag3NameText, tag3Color);
+                    userInfo.put("tag1", tag3);
+                }
+                else{
+                    //Toast if not created
+                }
+
 
                 tagsDb.updateChildren(userInfo);
             }
@@ -115,23 +152,26 @@ public class CreateTag extends AppCompatActivity {
         AmbilWarnaDialog colorPicker = new AmbilWarnaDialog(this, tagColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
-                //BLAH BLAH CANT BE EMPTY
+                //CANT BE EMPTY
                 Log.d("Color Picker", "Cancelled");
             }
 
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
                 tagColor = color;
-                switch (tagNumber) {
+                switch (tagNumber) { // We don't want the same color to be applied to all the tag
                     case 1: {
+                        tag1Color = tagColor;
                         tag1.setBackgroundColor(tagColor);
                         break;
                     }
                     case 2: {
+                        tag2Color = tagColor;
                         tag2.setBackgroundColor(tagColor);
                         break;
                     }
                     case 3: {
+                        tag3Color = tagColor;
                         tag3.setBackgroundColor(tagColor);
                         break;
                     }
