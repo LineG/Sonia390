@@ -16,9 +16,9 @@ import com.fsck.k9.fragment.MessageListFragment;
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class CreateTag extends AppCompatActivity {
-    ConstraintLayout createTagLayout;
-    int mDefaultColor;
-    Button colorPickerButton;
+    private ConstraintLayout createTagLayout;
+    private int mDefaultColor;
+    private Button colorPickerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class CreateTag extends AppCompatActivity {
         AmbilWarnaDialog colorPicker = new AmbilWarnaDialog(this, mDefaultColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
-
+                //BLAH BLAH CANT BE EMPTY
             }
 
             @Override
