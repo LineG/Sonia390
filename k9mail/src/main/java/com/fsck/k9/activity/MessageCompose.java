@@ -114,6 +114,12 @@ import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.ui.EolConvertingEditText;
 import com.fsck.k9.ui.compose.QuotedMessageMvpView;
 import com.fsck.k9.ui.compose.QuotedMessagePresenter;
+import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
+import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
+import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationResult;
+import com.ibm.watson.developer_cloud.language_translator.v3.util.Language;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
+
 import org.openintents.openpgp.util.OpenPgpApi;
 import timber.log.Timber;
 
@@ -238,8 +244,11 @@ public class MessageCompose extends K9Activity implements OnClickListener,
      */
     private String greetingText;
     public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
+    private EditText input;
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
+    private LanguageTranslator translationService;
+    private Button applyTranslationButtonView;
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
@@ -252,6 +261,49 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         arr[position] += 1;
         return arr[position];
 
+    }
+
+
+    // in the constructor, letting the SDK manage the IAM token
+    IamOptions options;
+
+    {
+        options = new IamOptions.Builder()
+                .apiKey("2sxvkDC3F6nP19R6kbD23Vkog9jxjadv15FpcmrJCxmu")
+                .build();
+    }
+
+    private LanguageTranslator initLanguageTranslatorService() {
+        LanguageTranslator service = new LanguageTranslator("2018-05-01");
+        service.setIamCredentials(options);
+        service.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
+        return service;
+    }
+
+
+    private class TranslationTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            TranslateOptions translateOptions = new TranslateOptions.Builder()
+                    .addText(params[0])
+                    .source(Language.ENGLISH)
+                    .target(Language.SPANISH)
+                    .build();
+            TranslationResult result = translationService.translate(translateOptions).execute();
+            String firstTranslation = result.getTranslations().get(0).getTranslationOutput();
+            showTranslation(firstTranslation);
+            return "Did translate";
+        }
+    }
+
+    private void showTranslation(final String translation) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                messageContentView.setText(translation);
+            }
+        });
     }
 
     @Override
@@ -348,6 +400,10 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         templatesSpinnerView  = (Spinner) findViewById(R.id.templates);
         applyTemplateButtonView = (Button) findViewById(R.id.apply_template);
 
+        input = findViewById(R.id.message_content);
+        translationService = initLanguageTranslatorService();
+        applyTranslationButtonView = (Button) findViewById(R.id.apply_translate);
+
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.message_compose_templates));
@@ -408,6 +464,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             public void onClick(View v) {
 
                 messageContentView.setText(greetingText);
+            }
+        });
+
+        //sonia translation feature
+
+        applyTranslationButtonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new TranslationTask().execute(input.getText().toString());
             }
         });
 
