@@ -6,6 +6,10 @@ public class Tag {
     //hexadecimal for color
     private String color;
 
+    public Tag(){
+        
+    }
+
     public Tag(String n, String cl) {
         name = n;
         color = cl;
