@@ -23,3 +23,6 @@
 -dontnote com.fsck.k9.view.**
 
 -keep public class org.openintents.openpgp.**
+
+-ignorewarnings
+

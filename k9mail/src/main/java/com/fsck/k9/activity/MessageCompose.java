@@ -475,11 +475,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
 
 
-
-
-
-
-
         //sonia translation feature/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         Spinner translatorSpinnerView;
@@ -502,24 +497,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
                     targetLanguage = getString(R.string.French);
                 }
-
-                else if (position == 1) {
-                    
-                }
-
-                else if (position == 2) {
-
-                    //greetingText = getString(R.string.template2);
-                }
-
-                else if (position == 3) {
-
-                    //greetingText = getString(R.string.template3);
-                }
-                else if (position == 4) {
-
-                    //greetingText = getString(R.string.template4);
-                }
             }
 
             @Override
@@ -536,16 +513,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 new TranslationTask().execute(input.getText().toString());
             }
         });
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
