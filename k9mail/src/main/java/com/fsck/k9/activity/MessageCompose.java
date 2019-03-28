@@ -492,46 +492,46 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                     targetLanguage = getString(R.string.English);
                 }
 
-                if (position == 1) {
+                else if (position == 1) {
 
                     targetLanguage = getString(R.string.French);
                 }
 
-                if (position == 2) {
+                else if (position == 2) {
 
                     targetLanguage = getString(R.string.Spanish);
                 }
 
-                if (position == 3) {
+                else if (position == 3) {
 
                     targetLanguage = getString(R.string.German);
                 }
 
-                if (position == 4) {
+                else if (position == 4) {
 
                     targetLanguage = getString(R.string.Arabic);
                 }
-                if (position == 5) {
+                else if (position == 5) {
 
                     targetLanguage = getString(R.string.Italian);
                 }
 
-                if (position == 6) {
+                else if (position == 6) {
 
                     targetLanguage = getString(R.string.Chinese);
                 }
 
-                if (position == 7) {
+                else if (position == 7) {
 
                     targetLanguage = getString(R.string.Russian);
                 }
 
-                if (position == 8) {
+                else if (position == 8) {
 
                     targetLanguage = getString(R.string.Japanese);
                 }
 
-                if (position == 9) {
+                else if (position == 9) {
 
                     targetLanguage = getString(R.string.Turkish);
                 }
