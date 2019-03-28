@@ -115,37 +115,53 @@ public class CreateTag extends AppCompatActivity {
                                      (!tag2NameText.equals(tag3NameText)));
 
                 Boolean uniqueColor = ((tag1Color != tag2Color) &&
-                                      (tag2Color != tag3Color) &&
-                                      (tag1Color != tag3Color));
+                                      (tag1Color != tag3Color) &&
+                                      (tag2Color != tag3Color));
 
-                if((!tag1NameText.equals("")) && uniqueName && uniqueColor) {
+                if(tag1NameText != null && uniqueName && uniqueColor) {
                     Tag tag1 = new Tag(tag1NameText, tag1Color);
                     userInfo.put("tag1", tag1);
                 }
                 else {
                     //Toast if not created
-                    Toast.makeText(CreateTag.this, "Invalid arguments for Tag 1",
-                            Toast.LENGTH_LONG).show();
+                    if(!uniqueName) {
+                        Toast.makeText(CreateTag.this, "Name already exists. Change name for tag 1",
+                                Toast.LENGTH_LONG).show();
+                    }
+                    else
+                        Toast.makeText(CreateTag.this, "Colour already exists. Chose another color for tag 1",
+                                Toast.LENGTH_LONG).show();
+
                 }
 
-                if(!tag2NameText.equals("") && uniqueName && uniqueColor) {
+                if(tag2NameText != null && uniqueName && uniqueColor) {
                     Tag tag2 = new Tag(tag2NameText, tag2Color);
                     userInfo.put("tag2", tag2);
                 }
                 else {
                     //Toast if not created
-                    Toast.makeText(CreateTag.this, "Invalid arguments for Tag 2",
-                            Toast.LENGTH_LONG).show();
+                    if(!uniqueName) {
+                        Toast.makeText(CreateTag.this, "Name already exists. Change name for tag 2",
+                                Toast.LENGTH_LONG).show();
+                    }
+                    else
+                        Toast.makeText(CreateTag.this, "Colour already exists. Chose another color for tag 2",
+                                Toast.LENGTH_LONG).show();
                 }
 
-                if(!tag1NameText.equals("") && uniqueName && uniqueColor) {
+                if(tag3NameText != null  && uniqueName && uniqueColor) {
                     Tag tag3 = new Tag(tag3NameText, tag3Color);
-                    userInfo.put("tag1", tag3);
+                    userInfo.put("tag3", tag3);
                 }
                 else {
                     //Toast if not created
-                    Toast.makeText(CreateTag.this, "Invalid arguments for Tag 3",
-                            Toast.LENGTH_LONG).show();
+                    if(!uniqueName) {
+                        Toast.makeText(CreateTag.this, "Name already exists. Change name for tag 31111",
+                                Toast.LENGTH_LONG).show();
+                    }
+                    else
+                        Toast.makeText(CreateTag.this, "Colour already exists. Chose another color for tag 3",
+                                Toast.LENGTH_LONG).show();
                 }
 
 
