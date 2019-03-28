@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.fsck.k9.Account;
 import com.fsck.k9.R;
 import com.fsck.k9.firebasedb.Tag;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
+
 
 public class CreateTag extends AppCompatActivity {
     
@@ -47,9 +49,11 @@ public class CreateTag extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String messageId = intent.getStringExtra("messageId");
-        final String accountId = intent.getStringExtra("accountId");
+        //final String accountId = intent.getStringExtra("email");
+        String emailTemp = intent.getStringExtra("email");
+        final String email = emailTemp.replace(".","^");
         Log.d("email_id", messageId);
-        Log.d("account_id", accountId);
+        Log.d("email", email);
 
         tagColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
 
@@ -106,7 +110,7 @@ public class CreateTag extends AppCompatActivity {
                 tag2NameText = tag2Name.getText().toString();
                 tag3NameText = tag3Name.getText().toString();
 
-                DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(accountId).child(messageId);
+                DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
 
                 Map userInfo = new HashMap<>();
 

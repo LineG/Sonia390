@@ -1190,12 +1190,13 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
             //sonia changes for tag
             case R.id.tag: {
-
+                String email = account.getEmail();
                 String emailId = (String) (getMessageAtPosition(adapterPosition).getUid());
                 String accountId = (String) (getMessageAtPosition(adapterPosition).getAccountUuid());
                 Intent intent = new Intent(MessageListFragment.this.getActivity(), CreateTag.class);
                 intent.putExtra("messageId", emailId);
                 intent.putExtra("accountId", accountId);
+                intent.putExtra("email",email);
                 startActivity(intent);
             }
         }
