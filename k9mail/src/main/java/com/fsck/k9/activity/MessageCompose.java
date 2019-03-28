@@ -248,8 +248,9 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private EditText input;
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
+    private String targetLanguage;
+    private IamOptions options;
     private LanguageTranslator translationService;
-    private Button applyTranslationButtonView;
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
@@ -264,17 +265,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     }
 
-////////////////////////////////////////////////////////////////////////Translation//////////////////////////////////////////////////////////////////////////////////////////////////
-
-    public String targetLanguage;
+////////////////////////////////////Translation/////////////////////////////////////////////////////
     // in the constructor, letting the SDK manage the IAM token
-    IamOptions options;
-
-    {
-        options = new IamOptions.Builder()
-                .apiKey("2sxvkDC3F6nP19R6kbD23Vkog9jxjadv15FpcmrJCxmu")
-                .build();
-    }
 
     private LanguageTranslator initLanguageTranslatorService() {
         LanguageTranslator service = new LanguageTranslator("2018-05-01");
@@ -308,17 +300,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
     }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -475,13 +464,17 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         });
 
 
+        //////////////////////////////////Translation///////////////////////////////////////////////
 
-        //sonia translation feature/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        options = new IamOptions.Builder()
+                .apiKey("2sxvkDC3F6nP19R6kbD23Vkog9jxjadv15FpcmrJCxmu")
+                .build();
+
 
         Spinner translatorSpinnerView;
 
         translatorSpinnerView  = (Spinner) findViewById(R.id.translatelangs);
-
+        Button applyTranslationButtonView;
         input = findViewById(R.id.message_content);
         translationService = initLanguageTranslatorService();
         applyTranslationButtonView = (Button) findViewById(R.id.apply_translate);
@@ -558,7 +551,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 new TranslationTask().execute(input.getText().toString());
             }
         });
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
