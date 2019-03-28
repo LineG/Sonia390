@@ -448,7 +448,6 @@ Please submit bug reports, contribute new features and ask questions at
     </string>
 
     <string-array name="Translation">
-        <item>English</item>
         <item>French</item>
         <item>Spanish</item>
         <item>German</item>
@@ -461,7 +460,6 @@ Please submit bug reports, contribute new features and ask questions at
     </string-array>
 
 
-    <string name = "English">en</string>
     <string name = "French">fr</string>
     <string name = "Spanish">es</string>
     <string name = "German">de</string>
