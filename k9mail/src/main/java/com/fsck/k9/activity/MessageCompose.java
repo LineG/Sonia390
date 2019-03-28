@@ -1,16 +1,6 @@
 package com.fsck.k9.activity;
 
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.regex.Pattern;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -49,14 +39,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Spinner;
-import android.widget.Button;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
 
 import com.fsck.k9.Account;
 import com.fsck.k9.Account.MessageFormat;
@@ -121,6 +111,17 @@ import com.ibm.watson.developer_cloud.language_translator.v3.util.Language;
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
 
 import org.openintents.openpgp.util.OpenPgpApi;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.regex.Pattern;
+
 import timber.log.Timber;
 
 
@@ -495,7 +496,51 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
 
+                    targetLanguage = getString(R.string.English);
+                }
+
+                if (position == 1) {
+
                     targetLanguage = getString(R.string.French);
+                }
+
+                if (position == 2) {
+
+                    targetLanguage = getString(R.string.Spanish);
+                }
+
+                if (position == 3) {
+
+                    targetLanguage = getString(R.string.German);
+                }
+
+                if (position == 4) {
+
+                    targetLanguage = getString(R.string.Arabic);
+                }
+                if (position == 5) {
+
+                    targetLanguage = getString(R.string.Italian);
+                }
+
+                if (position == 6) {
+
+                    targetLanguage = getString(R.string.Chinese);
+                }
+
+                if (position == 7) {
+
+                    targetLanguage = getString(R.string.Russian);
+                }
+
+                if (position == 8) {
+
+                    targetLanguage = getString(R.string.Japanese);
+                }
+
+                if (position == 9) {
+
+                    targetLanguage = getString(R.string.Turkish);
                 }
             }
 
