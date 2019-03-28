@@ -447,6 +447,15 @@ Please submit bug reports, contribute new features and ask questions at
         K-9’s icon is a picture of…well, of K-9.
     </string>
 
+    <string-array name="Translation">
+        <item>French</item>
+        <item>Spanish</item>
+        <item>German</item>
+        <item>askdnksad</item>
+    </string-array>
+
+    <string name = "French">fr</string>
+
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>
     <string name="message_to_label">To:</string>

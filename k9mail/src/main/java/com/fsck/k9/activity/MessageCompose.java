@@ -263,7 +263,9 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     }
 
+////////////////////////////////////////////////////////////////////////Translation//////////////////////////////////////////////////////////////////////////////////////////////////
 
+    public String targetLanguage;
     // in the constructor, letting the SDK manage the IAM token
     IamOptions options;
 
@@ -288,7 +290,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             TranslateOptions translateOptions = new TranslateOptions.Builder()
                     .addText(params[0])
                     .source(Language.ENGLISH)
-                    .target(Language.SPANISH)
+                    .target(targetLanguage)
                     .build();
             TranslationResult result = translationService.translate(translateOptions).execute();
             String firstTranslation = result.getTranslations().get(0).getTranslationOutput();
@@ -305,6 +307,13 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
     }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -400,9 +409,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         templatesSpinnerView  = (Spinner) findViewById(R.id.templates);
         applyTemplateButtonView = (Button) findViewById(R.id.apply_template);
 
-        input = findViewById(R.id.message_content);
-        translationService = initLanguageTranslatorService();
-        applyTranslationButtonView = (Button) findViewById(R.id.apply_translate);
 
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
@@ -467,7 +473,61 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
 
-        //sonia translation feature
+
+
+
+
+
+
+
+        //sonia translation feature/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Spinner translatorSpinnerView;
+
+        translatorSpinnerView  = (Spinner) findViewById(R.id.translatelangs);
+
+        input = findViewById(R.id.message_content);
+        translationService = initLanguageTranslatorService();
+        applyTranslationButtonView = (Button) findViewById(R.id.apply_translate);
+
+        ArrayAdapter<String> translationAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.Translation));
+        translatorSpinnerView.setAdapter(translationAdapter);
+
+        translatorSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+
+                    targetLanguage = getString(R.string.French);
+                }
+
+                else if (position == 1) {
+                    
+                }
+
+                else if (position == 2) {
+
+                    //greetingText = getString(R.string.template2);
+                }
+
+                else if (position == 3) {
+
+                    //greetingText = getString(R.string.template3);
+                }
+                else if (position == 4) {
+
+                    //greetingText = getString(R.string.template4);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+                // sometimes you need nothing here
+            }
+        });
 
         applyTranslationButtonView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -476,6 +536,18 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 new TranslationTask().execute(input.getText().toString());
             }
         });
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
 
         //sonia changes
         mediaRecorder = new MediaRecorder();
