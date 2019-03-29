@@ -161,6 +161,23 @@
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="?android:attr/textColorSecondary"/>
+        <TextView
+            android:id="@+id/tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ea0909"
+            android:layout_alignTop="@+id/subject_wrapper"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/flagged_center_right"
+            android:text="red"
+            android:paddingLeft="15dip"
+            android:paddingRight="8dip"
+            android:layout_marginRight="40pt"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorSecondary"/>
 
         <CheckBox
                 android:id="@+id/flagged_bottom_right"

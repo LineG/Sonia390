@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import com.fsck.k9.Account;
 import com.fsck.k9.R;
 import com.fsck.k9.firebasedb.Tag;
 import com.google.firebase.database.DatabaseReference;
@@ -49,11 +47,8 @@ public class CreateTag extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String messageId = intent.getStringExtra("messageId");
-        //final String accountId = intent.getStringExtra("email");
         String emailTemp = intent.getStringExtra("email");
         final String email = emailTemp.replace(".","^");
-        Log.d("email_id", messageId);
-        Log.d("email", email);
 
         tagColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
 
