@@ -21,7 +21,7 @@
 
             <EditText
                 android:id="@+id/tag1_name"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -33,8 +33,8 @@
                 android:id="@+id/tag_1"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Tag 1"
@@ -48,6 +48,13 @@
                 android:text="color"
                 tools:layout_editor_absoluteX="130dp"
                 tools:layout_editor_absoluteY="302dp" />
+            <Button
+                android:id="@+id/save_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
 
         </LinearLayout>
         <LinearLayout
@@ -58,7 +65,7 @@
 
             <EditText
                 android:id="@+id/tag2_name"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -70,8 +77,8 @@
                 android:id="@+id/tag_2"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Tag 2"
@@ -86,6 +93,14 @@
                 tools:layout_editor_absoluteX="130dp"
                 tools:layout_editor_absoluteY="302dp" />
 
+            <Button
+                android:id="@+id/save_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
 
         </LinearLayout>
 
@@ -97,7 +112,7 @@
 
             <EditText
                 android:id="@+id/tag3_name"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -109,8 +124,8 @@
                 android:id="@+id/tag_3"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Tag 3"
@@ -125,16 +140,15 @@
                 tools:layout_editor_absoluteX="130dp"
                 tools:layout_editor_absoluteY="302dp" />
 
+            <Button
+                android:id="@+id/save_tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
         </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/save_tags"
-            android:layout_marginTop="400dp"
-            android:layout_centerHorizontal="true"
-            android:text="save"/>
-
 
     </RelativeLayout>
 
