@@ -487,51 +487,47 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         translatorSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 if (position == 0) {
-
-                    targetLanguage = getString(R.string.English);
-                }
-
-                else if (position == 1) {
 
                     targetLanguage = getString(R.string.French);
                 }
 
-                else if (position == 2) {
+                else if (position == 1) {
 
                     targetLanguage = getString(R.string.Spanish);
                 }
 
-                else if (position == 3) {
+                else if (position == 2) {
 
                     targetLanguage = getString(R.string.German);
                 }
 
-                else if (position == 4) {
+                else if (position == 3) {
 
                     targetLanguage = getString(R.string.Arabic);
                 }
-                else if (position == 5) {
+                else if (position == 4) {
 
                     targetLanguage = getString(R.string.Italian);
                 }
 
-                else if (position == 6) {
+                else if (position == 5) {
 
                     targetLanguage = getString(R.string.Chinese);
                 }
 
-                else if (position == 7) {
+                else if (position == 6) {
 
                     targetLanguage = getString(R.string.Russian);
                 }
 
-                else if (position == 8) {
+                else if (position == 7) {
 
                     targetLanguage = getString(R.string.Japanese);
                 }
 
-                else if (position == 9) {
+                else if (position == 8) {
 
                     targetLanguage = getString(R.string.Turkish);
                 }
