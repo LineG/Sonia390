@@ -268,7 +268,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 ////////////////////////////////////Translation/////////////////////////////////////////////////////
     // in the constructor, letting the SDK manage the IAM token
 
-    private LanguageTranslator initLanguageTranslatorService() {
+    public LanguageTranslator initLanguageTranslatorService() {
         LanguageTranslator service = new LanguageTranslator("2018-05-01");
         service.setIamCredentials(options);
         service.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
@@ -276,7 +276,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     }
 
 
-    private class TranslationTask extends AsyncTask<String, Void, String> {
+    public class TranslationTask extends AsyncTask<String, Void, String> {
 
         @Override
         protected String doInBackground(String... params) {
@@ -292,7 +292,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         }
     }
 
-    private void showTranslation(final String translation) {
+    public void showTranslation(final String translation) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -2226,4 +2226,11 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             return titleResource;
         }
     }
+
+    public void showtTranslation(EolConvertingEditText m, String translation) {
+
+        m.setText(translation);
+
+    }
+
 }
