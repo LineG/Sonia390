@@ -54,8 +54,9 @@ public class CreateTag extends AppCompatActivity {
         if (emailTemp != null) {
             emailTemp = emailTemp.replace(".", "^");
         }
-        else
+        else {
             emailTemp = "390soen@gmailTest";
+        }
 
         final String email = emailTemp;
 

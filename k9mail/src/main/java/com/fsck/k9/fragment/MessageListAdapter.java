@@ -218,7 +218,6 @@ public class MessageListAdapter extends CursorAdapter {
         //SONIA
         createTag(cursor, holder);
 
-
         if (holder.from != null ) {
             holder.from.setTypeface(Typeface.create(holder.from.getTypeface(), maybeBoldTypeface));
             if (fragment.senderAboveSubject) {
@@ -385,8 +384,7 @@ public class MessageListAdapter extends CursorAdapter {
 
         String messageUid = cursor.getString(UID_COLUMN);
         String email = fragment.getAccountFromCursor(cursor).getEmail();
-        email = email.replace(".","^");
-        Tag tag = new Tag();
+        email = email.replace(".", "^");
         final MessageViewHolder holderFinal = holder;
 
         DatabaseReference tagRef = FirebaseDatabase.getInstance().getReference().child(email)
@@ -426,8 +424,9 @@ public class MessageListAdapter extends CursorAdapter {
                         holderFinal.tag2.setText(name);
                         holderFinal.tag2.setBackgroundColor(color);
                     }
-                    else holderFinal.tag2.setVisibility(View.GONE);
-
+                    else {
+                        holderFinal.tag2.setVisibility(View.GONE);
+                    }
                 }
 
                 if (dataSnapshot.child("tag3").exists()) {
@@ -439,7 +438,7 @@ public class MessageListAdapter extends CursorAdapter {
 
                     int color = Integer.parseInt(colorS);
 
-                    if(name != "" ) {
+                    if (name.equals("")) {
                         holderFinal.tag3.setVisibility(View.VISIBLE);
                         holderFinal.tag3.setText(name);
                         holderFinal.tag3.setBackgroundColor(color);

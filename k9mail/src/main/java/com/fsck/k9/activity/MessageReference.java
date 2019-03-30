@@ -122,7 +122,9 @@ public class MessageReference {
         return uid;
     }
 
-    public Flag getFlag() { return flag; }
+    public Flag getFlag() {
+        return flag;
+    }
 
     public MessageReference withModifiedUid(String newUid) {
         return new MessageReference(accountUuid, folderName, newUid, flag);
