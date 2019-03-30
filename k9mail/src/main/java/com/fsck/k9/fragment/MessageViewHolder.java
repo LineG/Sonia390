@@ -19,6 +19,9 @@ public class MessageViewHolder implements View.OnClickListener {
     public View chip;
     public TextView threadCount;
     public CheckBox flagged;
+    public TextView tag1;
+    public TextView tag2;
+    public TextView tag3;
     public CheckBox selected;
     public int position = -1;
     public ContactBadge contactBadge;

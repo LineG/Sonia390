@@ -26,7 +26,7 @@ import yuku.ambilwarna.AmbilWarnaDialog;
 
 
 public class CreateTag extends AppCompatActivity {
-    
+
     private TextView tag1;
     private TextView tag2;
     private TextView tag3;
@@ -37,9 +37,6 @@ public class CreateTag extends AppCompatActivity {
     private int tag1Color;
     private int tag2Color;
     private int tag3Color;
-
-
-
 
 
     @Override
@@ -58,7 +55,7 @@ public class CreateTag extends AppCompatActivity {
         Intent intent = getIntent();
         final String messageId = intent.getStringExtra("messageId");
         String emailTemp = intent.getStringExtra("email");
-        final String email = emailTemp.replace(".","^");
+        final String email = emailTemp.replace(".", "^");
 
         tagColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
 
@@ -80,8 +77,7 @@ public class CreateTag extends AppCompatActivity {
 
         final DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
 
-        retrieveTags(email,messageId);
-
+        //retrieveTags(email,messageId);
 
 
         colorPickerButton1.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +107,7 @@ public class CreateTag extends AppCompatActivity {
                 String tag1NameText = tag1Name.getText().toString();
                 Map userInfo = new HashMap<>();
 
-                if ((!tag1NameText.equals("")) && tag1Color!=0) {
+                if (tag1Color != 0) {
                     Tag tag1 = new Tag(tag1NameText, tag1Color);
                     userInfo.put("tag1", tag1);
                     Toast.makeText(CreateTag.this, "Added tag1",
@@ -128,12 +124,12 @@ public class CreateTag extends AppCompatActivity {
                 String tag2NameText = tag2Name.getText().toString();
                 Map userInfo = new HashMap<>();
 
-                if ((!tag2NameText.equals("")) && tag2Color!=0) {
+
                     Tag tag2 = new Tag(tag2NameText, tag2Color);
                     userInfo.put("tag2", tag2);
                     Toast.makeText(CreateTag.this, "Added tag2",
                             Toast.LENGTH_LONG).show();
-                }
+
 
                 tagsDb.updateChildren(userInfo);
             }
@@ -145,19 +141,18 @@ public class CreateTag extends AppCompatActivity {
                 String tag3NameText = tag3Name.getText().toString();
                 Map userInfo = new HashMap<>();
 
-                if ((!tag3NameText.equals("")) && tag3Color!=0) {
+
                     Tag tag3 = new Tag(tag3NameText, tag3Color);
                     userInfo.put("tag3", tag3);
                     Toast.makeText(CreateTag.this, "Added tag3",
                             Toast.LENGTH_LONG).show();
-                }
+
 
                 tagsDb.updateChildren(userInfo);
             }
         });
 
     }
-
 
 
     public void openColorPicker(final int tagNumber) {
@@ -198,30 +193,31 @@ public class CreateTag extends AppCompatActivity {
 
     }
 
-    public void retrieveTags(final String email, final String messageId){
+    public void retrieveTags(final String email, final String messageId) {
         Log.d("messageID", messageId);
         DatabaseReference tag1Db = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
         Log.d("here", tag1Db.toString());
 
+
         tag1Db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    if(dataSnapshot.child("tag1").exists()){
+                if (dataSnapshot.exists()) {
+                    if (dataSnapshot.child("tag1").exists()) {
                         String tag1Name = dataSnapshot.child("tag1").child("name").getValue().toString();
                         String tag1ColorString = dataSnapshot.child("tag1").child("color").getValue().toString();
                         int tag1Color = Integer.parseInt(tag1ColorString);
                         tag1.setBackgroundColor(tag1Color);
                         tag1.setText(tag1Name);
                     }
-                    if(dataSnapshot.child("tag2").exists()){
+                    if (dataSnapshot.child("tag2").exists()) {
                         String tag2Name = dataSnapshot.child("tag2").child("name").getValue().toString();
                         String tag2ColorString = dataSnapshot.child("tag2").child("color").getValue().toString();
                         int tag2Color = Integer.parseInt(tag2ColorString);
                         tag2.setBackgroundColor(tag2Color);
                         tag2.setText(tag2Name);
                     }
-                    if(dataSnapshot.child("tag3").exists()){
+                    if (dataSnapshot.child("tag3").exists()) {
                         String tag3Name = dataSnapshot.child("tag3").child("name").getValue().toString();
                         String tag3ColorString = dataSnapshot.child("tag3").child("color").getValue().toString();
                         int tag3Color = Integer.parseInt(tag3ColorString);

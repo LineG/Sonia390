@@ -1196,7 +1196,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
                 Intent intent = new Intent(MessageListFragment.this.getActivity(), CreateTag.class);
                 intent.putExtra("messageId", emailId);
                 intent.putExtra("accountId", accountId);
-                intent.putExtra("email",email);
+                intent.putExtra("email", email);
                 startActivity(intent);
             }
         }
