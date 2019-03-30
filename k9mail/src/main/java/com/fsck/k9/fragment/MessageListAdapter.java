@@ -12,7 +12,6 @@ import android.text.SpannableStringBuilder;
 import android.text.format.DateUtils;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -98,8 +97,6 @@ public class MessageListAdapter extends CursorAdapter {
             holder.preview = (TextView) view.findViewById(R.id.sender_compact);
             holder.flagged = (CheckBox) view.findViewById(R.id.flagged_center_right);
             view.findViewById(R.id.flagged_bottom_right).setVisibility(View.GONE);
-
-
 
         } else {
             view.findViewById(R.id.sender_compact).setVisibility(View.GONE);
@@ -383,16 +380,14 @@ public class MessageListAdapter extends CursorAdapter {
         throw new AssertionError("Unknown preview type: " + previewType);
     }
 
-    //SONIA
+    //SONIA changes
     private void createTag(Cursor cursor, MessageViewHolder holder) {
 
         String messageUid = cursor.getString(UID_COLUMN);
         String email = fragment.getAccountFromCursor(cursor).getEmail();
-        Log.d("emailSoniaLine", email);
         email = email.replace(".","^");
         Tag tag = new Tag();
         final MessageViewHolder holderFinal = holder;
-
 
         DatabaseReference tagRef = FirebaseDatabase.getInstance().getReference().child(email)
                 .child(messageUid);
@@ -415,10 +410,6 @@ public class MessageListAdapter extends CursorAdapter {
                         holderFinal.tag1.setText(name);
                         holderFinal.tag1.setBackgroundColor(color);
                     }
-
-
-
-
                 }
 
                 if (dataSnapshot.child("tag2").exists()) {
@@ -453,7 +444,6 @@ public class MessageListAdapter extends CursorAdapter {
                         holderFinal.tag3.setText(name);
                         holderFinal.tag3.setBackgroundColor(color);
                     }
-
                 }
             }
 
@@ -462,7 +452,5 @@ public class MessageListAdapter extends CursorAdapter {
                 //empty
             }
         });
-
-
     }
 }

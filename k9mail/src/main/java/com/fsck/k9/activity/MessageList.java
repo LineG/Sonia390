@@ -1155,7 +1155,6 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             }
         }
 
-
         /*
          * Set visibility of menu items related to the message list
          */
