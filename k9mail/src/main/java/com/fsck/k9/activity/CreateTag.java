@@ -45,9 +45,19 @@ public class CreateTag extends AppCompatActivity {
         Button save3;
 
         Intent intent = getIntent();
-        final String messageId = intent.getStringExtra("messageId");
+        String messageIdTemp = intent.getStringExtra("messageId");
+        if (messageIdTemp == null) {
+            messageIdTemp = "test";
+        }
+        final String messageId = messageIdTemp;
         String emailTemp = intent.getStringExtra("email");
-        final String email = emailTemp.replace(".", "^");
+        if (emailTemp != null) {
+            emailTemp = emailTemp.replace(".", "^");
+        }
+        else
+            emailTemp = "390soen@gmailTest";
+
+        final String email = emailTemp;
 
         tagColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
 
