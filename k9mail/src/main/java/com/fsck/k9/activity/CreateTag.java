@@ -38,16 +38,15 @@ public class CreateTag extends AppCompatActivity {
     private int tag2Color;
     private int tag3Color;
 
-    private String tag1NameText;
-    private String tag2NameText;
-    private String tag3NameText;
 
-    
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_tag);
+
 
         Button colorPickerButton1;
         Button colorPickerButton2;
@@ -109,7 +108,7 @@ public class CreateTag extends AppCompatActivity {
         save1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tag1NameText = tag1Name.getText().toString();
+                String tag1NameText = tag1Name.getText().toString();
                 Map userInfo = new HashMap<>();
 
                 if ((!tag1NameText.equals("")) && tag1Color!=0) {
@@ -126,7 +125,7 @@ public class CreateTag extends AppCompatActivity {
         save2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tag2NameText = tag2Name.getText().toString();
+                String tag2NameText = tag2Name.getText().toString();
                 Map userInfo = new HashMap<>();
 
                 if ((!tag2NameText.equals("")) && tag2Color!=0) {
@@ -143,7 +142,7 @@ public class CreateTag extends AppCompatActivity {
         save3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tag3NameText = tag3Name.getText().toString();
+                String tag3NameText = tag3Name.getText().toString();
                 Map userInfo = new HashMap<>();
 
                 if ((!tag3NameText.equals("")) && tag3Color!=0) {
@@ -207,32 +206,25 @@ public class CreateTag extends AppCompatActivity {
         tag1Db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("here", dataSnapshot.child("tag1").child("name").getValue().toString());
-                if(dataSnapshot != null){
-                    if(dataSnapshot.child("tag1") != null){
+                if(dataSnapshot.exists()){
+                    if(dataSnapshot.child("tag1").exists()){
                         String tag1Name = dataSnapshot.child("tag1").child("name").getValue().toString();
                         String tag1ColorString = dataSnapshot.child("tag1").child("color").getValue().toString();
                         int tag1Color = Integer.parseInt(tag1ColorString);
-                        Log.d("tag1Name",tag1Name);
-                        Log.d("tag1ColorString",tag1ColorString);
                         tag1.setBackgroundColor(tag1Color);
                         tag1.setText(tag1Name);
                     }
-                    if(dataSnapshot.child("tag2") != null){
+                    if(dataSnapshot.child("tag2").exists()){
                         String tag2Name = dataSnapshot.child("tag2").child("name").getValue().toString();
                         String tag2ColorString = dataSnapshot.child("tag2").child("color").getValue().toString();
                         int tag2Color = Integer.parseInt(tag2ColorString);
-                        Log.d("tag2Name",tag2Name);
-                        Log.d("tag2ColorString",tag2ColorString);
                         tag2.setBackgroundColor(tag2Color);
                         tag2.setText(tag2Name);
                     }
-                    if(dataSnapshot.child("tag3") != null){
+                    if(dataSnapshot.child("tag3").exists()){
                         String tag3Name = dataSnapshot.child("tag3").child("name").getValue().toString();
                         String tag3ColorString = dataSnapshot.child("tag3").child("color").getValue().toString();
                         int tag3Color = Integer.parseInt(tag3ColorString);
-                        Log.d("tag3Name",tag3Name);
-                        Log.d("tag3ColorString",tag3ColorString);
                         tag3.setBackgroundColor(tag3Color);
                         tag3.setText(tag3Name);
                     }
@@ -241,7 +233,7 @@ public class CreateTag extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                // Can't be empty
             }
         });
     }
