@@ -23,12 +23,11 @@ public class CustomTagTest {
     private CreateTag activity;
     private Tag tag;
     private CreateTag createTagActivity;
-    private Bundle mb;
-
+    
     @Before
     public void setUp() {
 
-        mb = mock(Bundle.class);
+        Bundle mb = mock(Bundle.class);
 
         try {
 
