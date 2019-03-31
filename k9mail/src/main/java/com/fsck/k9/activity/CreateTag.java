@@ -51,8 +51,8 @@ public class CreateTag extends AppCompatActivity {
         Button remove1;
         Button remove2;
         Button remove3;
+        Button saveAll;
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         String messageIdTemp = intent.getStringExtra("messageId");
@@ -81,6 +81,7 @@ public class CreateTag extends AppCompatActivity {
         remove1 = (Button) findViewById(R.id.remove_1);
         remove2 = (Button) findViewById(R.id.remove_2);
         remove3 = (Button) findViewById(R.id.remove_3);
+        saveAll = (Button) findViewById(R.id.save_changes);
 
 
         tag1Name = (EditText) findViewById(R.id.tag1_name);
@@ -168,6 +169,7 @@ public class CreateTag extends AppCompatActivity {
 
             }
         });
+
         remove2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -178,6 +180,7 @@ public class CreateTag extends AppCompatActivity {
 
             }
         });
+
         remove3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,6 +190,15 @@ public class CreateTag extends AppCompatActivity {
                 Toast.makeText(CreateTag.this, "Removed tag3", Toast.LENGTH_LONG).show();
 
 
+            }
+        });
+
+        saveAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Accounts.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
