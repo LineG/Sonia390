@@ -6,7 +6,6 @@ import android.app.Activity;
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.ui.EolConvertingEditText;
 import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
-import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,11 +22,10 @@ import static org.mockito.Mockito.verify;
 public class TranslationTest {
 
     protected Activity activity;
-    private LanguageTranslator ltMock;
     private EolConvertingEditText ecetMock;
 
     @Before
-    public void setup() {
+    public void setUp() {
         activity = Robolectric.buildActivity(MessageCompose.class)
                 .create()
                 .resume()
@@ -37,12 +35,12 @@ public class TranslationTest {
         //ResourceBundle schemaBundle = Mockito.mock(ResourceBundle.class);
 
 
-        ltMock = mock(LanguageTranslator.class);
+        LanguageTranslator ltMock = mock(LanguageTranslator.class);
         ecetMock = mock(EolConvertingEditText.class);
     }
 
     @Test
-    public void testTranslation(){
+    public void testTranslation() { 
 
         ((MessageCompose) activity).showtTranslation(ecetMock, "Hello");
 
