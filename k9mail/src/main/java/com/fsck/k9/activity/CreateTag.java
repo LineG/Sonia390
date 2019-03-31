@@ -1,6 +1,7 @@
 package com.fsck.k9.activity;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,8 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.fsck.k9.R;
 import com.fsck.k9.firebasedb.Tag;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -44,6 +48,11 @@ public class CreateTag extends AppCompatActivity {
         Button save1;
         Button save2;
         Button save3;
+        Button remove1;
+        Button remove2;
+        Button remove3;
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         String messageIdTemp = intent.getStringExtra("messageId");
@@ -69,6 +78,10 @@ public class CreateTag extends AppCompatActivity {
         save1 = (Button) findViewById(R.id.save_tag1);
         save2 = (Button) findViewById(R.id.save_tag2);
         save3 = (Button) findViewById(R.id.save_tag3);
+        remove1 = (Button) findViewById(R.id.remove_1);
+        remove2 = (Button) findViewById(R.id.remove_2);
+        remove3 = (Button) findViewById(R.id.remove_3);
+
 
         tag1Name = (EditText) findViewById(R.id.tag1_name);
         tag2Name = (EditText) findViewById(R.id.tag2_name);
@@ -79,6 +92,8 @@ public class CreateTag extends AppCompatActivity {
         tag3 = (TextView) findViewById(R.id.tag_3);
 
         final DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
+
+        retrieveTags(email,messageId);
 
         colorPickerButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,6 +157,38 @@ public class CreateTag extends AppCompatActivity {
                 tagsDb.updateChildren(userInfo);
             }
         });
+
+        remove1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tagsDb.child("tag1").removeValue();
+                tag1.setText("Tag 1");
+                tag1.setBackgroundColor(0);
+                Toast.makeText(CreateTag.this, "Removed tag1", Toast.LENGTH_LONG).show();
+
+            }
+        });
+        remove2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tagsDb.child("tag2").removeValue();
+                tag2.setText("Tag 2");
+                tag2.setBackgroundColor(0);
+                Toast.makeText(CreateTag.this, "Removed tag2", Toast.LENGTH_LONG).show();
+
+            }
+        });
+        remove3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tagsDb.child("tag3").removeValue();
+                tag3.setText("Tag 3");
+                tag3.setBackgroundColor(0);
+                Toast.makeText(CreateTag.this, "Removed tag3", Toast.LENGTH_LONG).show();
+
+
+            }
+        });
     }
 
     public void openColorPicker(final int tagNumber) {
@@ -177,5 +224,43 @@ public class CreateTag extends AppCompatActivity {
             }
         });
         colorPicker.show();
+    }
+
+    public void retrieveTags(final String email, final String messageId){
+        DatabaseReference tag1Db = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
+
+        tag1Db.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    if(dataSnapshot.child("tag1").exists()){
+                        String tag1Name = dataSnapshot.child("tag1").child("name").getValue().toString();
+                        String tag1ColorString = dataSnapshot.child("tag1").child("color").getValue().toString();
+                        int tag1Color = Integer.parseInt(tag1ColorString);
+                        tag1.setBackgroundColor(tag1Color);
+                        tag1.setText(tag1Name);
+                    }
+                    if(dataSnapshot.child("tag2").exists()){
+                        String tag2Name = dataSnapshot.child("tag2").child("name").getValue().toString();
+                        String tag2ColorString = dataSnapshot.child("tag2").child("color").getValue().toString();
+                        int tag2Color = Integer.parseInt(tag2ColorString);
+                        tag2.setBackgroundColor(tag2Color);
+                        tag2.setText(tag2Name);
+                    }
+                    if(dataSnapshot.child("tag3").exists()){
+                        String tag3Name = dataSnapshot.child("tag3").child("name").getValue().toString();
+                        String tag3ColorString = dataSnapshot.child("tag3").child("color").getValue().toString();
+                        int tag3Color = Integer.parseInt(tag3ColorString);
+                        tag3.setBackgroundColor(tag3Color);
+                        tag3.setText(tag3Name);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Can't be empty
+            }
+        });
     }
 }
