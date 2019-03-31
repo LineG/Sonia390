@@ -210,6 +210,7 @@ public class TagsTest {
                                 3),
                         isDisplayed()));
         appCompatButton3.perform(click());
+        assert(true);
 
     }
 

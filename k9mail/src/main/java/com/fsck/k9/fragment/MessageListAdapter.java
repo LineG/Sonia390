@@ -23,7 +23,6 @@ import com.fsck.k9.Account;
 import com.fsck.k9.FontSizes;
 import com.fsck.k9.K9;
 import com.fsck.k9.R;
-import com.fsck.k9.firebasedb.Tag;
 import com.fsck.k9.helper.Utility;
 import com.fsck.k9.mail.Address;
 import com.fsck.k9.mailstore.DatabasePreviewType;
@@ -419,7 +418,7 @@ public class MessageListAdapter extends CursorAdapter {
 
                     int color = Integer.parseInt(colorS);
 
-                    if(name != "" ) {
+                    if (!"".equals(name) ) {
                         holderFinal.tag2.setVisibility(View.VISIBLE);
                         holderFinal.tag2.setText(name);
                         holderFinal.tag2.setBackgroundColor(color);
@@ -429,7 +428,7 @@ public class MessageListAdapter extends CursorAdapter {
                     }
                 }
 
-                if (dataSnapshot.child("tag3").exists()) {
+                if (dataSnapshot.child("tag3").exists()){
 
                     String name = dataSnapshot.child("tag3").child("name").getValue()
                             .toString();
@@ -438,7 +437,7 @@ public class MessageListAdapter extends CursorAdapter {
 
                     int color = Integer.parseInt(colorS);
 
-                    if (name.equals("")) {
+                    if ("".equals(name)) {
                         holderFinal.tag3.setVisibility(View.VISIBLE);
                         holderFinal.tag3.setText(name);
                         holderFinal.tag3.setBackgroundColor(color);
