@@ -447,6 +447,28 @@ Please submit bug reports, contribute new features and ask questions at
         K-9’s icon is a picture of…well, of K-9.
     </string>
 
+    <string-array name="Translation">
+        <item>French</item>
+        <item>Spanish</item>
+        <item>German</item>
+        <item>Arabic</item>
+        <item>Italian</item>
+        <item>Chinese(simplified)</item>
+        <item>Russian</item>
+        <item>Japanese</item>
+        <item>Turkish</item>
+    </string-array>
+
+
+    <string name = "French">fr</string>
+    <string name = "Spanish">es</string>
+    <string name = "German">de</string>
+    <string name = "Arabic">ar</string>
+    <string name = "Italian">it</string>
+    <string name = "Chinese">zh</string>
+    <string name = "Russian">ru</string>
+    <string name = "Japanese">ja</string>
+    <string name = "Turkish">tr</string>
 
     <string name="message_view_from_format">From: <xliff:g id="name">%s</xliff:g> &lt;<xliff:g id="email">%s</xliff:g>&gt;</string>
     <string name="message_to_label">To:</string>
