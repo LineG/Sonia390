@@ -35,7 +35,6 @@ public class CreateTag extends AppCompatActivity {
     private int tag1Color;
     private int tag2Color;
     private int tag3Color;
-    AmbilWarnaDialog colorPicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -238,28 +237,28 @@ public class CreateTag extends AppCompatActivity {
         colorPicker.show();
     }
 
-    public void retrieveTags(final String email, final String messageId){
+    public void retrieveTags(final String email, final String messageId) {
         DatabaseReference tag1Db = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
 
         tag1Db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    if(dataSnapshot.child("tag1").exists()){
+                if(dataSnapshot.exists()) {
+                    if(dataSnapshot.child("tag1").exists()) {
                         String tag1Name = dataSnapshot.child("tag1").child("name").getValue().toString();
                         String tag1ColorString = dataSnapshot.child("tag1").child("color").getValue().toString();
                         int tag1Color = Integer.parseInt(tag1ColorString);
                         tag1.setBackgroundColor(tag1Color);
                         tag1.setText(tag1Name);
                     }
-                    if(dataSnapshot.child("tag2").exists()){
+                    if(dataSnapshot.child("tag2").exists()) {
                         String tag2Name = dataSnapshot.child("tag2").child("name").getValue().toString();
                         String tag2ColorString = dataSnapshot.child("tag2").child("color").getValue().toString();
                         int tag2Color = Integer.parseInt(tag2ColorString);
                         tag2.setBackgroundColor(tag2Color);
                         tag2.setText(tag2Name);
                     }
-                    if(dataSnapshot.child("tag3").exists()){
+                    if(dataSnapshot.child("tag3").exists()) {
                         String tag3Name = dataSnapshot.child("tag3").child("name").getValue().toString();
                         String tag3ColorString = dataSnapshot.child("tag3").child("color").getValue().toString();
                         int tag3Color = Integer.parseInt(tag3ColorString);
