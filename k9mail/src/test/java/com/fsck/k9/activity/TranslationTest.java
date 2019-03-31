@@ -5,7 +5,6 @@ import android.app.Activity;
 
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.ui.EolConvertingEditText;
-import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
 
 import org.junit.Before;
 import org.junit.Test;
