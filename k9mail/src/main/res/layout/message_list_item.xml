@@ -120,18 +120,17 @@
                     />
 
             <TextView
-                    android:id="@+id/thread_count"
-                    android:textColor="?attr/messageListThreadCountForegroundColor"
-                    android:background="?attr/messageListThreadCountBackground"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dip"
-                    android:layout_marginRight="4dip"
-                    android:paddingRight="4dip"
-                    android:paddingBottom="1dip"
-                    android:paddingLeft="4dip"
-                    android:focusable="false"
-                    />
+                android:id="@+id/thread_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="4dip"
+                android:background="?attr/messageListThreadCountBackground"
+                android:focusable="false"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:paddingBottom="1dip"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
         </LinearLayout>
 
         <CheckBox
@@ -161,6 +160,59 @@
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="?android:attr/textColorSecondary"/>
+        <TextView
+            android:id="@+id/tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ea0909"
+            android:layout_alignTop="@+id/subject_wrapper"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tag2"
+            android:text="red"
+            android:paddingLeft="15dip"
+            android:paddingRight="8dip"
+            android:layout_marginRight="4pt"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#c0c0c0"
+            android:layout_alignTop="@+id/subject_wrapper"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tag3"
+            android:text="silver"
+            android:paddingLeft="15dip"
+            android:paddingRight="8dip"
+            android:layout_marginRight="4pt"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffff"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/subject_wrapper"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/flagged_center_right"
+            android:text="aqua"
+            android:paddingLeft="15dip"
+            android:paddingRight="8dip"
+            android:layout_marginRight="4pt"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <CheckBox
                 android:id="@+id/flagged_bottom_right"

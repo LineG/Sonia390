@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <permission
         android:name="${applicationId}.permission.REMOTE_CONTROL"
@@ -58,6 +58,9 @@
         android:label="@string/app_name"
         android:resizeableActivity="true"
         android:theme="@style/Theme.K9.Startup">
+        <activity android:name=".activity.CreateTag"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
         <activity
             android:name=".activity.BotActivity"
             android:theme="@style/Theme.AppCompat.Light" />

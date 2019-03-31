@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.format.DateUtils;
@@ -26,6 +27,12 @@ import com.fsck.k9.helper.Utility;
 import com.fsck.k9.mail.Address;
 import com.fsck.k9.mailstore.DatabasePreviewType;
 import com.fsck.k9.ui.ContactBadge;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 import static com.fsck.k9.fragment.MLFProjectionInfo.ANSWERED_COLUMN;
 import static com.fsck.k9.fragment.MLFProjectionInfo.ATTACHMENT_COUNT_COLUMN;
@@ -79,6 +86,9 @@ public class MessageListAdapter extends CursorAdapter {
         MessageViewHolder holder = new MessageViewHolder(fragment);
         holder.date = (TextView) view.findViewById(R.id.date);
         holder.chip = view.findViewById(R.id.chip);
+        holder.tag1 = (TextView) view.findViewById(R.id.tag1);
+        holder.tag2 = (TextView) view.findViewById(R.id.tag2);
+        holder.tag3 = (TextView) view.findViewById(R.id.tag3);
 
 
         if (fragment.previewLines == 0 && fragment.contactsPictureLoader == null) {
@@ -86,8 +96,6 @@ public class MessageListAdapter extends CursorAdapter {
             holder.preview = (TextView) view.findViewById(R.id.sender_compact);
             holder.flagged = (CheckBox) view.findViewById(R.id.flagged_center_right);
             view.findViewById(R.id.flagged_bottom_right).setVisibility(View.GONE);
-
-
 
         } else {
             view.findViewById(R.id.sender_compact).setVisibility(View.GONE);
@@ -127,7 +135,6 @@ public class MessageListAdapter extends CursorAdapter {
 
         holder.flagged.setVisibility(fragment.stars ? View.VISIBLE : View.GONE);
         holder.flagged.setOnClickListener(holder);
-
 
         holder.selected = (CheckBox) view.findViewById(R.id.selected_checkbox);
         holder.selected.setOnClickListener(holder);
@@ -206,6 +213,9 @@ public class MessageListAdapter extends CursorAdapter {
         formatPreviewText(holder.preview, beforePreviewText, sigil);
 
         Drawable statusHolder = buildStatusHolder(forwarded, answered);
+
+        //SONIA changes
+        createTag(cursor, holder);
 
         if (holder.from != null ) {
             holder.from.setTypeface(Typeface.create(holder.from.getTypeface(), maybeBoldTypeface));
@@ -366,5 +376,79 @@ public class MessageListAdapter extends CursorAdapter {
         }
 
         throw new AssertionError("Unknown preview type: " + previewType);
+    }
+
+    //SONIA changes
+    private void createTag(Cursor cursor, MessageViewHolder holder) {
+
+        String messageUid = cursor.getString(UID_COLUMN);
+        String email = fragment.getAccountFromCursor(cursor).getEmail();
+        email = email.replace(".", "^");
+        final MessageViewHolder holderFinal = holder;
+
+        DatabaseReference tagRef = FirebaseDatabase.getInstance().getReference().child(email)
+                .child(messageUid);
+
+        tagRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.child("tag1").exists()) {
+
+                    String name = dataSnapshot.child("tag1").child("name").getValue()
+                            .toString();
+                    String colorS = dataSnapshot.child("tag1").child("color").getValue()
+                            .toString();
+
+                    int color = Integer.parseInt(colorS);
+
+                    if(name != "" ) {
+                        holderFinal.tag1.setVisibility(View.VISIBLE);
+                        holderFinal.tag1.setText(name);
+                        holderFinal.tag1.setBackgroundColor(color);
+                    }
+                }
+
+                if (dataSnapshot.child("tag2").exists()) {
+
+                    String name = dataSnapshot.child("tag2").child("name").getValue()
+                            .toString();
+                    String colorS = dataSnapshot.child("tag2").child("color").getValue()
+                            .toString();
+
+                    int color = Integer.parseInt(colorS);
+
+                    if (!"".equals(name) ) {
+                        holderFinal.tag2.setVisibility(View.VISIBLE);
+                        holderFinal.tag2.setText(name);
+                        holderFinal.tag2.setBackgroundColor(color);
+                    }
+                    else {
+                        holderFinal.tag2.setVisibility(View.GONE);
+                    }
+                }
+
+                if (dataSnapshot.child("tag3").exists()){
+
+                    String name = dataSnapshot.child("tag3").child("name").getValue()
+                            .toString();
+                    String colorS = dataSnapshot.child("tag3").child("color").getValue()
+                            .toString();
+
+                    int color = Integer.parseInt(colorS);
+
+                    if (name != "") {
+                        holderFinal.tag3.setVisibility(View.VISIBLE);
+                        holderFinal.tag3.setText(name);
+                        holderFinal.tag3.setBackgroundColor(color);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //empty
+            }
+        });
     }
 }

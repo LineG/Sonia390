@@ -32,6 +32,8 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import timber.log.Timber;
+
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -58,6 +60,7 @@ import com.fsck.k9.Preferences;
 import com.fsck.k9.R;
 import com.fsck.k9.activity.ActivityListener;
 import com.fsck.k9.activity.ChooseFolder;
+import com.fsck.k9.activity.CreateTag;
 import com.fsck.k9.activity.FolderInfoHolder;
 import com.fsck.k9.activity.MessageReference;
 import com.fsck.k9.activity.misc.ContactPictureLoader;
@@ -786,6 +789,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
     private void onForward(MessageReference messageReference) {
         fragmentListener.onForward(messageReference);
+        Log.d("hello", messageReference.toString());
     }
 
     public void onForwardAsAttachment(MessageReference messageReference) {
@@ -1098,6 +1102,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         }
 
         int adapterPosition = getPositionForUniqueId(contextMenuUniqueId);
+
         if (adapterPosition == AdapterView.INVALID_POSITION) {
             return false;
         }
@@ -1181,6 +1186,18 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
             case R.id.debug_delete_locally: {
                 onDebugClearLocally(getMessageAtPosition(adapterPosition));
                 break;
+            }
+
+            //sonia changes for tag
+            case R.id.tag: {
+                String email = account.getEmail();
+                String emailId = (String) (getMessageAtPosition(adapterPosition).getUid());
+                String accountId = (String) (getMessageAtPosition(adapterPosition).getAccountUuid());
+                Intent intent = new Intent(MessageListFragment.this.getActivity(), CreateTag.class);
+                intent.putExtra("messageId", emailId);
+                intent.putExtra("accountId", accountId);
+                intent.putExtra("email", email);
+                startActivity(intent);
             }
         }
 
@@ -1987,6 +2004,9 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         private MenuItem mFlag;
         private MenuItem mUnflag;
 
+        //Sonia changes for tags
+        private MenuItem mTag;
+
         @Override
         public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
             mSelectAll = menu.findItem(R.id.select_all);
@@ -1994,6 +2014,9 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
             mMarkAsUnread = menu.findItem(R.id.mark_as_unread);
             mFlag = menu.findItem(R.id.flag);
             mUnflag = menu.findItem(R.id.unflag);
+
+            //Sonia changes for tags
+            mTag = menu.findItem(R.id.tag);
 
             // we don't support cross account actions atm
             if (!singleAccountMode) {
@@ -2469,6 +2492,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
     public void onToggleFlagged() {
         onToggleFlag(Flag.FLAGGED, FLAGGED_COLUMN);
+
     }
 
     public void onToggleRead() {

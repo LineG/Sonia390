@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/create_tag_layout"
+    tools:context="com.fsck.k9.activity.CreateTag">
+
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/tag1_name"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name Tag 1"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tag_1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Tag 1"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/color_picker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-20dp"
+                android:text="color"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+            <Button
+                android:id="@+id/save_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+            <Button
+                android:id="@+id/remove_1"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:text="X"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="110dp">
+
+            <EditText
+                android:id="@+id/tag2_name"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name Tag 2"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tag_2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Tag 2"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/color_picker2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-20dp"
+                android:text="color"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
+            <Button
+                android:id="@+id/save_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+            <Button
+                android:id="@+id/remove_2"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:text="X"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="210dp">
+
+            <EditText
+                android:id="@+id/tag3_name"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name Tag 3"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tag_3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Tag 3"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/color_picker3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-20dp"
+                android:text="color"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
+            <Button
+                android:id="@+id/save_tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+            <Button
+                android:id="@+id/remove_3"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:text="X"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="302dp" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/save_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="302dp" />
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

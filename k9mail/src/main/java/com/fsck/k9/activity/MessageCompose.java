@@ -460,6 +460,9 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             public void onClick(View v) {
 
                 messageContentView.setText(greetingText);
+
+                //testing for retrieving tags
+
             }
         });
 
