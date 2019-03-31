@@ -31,6 +31,7 @@ public class CreateTag extends AppCompatActivity {
     private int tag1Color;
     private int tag2Color;
     private int tag3Color;
+    AmbilWarnaDialog colorPicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

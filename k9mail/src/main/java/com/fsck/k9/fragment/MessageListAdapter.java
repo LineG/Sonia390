@@ -214,7 +214,7 @@ public class MessageListAdapter extends CursorAdapter {
 
         Drawable statusHolder = buildStatusHolder(forwarded, answered);
 
-        //SONIA
+        //SONIA changes
         createTag(cursor, holder);
 
         if (holder.from != null ) {
@@ -437,7 +437,7 @@ public class MessageListAdapter extends CursorAdapter {
 
                     int color = Integer.parseInt(colorS);
 
-                    if ("".equals(name)) {
+                    if (name != "") {
                         holderFinal.tag3.setVisibility(View.VISIBLE);
                         holderFinal.tag3.setText(name);
                         holderFinal.tag3.setBackgroundColor(color);
