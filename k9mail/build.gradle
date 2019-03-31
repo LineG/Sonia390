@@ -81,6 +81,9 @@ android {
         generatedDensities = ['mdpi', 'hdpi', 'xhdpi']
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
     }
 
     signingConfigs {
