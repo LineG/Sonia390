@@ -31,11 +31,6 @@ public class TranslationTest {
                 .resume()
                 .get();
 
-
-        //ResourceBundle schemaBundle = Mockito.mock(ResourceBundle.class);
-
-
-        LanguageTranslator ltMock = mock(LanguageTranslator.class);
         ecetMock = mock(EolConvertingEditText.class);
     }
 
@@ -45,8 +40,5 @@ public class TranslationTest {
         ((MessageCompose) activity).showtTranslation(ecetMock, "Hello");
 
         verify(ecetMock).setText("Hello");
-
     }
-
 }
-
