@@ -11,9 +11,6 @@ import org.robolectric.annotation.Config;
 
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.firebasedb.Tag;
-import com.fsck.k9.fragment.MessageListAdapter;
-
-import yuku.ambilwarna.AmbilWarnaDialog;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -25,16 +22,11 @@ public class CustomTagTest {
 
     private CreateTag activity;
     private Tag tag;
-    CreateTag createTagActivity;
-    MessageListAdapter mmla;
-    AmbilWarnaDialog mcp;
-    Bundle mb;
+    private CreateTag createTagActivity;
+    private Bundle mb;
 
     @Before
     public void setUp() {
-
-        mmla = mock(MessageListAdapter.class);
-        mcp = mock(AmbilWarnaDialog.class);
 
         mb = mock(Bundle.class);
 

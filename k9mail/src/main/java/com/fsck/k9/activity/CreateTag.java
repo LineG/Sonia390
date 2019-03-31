@@ -52,14 +52,15 @@ public class CreateTag extends AppCompatActivity {
         Button remove3;
         Button saveAll;
 
-
         Intent intent = getIntent();
         String messageIdTemp = intent.getStringExtra("messageId");
         if (messageIdTemp == null) {
             messageIdTemp = "test";
         }
+
         final String messageId = messageIdTemp;
         String emailTemp = intent.getStringExtra("email");
+
         if (emailTemp != null) {
             emailTemp = emailTemp.replace(".", "^");
         }
@@ -127,6 +128,7 @@ public class CreateTag extends AppCompatActivity {
                 Toast.makeText(CreateTag.this, "Added tag1", Toast.LENGTH_LONG).show();
 
                 tagsDb.updateChildren(userInfo);
+
             }
         });
 
@@ -141,6 +143,7 @@ public class CreateTag extends AppCompatActivity {
                 Toast.makeText(CreateTag.this, "Added tag2", Toast.LENGTH_LONG).show();
 
                 tagsDb.updateChildren(userInfo);
+
             }
         });
 
@@ -155,6 +158,7 @@ public class CreateTag extends AppCompatActivity {
                 Toast.makeText(CreateTag.this, "Added tag3", Toast.LENGTH_LONG).show();
 
                 tagsDb.updateChildren(userInfo);
+
             }
         });
 
@@ -188,7 +192,6 @@ public class CreateTag extends AppCompatActivity {
                 tag3.setBackgroundColor(0);
                 Toast.makeText(CreateTag.this, "Removed tag3", Toast.LENGTH_LONG).show();
 
-
             }
         });
 
@@ -198,6 +201,7 @@ public class CreateTag extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Accounts.class);
                 startActivity(intent);
                 finish();
+
             }
         });
     }
