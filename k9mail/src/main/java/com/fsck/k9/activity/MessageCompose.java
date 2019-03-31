@@ -1,16 +1,6 @@
 package com.fsck.k9.activity;
 
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.regex.Pattern;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -49,14 +39,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Spinner;
-import android.widget.Button;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
 
 import com.fsck.k9.Account;
 import com.fsck.k9.Account.MessageFormat;
@@ -114,7 +104,24 @@ import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.ui.EolConvertingEditText;
 import com.fsck.k9.ui.compose.QuotedMessageMvpView;
 import com.fsck.k9.ui.compose.QuotedMessagePresenter;
+import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
+import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
+import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationResult;
+import com.ibm.watson.developer_cloud.language_translator.v3.util.Language;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
+
 import org.openintents.openpgp.util.OpenPgpApi;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.regex.Pattern;
+
 import timber.log.Timber;
 
 
@@ -238,8 +245,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
      */
     private String greetingText;
     public int[] templateArr = {0, 0, 0, 0, 0, 0, 0};
+    private EditText input;
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
+    private String targetLanguage;
+    private IamOptions options;
+    private LanguageTranslator translationService;
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
@@ -254,9 +265,49 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
     }
 
+////////////////////////////////////Translation/////////////////////////////////////////////////////
+    // in the constructor, letting the SDK manage the IAM token
+
+    public LanguageTranslator initLanguageTranslatorService() {
+        LanguageTranslator service = new LanguageTranslator("2018-05-01");
+        service.setIamCredentials(options);
+        service.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
+        return service;
+    }
+
+
+    public class TranslationTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            TranslateOptions translateOptions = new TranslateOptions.Builder()
+                    .addText(params[0])
+                    .source(Language.ENGLISH)
+                    .target(targetLanguage)
+                    .build();
+            TranslationResult result = translationService.translate(translateOptions).execute();
+            String firstTranslation = result.getTranslations().get(0).getTranslationOutput();
+            showTranslation(firstTranslation);
+            return "Did translate";
+        }
+    }
+
+    public void showTranslation(final String translation) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                messageContentView.setText(translation);
+            }
+        });
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -348,6 +399,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         templatesSpinnerView  = (Spinner) findViewById(R.id.templates);
         applyTemplateButtonView = (Button) findViewById(R.id.apply_template);
 
+
         ArrayAdapter<String> templatesAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.message_compose_templates));
@@ -410,6 +462,94 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 messageContentView.setText(greetingText);
             }
         });
+
+
+        //////////////////////////////////Translation///////////////////////////////////////////////
+
+        options = new IamOptions.Builder()
+                .apiKey("2sxvkDC3F6nP19R6kbD23Vkog9jxjadv15FpcmrJCxmu")
+                .build();
+
+
+        Spinner translatorSpinnerView;
+
+        translatorSpinnerView  = (Spinner) findViewById(R.id.translatelangs);
+        Button applyTranslationButtonView;
+        input = findViewById(R.id.message_content);
+        translationService = initLanguageTranslatorService();
+        applyTranslationButtonView = (Button) findViewById(R.id.apply_translate);
+
+        ArrayAdapter<String> translationAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                getResources().getStringArray(R.array.Translation));
+        translatorSpinnerView.setAdapter(translationAdapter);
+
+        translatorSpinnerView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0) {
+
+                    targetLanguage = getString(R.string.French);
+                }
+
+                else if (position == 1) {
+
+                    targetLanguage = getString(R.string.Spanish);
+                }
+
+                else if (position == 2) {
+
+                    targetLanguage = getString(R.string.German);
+                }
+
+                else if (position == 3) {
+
+                    targetLanguage = getString(R.string.Arabic);
+                }
+                else if (position == 4) {
+
+                    targetLanguage = getString(R.string.Italian);
+                }
+
+                else if (position == 5) {
+
+                    targetLanguage = getString(R.string.Chinese);
+                }
+
+                else if (position == 6) {
+
+                    targetLanguage = getString(R.string.Russian);
+                }
+
+                else if (position == 7) {
+
+                    targetLanguage = getString(R.string.Japanese);
+                }
+
+                else if (position == 8) {
+
+                    targetLanguage = getString(R.string.Turkish);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+                // sometimes you need nothing here
+            }
+        });
+
+        applyTranslationButtonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new TranslationTask().execute(input.getText().toString());
+            }
+        });
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
         //sonia changes
         mediaRecorder = new MediaRecorder();
@@ -2086,4 +2226,11 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             return titleResource;
         }
     }
+
+    public void showtTranslation(EolConvertingEditText m, String translation) {
+
+        m.setText(translation);
+
+    }
+
 }
