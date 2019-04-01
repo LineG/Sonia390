@@ -81,26 +81,6 @@ public class TranslateTest {
                         isDisplayed()));
         button2.perform(click());
 
-        ViewInteraction button3 = onView(
-                allOf(withId(android.R.id.button2), withText("Continue"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.LinearLayout")),
-                                        0),
-                                0),
-                        isDisplayed()));
-        button3.perform(click());
-
-        ViewInteraction button4 = onView(
-                allOf(withId(android.R.id.button2), withText("Continue"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.LinearLayout")),
-                                        0),
-                                0),
-                        isDisplayed()));
-        button4.perform(click());
-
         ViewInteraction editText3 = onView(
                 allOf(withId(R.id.account_description), withContentDescription("Give this account a name (optional):"),
                         childAtPosition(
@@ -118,5 +98,128 @@ public class TranslateTest {
                                         0),
                                 1)));
         editText4.perform(scrollTo(), replaceText("s"), closeSoftKeyboard());
-        
+
+        ViewInteraction button5 = onView(
+                allOf(withId(R.id.done), withText("Done"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        2),
+                                1),
+                        isDisplayed()));
+        button5.perform(click());
+
+        ViewInteraction button6 = onView(
+                allOf(withId(android.R.id.button1), withText("OK"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        0),
+                                2),
+                        isDisplayed()));
+        button6.perform(click());
+
+        ViewInteraction actionMenuItemView = onView(
+                allOf(withId(R.id.compose), withContentDescription("Compose"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("com.android.internal.widget.ActionBarContainer")),
+                                        0),
+                                2),
+                        isDisplayed()));
+        actionMenuItemView.perform(click());
+
+        pressBack();
+
+        ViewInteraction eolConvertingEditText = onView(
+                allOf(withId(R.id.message_content),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                6)));
+        eolConvertingEditText.perform(scrollTo(), replaceText("hello"), closeSoftKeyboard());
+
+        ViewInteraction button7 = onView(
+                allOf(withId(R.id.apply_translate),
+                        childAtPosition(
+                                childAtPosition(
+                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                                        5),
+                                2),
+                        isDisplayed()));
+        button7.check(matches(isDisplayed()));
+
+        ViewInteraction textView = onView(
+                allOf(withId(android.R.id.text1), withText("French"),
+                        childAtPosition(
+                                allOf(withId(R.id.translatelangs),
+                                        childAtPosition(
+                                                IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                                                1)),
+                                0),
+                        isDisplayed()));
+        textView.check(matches(withText("French")));
+
+        ViewInteraction textView2 = onView(
+                allOf(withId(R.id.translate_string), withText("Translate  "),
+                        childAtPosition(
+                                childAtPosition(
+                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                                        5),
+                                0),
+                        isDisplayed()));
+        textView2.check(matches(withText("Translate  ")));
+
+        ViewInteraction textView3 = onView(
+                allOf(withId(R.id.translate_string), withText("Translate  "),
+                        childAtPosition(
+                                childAtPosition(
+                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                                        5),
+                                0),
+                        isDisplayed()));
+        textView3.check(matches(withText("Translate  ")));
+
+        ViewInteraction button8 = onView(
+                allOf(withId(R.id.apply_translate), withText("Apply Translation"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        5),
+                                2)));
+        button8.perform(scrollTo(), click());
+
+        ViewInteraction editText5 = onView(
+                allOf(withId(R.id.message_content), withText("Bonjour"),
+                        childAtPosition(
+                                childAtPosition(
+                                        IsInstanceOf.<View>instanceOf(android.widget.ScrollView.class),
+                                        0),
+                                6),
+                        isDisplayed()));
+        editText5.check(matches(withText("Bonjour")));
+    }
+
+    private static Matcher<View> childAtPosition(
+            final Matcher<View> parentMatcher, final int position) {
+
+        return new TypeSafeMatcher<View>() {
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("Child at position " + position + " in parent ");
+                parentMatcher.describeTo(description);
+            }
+
+            @Override
+            public boolean matchesSafely(View view) {
+                ViewParent parent = view.getParent();
+                return parent instanceof ViewGroup && parentMatcher.matches(parent)
+                        && view.equals(((ViewGroup) parent).getChildAt(position));
+            }
+        };
+    }
+
 }
+
+
