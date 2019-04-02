@@ -56,6 +56,12 @@
         android:showAsAction="always"
         android:title="@string/bot_action"/>
 
+    <!-- sonia contact list button -->
+    <item
+        android:id="@+id/contact_list"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_contact_mail_black_24dp"/>
+
     <!-- MessageView -->
     <item
         android:id="@+id/delete"
