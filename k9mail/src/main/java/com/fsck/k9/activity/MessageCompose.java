@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.ActivityCompat;
@@ -110,8 +111,6 @@ import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationRe
 import com.ibm.watson.developer_cloud.language_translator.v3.util.Language;
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
 
-import org.openintents.openpgp.util.OpenPgpApi;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
@@ -123,6 +122,12 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 import timber.log.Timber;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.openintents.openpgp.util.OpenPgpApi;
 
 
 @SuppressWarnings("deprecation") // TODO get rid of activity dialogs and indeterminate progress bars
@@ -248,15 +253,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private EditText input;
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
-    private String targetLanguage;
-    private IamOptions options;
-    private LanguageTranslator translationService;
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
     private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private Date currentTime;
     private final int requestPermissionCode = 1000;
+    private String targetLanguage;
+    private IamOptions options;
+    private LanguageTranslator translationService;
+    private EditText word;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -301,12 +307,31 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         });
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////Thesaurus///////////////////////////////////////////////////
+    private void getWebsite(String word){
+        Document doc = null;
+        try {
+            doc = Jsoup.connect("https://www.thesaurus.com/browse/"+word).get();
+            Elements links = doc.getElementsByAttributeValueContaining("class", "css-1hlsbfu etbu2a31");
+            String x = "";
+            for(Element link : links){
 
+                x += link.text()+" ";
+            }
+            messageContentView.setText(x);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
@@ -551,6 +576,18 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
     ////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////OnClick///////////////////////////////////////////////////
+        word = (EditText) findViewById(R.id.word_thesaurus);
+        Button button = (Button) findViewById(R.id.apply_thesaurus);
+        button.setOnClickListener(new  View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getWebsite(word.getText().toString());
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

@@ -111,6 +111,37 @@
                     android:layout_width="match_parent"/>
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#509f1a71"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/apply_thesaurus"
+                    android:text="Thesaurus"
+                    android:textSize="10sp"
+                    android:padding="0dip"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#509f1a71"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/word_thesaurus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="0dip"
+                    android:hint="Thesaurus"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
             <view
                 class="com.fsck.k9.ui.EolConvertingEditText"
                 android:id="@+id/message_content"
