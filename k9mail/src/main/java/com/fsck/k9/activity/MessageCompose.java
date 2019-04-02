@@ -311,12 +311,12 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private void getWebsite(String word){
         Document doc = null;
         try {
-            doc = Jsoup.connect("https://www.thesaurus.com/browse/"+word).get();
+            doc = Jsoup.connect("https://www.thesaurus.com/browse/"+ word).get();
             Elements links = doc.getElementsByAttributeValueContaining("class", "css-1hlsbfu etbu2a31");
             String x = "";
             for(Element link : links){
 
-                x += link.text()+" ";
+                x += link.text()+ " ";
             }
             messageContentView.setText(x);
         } catch (IOException e) {
