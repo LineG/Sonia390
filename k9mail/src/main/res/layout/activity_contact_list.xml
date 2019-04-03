@@ -14,12 +14,9 @@
         android:layout_alignParentBottom="true"/>
 
     <ListView
-        android:id="@+id/contact_listview"
+        android:id="@+id/contact_list_view"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"/>
-
-
-
 
 </RelativeLayout>

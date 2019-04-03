@@ -5,10 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.fsck.k9.R;
+import com.fsck.k9.firebasedb.Contact;
+import com.fsck.k9.fragment.ContactListAdapter;
+
+import java.util.ArrayList;
 
 public class ContactList extends AppCompatActivity {
+
+    private ListView listView;
+    private ContactListAdapter contactAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,20 @@ public class ContactList extends AppCompatActivity {
                 openAddContactActivity();
             }
         });
+
+        listView = findViewById(R.id.contact_list_view);
+
+        ArrayList<Contact> contactList = new ArrayList<>();
+
+        contactList.add(new Contact("line", "ghanem",
+                "ghanemline@gmail.com"));
+        contactList.add(new Contact("lara", "ghanem",
+                "laraghanem@gmail.com"));
+
+        contactAdapter = new ContactListAdapter(this, contactList);
+
+        listView.setAdapter(contactAdapter);
+
 
     }
 
