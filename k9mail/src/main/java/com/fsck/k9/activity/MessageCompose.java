@@ -113,6 +113,7 @@ import com.ibm.watson.developer_cloud.service.security.IamOptions;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -320,11 +321,34 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
                 x += link.text()+ " ";
             }
-            messageContentView.setText(x);
+
+            String temp = trimWebsiteString(x);
+
+            messageContentView.setText(temp);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    private String trimWebsiteString(String fromWebsite) {
+
+        // synonyms for "word" - MOST RELEVANT
+        int index = fromWebsite.indexOf("MOST RELEVANT");
+        fromWebsite = fromWebsite.substring(0, index);
+
+        return fromWebsite;
+    }
+
+    private ArrayList<String> getSynonyms(String temp) {
+        String [] tempArray = new String[25];
+        tempArray = temp.split(" ");
+
+        ArrayList <String> list = new ArrayList<>();
+
+        return list;
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
