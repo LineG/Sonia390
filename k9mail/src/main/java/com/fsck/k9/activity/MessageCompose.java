@@ -312,7 +312,9 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         Document doc = null;
         try {
             doc = Jsoup.connect("https://www.thesaurus.com/browse/"+ word).get();
-            Elements links = doc.getElementsByAttributeValueContaining("class", "css-1hlsbfu etbu2a31");
+                                                                //css-1hlsbfu etbu2a31 : the one tyler used
+                                                                //css-1lc0dpe et6tpn80
+            Elements links = doc.getElementsByAttributeValueContaining("class", "css-429zho e1991neq0");
             String x = "";
             for(Element link : links){
 
@@ -575,8 +577,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 new TranslationTask().execute(input.getText().toString());
             }
         });
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////OnClick///////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////OnClick///////////////////////////////////////////////
         word = (EditText) findViewById(R.id.word_thesaurus);
         Button button = (Button) findViewById(R.id.apply_thesaurus);
         button.setOnClickListener(new  View.OnClickListener() {
@@ -587,7 +589,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
 
 
 
