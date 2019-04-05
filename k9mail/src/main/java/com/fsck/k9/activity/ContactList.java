@@ -3,6 +3,7 @@ package com.fsck.k9.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -19,11 +20,15 @@ public class ContactList extends AppCompatActivity {
 
     private ListView listView;
     private ContactListAdapter contactAdapter;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list);
+
+        Intent intent = getIntent();
+        email = intent.getStringExtra("email");
 
         Button button = (Button) findViewById(R.id.add_new_contact);
         button.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +70,7 @@ public class ContactList extends AppCompatActivity {
 
     public void openAddContactActivity() {
         Intent intent = new Intent(this, AddContact.class);
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 

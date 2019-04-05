@@ -807,7 +807,9 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
 
     //sonia contacts list new activity
     private void onContactList() {
+        String email = account.getEmail();
         Intent intent = new Intent(this, ContactList.class);
+        intent.putExtra("email", email);
         startActivity(intent);
         finish();
     }
