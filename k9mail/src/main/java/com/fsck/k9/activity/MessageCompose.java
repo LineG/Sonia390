@@ -311,20 +311,21 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 ///////////////////////////////////////Thesaurus///////////////////////////////////////////////////
     private void getWebsite(String word){
         Document doc = null;
-        try {
-            doc = Jsoup.connect("https://www.thesaurus.com/browse/"+ word).get();
+        try {                           //https://www.thesaurus.com/browse/
+            doc = Jsoup.connect("https://www.synonym.com/synonyms/"+ word).get();
                                                                 //css-1hlsbfu etbu2a31 : the one tyler used
                                                                 //css-1lc0dpe et6tpn80
-            Elements links = doc.getElementsByAttributeValueContaining("class", "css-429zho e1991neq0");
+                                                                //css-429zho e1991neq0 best option
+            Elements links = doc.getElementsByClass("syn");
             String x = "";
             for(Element link : links){
 
-                x += link.text()+ " ";
+                x += link.text()+ ", ";
             }
 
-            String temp = trimWebsiteString(x);
+            //String temp = trimWebsiteString(x);
 
-            messageContentView.setText(temp);
+            messageContentView.setText(x);
 
         } catch (IOException e) {
             e.printStackTrace();
