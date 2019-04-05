@@ -111,9 +111,15 @@ import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationRe
 import com.ibm.watson.developer_cloud.language_translator.v3.util.Language;
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.openintents.openpgp.util.OpenPgpApi;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -123,12 +129,6 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 import timber.log.Timber;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import org.openintents.openpgp.util.OpenPgpApi;
 
 
 @SuppressWarnings("deprecation") // TODO get rid of activity dialogs and indeterminate progress bars
@@ -323,31 +323,23 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 x += link.text()+ ", ";
             }
 
-            //String temp = trimWebsiteString(x);
+            String [] temp = getSynonyms(x);
+            String synonyms = "";
+            for (int a = 0; a < 5; a++) {
+               synonyms += temp [a];
+            }
 
-            messageContentView.setText(x);
+                messageContentView.setText(synonyms);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private String trimWebsiteString(String fromWebsite) {
-
-        // synonyms for "word" - MOST RELEVANT
-        int index = fromWebsite.indexOf("MOST RELEVANT");
-        fromWebsite = fromWebsite.substring(0, index);
-
-        return fromWebsite;
-    }
-
-    private ArrayList<String> getSynonyms(String temp) {
-        String [] tempArray = new String[25];
-        tempArray = temp.split(" ");
-
-        ArrayList <String> list = new ArrayList<>();
-
-        return list;
+    private String[] getSynonyms(String temp) {
+        String [] tempArray = temp.split(",");
+        String[] newArray = Arrays.copyOfRange(tempArray, 0, 5);
+        return newArray;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
