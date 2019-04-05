@@ -1,6 +1,7 @@
 package com.fsck.k9.activity;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,12 @@ import android.widget.ListView;
 import com.fsck.k9.R;
 import com.fsck.k9.firebasedb.Contact;
 import com.fsck.k9.fragment.ContactListAdapter;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -21,6 +28,8 @@ public class ContactList extends AppCompatActivity {
     private ListView listView;
     private ContactListAdapter contactAdapter;
     private String email;
+    private String emailFb;
+    final ArrayList<Contact> contactList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,7 @@ public class ContactList extends AppCompatActivity {
 
         Intent intent = getIntent();
         email = intent.getStringExtra("email");
+        emailFb = email.replace(".", "^");
 
         Button button = (Button) findViewById(R.id.add_new_contact);
         button.setOnClickListener(new View.OnClickListener() {
@@ -40,12 +50,16 @@ public class ContactList extends AppCompatActivity {
 
         listView = findViewById(R.id.contact_list_view);
 
-        final ArrayList<Contact> contactList = new ArrayList<>();
+        retrieveTags(emailFb);
 
-        contactList.add(new Contact("line", "ghanem",
-                "ghanemline@gmail.com"));
-        contactList.add(new Contact("lara", "ghanem",
-                "laraghanem@gmail.com"));
+//        final ArrayList<Contact> contactList = new ArrayList<>();
+//
+//        contactList.add(new Contact("line", "ghanem",
+//                "ghanemline@gmail.com"));
+//        contactList.add(new Contact("lara", "ghanem",
+//                "laraghanem@gmail.com"));
+
+
 
         contactAdapter = new ContactListAdapter(this, contactList);
 
@@ -82,5 +96,37 @@ public class ContactList extends AppCompatActivity {
         startActivity(i);
 
 
+    }
+
+    public void retrieveTags(final String email) {
+        DatabaseReference contactsDb = FirebaseDatabase.getInstance().getReference().child(email).child("contacts");
+        contactsDb.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
+                if(dataSnapshot.exists()) {
+                    String firstName = dataSnapshot.child("name").getValue().toString();
+                    String lastName = dataSnapshot.child("lastName").getValue().toString();
+                    String email = dataSnapshot.child("email").getValue().toString();
+
+                    Contact contact = new Contact(firstName, lastName, email);
+                    Log.d("contact", contact.toString());
+                    contactList.add(contact);
+                    contactAdapter.notifyDataSetChanged();
+                }
+            }
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+            }
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
     }
 }
