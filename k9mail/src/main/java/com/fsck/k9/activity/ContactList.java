@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -33,7 +35,7 @@ public class ContactList extends AppCompatActivity {
 
         listView = findViewById(R.id.contact_list_view);
 
-        ArrayList<Contact> contactList = new ArrayList<>();
+        final ArrayList<Contact> contactList = new ArrayList<>();
 
         contactList.add(new Contact("line", "ghanem",
                 "ghanemline@gmail.com"));
@@ -43,12 +45,36 @@ public class ContactList extends AppCompatActivity {
         contactAdapter = new ContactListAdapter(this, contactList);
 
         listView.setAdapter(contactAdapter);
+        listView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                Contact contact = contactList.get(position);
+                sendContact(contact.getEmail());
 
 
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        return;
     }
 
     public void openAddContactActivity() {
         Intent intent = new Intent(this, AddContact.class);
         startActivity(intent);
+    }
+
+
+    private void sendContact(String email) {
+
+        Intent i = new Intent(this, MessageCompose.class);
+        i.putExtra("contact_email", email);
+        startActivity(i);
+
+
     }
 }

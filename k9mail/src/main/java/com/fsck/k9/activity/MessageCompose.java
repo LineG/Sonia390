@@ -104,6 +104,7 @@ import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.ui.EolConvertingEditText;
 import com.fsck.k9.ui.compose.QuotedMessageMvpView;
 import com.fsck.k9.ui.compose.QuotedMessagePresenter;
+import com.fsck.k9.view.RecipientSelectView;
 import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
 import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
 import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationResult;
@@ -338,6 +339,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         final Intent intent = getIntent();
 
         String messageReferenceString = intent.getStringExtra(EXTRA_MESSAGE_REFERENCE);
+        String contact_email = intent.getStringExtra("contact_email");
         relatedMessageReference = MessageReference.parse(messageReferenceString);
 
         final String accountUuid = (relatedMessageReference != null) ?
@@ -374,6 +376,11 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 AutocryptStatusInteractor.getInstance(), new ReplyToParser(), this);
         recipientPresenter.asyncUpdateCryptoStatus();
 
+        if (contact_email != null) {
+
+            RecipientSelectView receipientView = (RecipientSelectView) findViewById(R.id.to);
+            receipientView.setText(contact_email);
+        }
 
         subjectView = (EditText) findViewById(R.id.subject);
         subjectView.getInputExtras(true).putBoolean("allowEmoji", true);

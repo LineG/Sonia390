@@ -41,12 +41,13 @@ public class ContactListAdapter extends ArrayAdapter<Contact> {
             holder.contactName = convertView.findViewById(R.id.contact_list_name);
             holder.contactEmail = convertView.findViewById(R.id.contact_list_email);
 
-        }
 
-        Contact contact = getItem(position);
-        String name = contact.getName() + " " + contact.getLastName();
-        holder.contactName.setText(name);
-        holder.contactEmail.setText(contact.getEmail());
+            Contact contact = getItem(position);
+            String name = contact.getName() + " " + contact.getLastName();
+
+            holder.contactName.setText(name);
+            holder.contactEmail.setText(contact.getEmail());
+        }
 
         return convertView;
 
