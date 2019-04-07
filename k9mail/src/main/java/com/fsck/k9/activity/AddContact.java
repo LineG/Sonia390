@@ -3,7 +3,6 @@ package com.fsck.k9.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +49,7 @@ public class AddContact extends AppCompatActivity {
                 String contactEmailText = contactEmail.getText().toString();
                 String emailForSaving = contactEmailText.replace(".", "^");
 
-                Contact contact = new Contact(firstNameText,lastNameText,contactEmailText);
+                Contact contact = new Contact(firstNameText, lastNameText, contactEmailText);
 
                 Map contactInfo = new HashMap<>();
 

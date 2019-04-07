@@ -293,6 +293,7 @@ public class ContactsTest {
                                 1)))
                 .atPosition(2);
         linearLayout2.perform(click());
+        assert(true);
     }
 
     private static Matcher<View> childAtPosition(

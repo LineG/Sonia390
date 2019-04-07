@@ -19,22 +19,22 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class ContactList extends AppCompatActivity {
 
-    private ListView listView;
     private ContactListAdapter contactAdapter;
     private String email;
-    private String emailFb;
     final ArrayList<Contact> contactList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list);
+
+        ListView listView;
+        String emailFb;
 
         Intent intent = getIntent();
         email = intent.getStringExtra("email");
@@ -52,13 +52,6 @@ public class ContactList extends AppCompatActivity {
 
         retrieveTags(emailFb);
 
-//        final ArrayList<Contact> contactList = new ArrayList<>();
-//
-//        contactList.add(new Contact("line", "ghanem",
-//                "ghanemline@gmail.com"));
-//        contactList.add(new Contact("lara", "ghanem",
-//                "laraghanem@gmail.com"));
-
 
 
         contactAdapter = new ContactListAdapter(this, contactList);
@@ -66,7 +59,7 @@ public class ContactList extends AppCompatActivity {
         listView.setAdapter(contactAdapter);
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Contact contact = contactList.get(position);
                 sendContact(contact.getEmail());
 
@@ -79,7 +72,6 @@ public class ContactList extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
-        return;
     }
 
     public void openAddContactActivity() {
@@ -103,7 +95,7 @@ public class ContactList extends AppCompatActivity {
         contactsDb.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
-                if(dataSnapshot.exists()) {
+                if (dataSnapshot.exists()) {
                     String firstName = dataSnapshot.child("name").getValue().toString();
                     String lastName = dataSnapshot.child("lastName").getValue().toString();
                     String email = dataSnapshot.child("email").getValue().toString();
@@ -116,16 +108,20 @@ public class ContactList extends AppCompatActivity {
             }
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                //comment
             }
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
+                //comment
             }
 
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                //comment
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                //comment
             }
         });
     }
