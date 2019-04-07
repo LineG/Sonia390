@@ -132,14 +132,6 @@
                 android:background="#509f1a71"
                 android:orientation="horizontal" >
 
-                <EditText
-                    android:id="@+id/word_thesaurus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:padding="0dip"
-                    android:hint="Thesaurus"
-                    android:textSize="10sp" />
             </LinearLayout>
 
             <view

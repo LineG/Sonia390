@@ -33,9 +33,11 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -45,6 +47,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -263,7 +266,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private String targetLanguage;
     private IamOptions options;
     private LanguageTranslator translationService;
-    private EditText word;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -309,7 +311,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////Thesaurus///////////////////////////////////////////////////
-    private void getWebsite(String word) {
+    private String getWebsite(String word) {
         Document doc = null;
         try {                           //https://www.thesaurus.com/browse/
             doc = Jsoup.connect("https://www.synonym.com/synonyms/" + word).get();
@@ -329,11 +331,14 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                synonyms += temp [a];
             }
 
-                messageContentView.setText(synonyms);
+            return synonyms;
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return "No synonyms found";
+
     }
 
     private String[] getSynonyms(String temp) {
@@ -341,7 +346,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         String[] newArray = Arrays.copyOfRange(tempArray, 0, 5);
         return newArray;
     }
-
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -596,13 +600,38 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         });
         ///////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////OnClick///////////////////////////////////////////////
-        word = (EditText) findViewById(R.id.word_thesaurus);
         Button button = (Button) findViewById(R.id.apply_thesaurus);
         button.setOnClickListener(new  View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int startSelection=input.getSelectionStart();
+                int endSelection=input.getSelectionEnd();
+                String selectedText = input.getText().toString().substring(startSelection, endSelection);
 
-                getWebsite(word.getText().toString());
+                // inflate the layout of the popup window
+                LayoutInflater inflater = (LayoutInflater)
+                        getSystemService(LAYOUT_INFLATER_SERVICE);
+                View popupView = inflater.inflate(R.layout.popup_window, null);
+
+                // create the popup window
+                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                boolean focusable = true; // lets taps outside the popup also dismiss it
+                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+                // show the popup window
+                // which view you pass in doesn't matter, it is only used for the window tolken
+                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+                ((TextView)popupWindow.getContentView().findViewById(R.id.popup_text)).setText(getWebsite(selectedText));
+
+                // dismiss the popup window when touched
+                popupView.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        popupWindow.dismiss();
+                        return true;
+                    }
+                });
             }
         });
 
