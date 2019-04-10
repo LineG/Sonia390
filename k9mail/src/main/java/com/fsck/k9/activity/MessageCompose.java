@@ -328,7 +328,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             String [] temp = getSynonyms(x);
             String synonyms = "";
             for (int a = 0; a < 5; a++) {
-               synonyms += temp [a];
+               synonyms += temp [a] + ", ";
             }
 
             return synonyms;
