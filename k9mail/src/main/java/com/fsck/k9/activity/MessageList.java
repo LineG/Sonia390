@@ -64,8 +64,6 @@ import com.fsck.k9.view.MessageHeader;
 import com.fsck.k9.view.MessageTitleView;
 import com.fsck.k9.view.ViewSwitcher;
 import com.fsck.k9.view.ViewSwitcher.OnSwitchCompleteListener;
-import com.google.firebase.perf.FirebasePerformance;
-import com.google.firebase.perf.metrics.Trace;
 
 import de.cketti.library.changelog.ChangeLog;
 
@@ -209,10 +207,6 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Firebase APM
-        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
-        myTrace.start();
-
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
             return;
@@ -252,7 +246,6 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
 
         //Sonia changes
         tts = new TextToSpeech(this, this);
-        myTrace.stop();
     }
 
     @Override
