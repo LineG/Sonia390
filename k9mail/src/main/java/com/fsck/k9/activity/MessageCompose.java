@@ -605,8 +605,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         button.setOnClickListener(new  View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int startSelection=input.getSelectionStart();
-                int endSelection=input.getSelectionEnd();
+                int startSelection = input.getSelectionStart();
+                int endSelection = input.getSelectionEnd();
                 String selectedText = input.getText().toString().substring(startSelection, endSelection);
 
                 // inflate the layout of the popup window
@@ -623,7 +623,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 // show the popup window
                 // which view you pass in doesn't matter, it is only used for the window tolken
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-                ((TextView)popupWindow.getContentView().findViewById(R.id.popup_text)).setText(getWebsite(selectedText));
+                ((TextView) popupWindow.getContentView().findViewById(R.id.popup_text)).setText(getWebsite(selectedText));
 
                 // dismiss the popup window when touched
                 popupView.setOnTouchListener(new View.OnTouchListener() {

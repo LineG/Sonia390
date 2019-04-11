@@ -17,7 +17,7 @@ import org.robolectric.annotation.Config;
 public class ThesaurusTest {
 
     protected Activity activity;
-    private String result;
+
 
     @Before
     public void setUp() {
@@ -30,7 +30,7 @@ public class ThesaurusTest {
 
     @Test
     public void testThesaurus() {
-
+        String result;
         result = ((MessageCompose) activity).getTestResult();
 
         // Synonyms for null should be the same
