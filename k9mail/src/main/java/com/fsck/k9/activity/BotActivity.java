@@ -28,9 +28,6 @@ public class BotActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Firebase APM
-        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
-        myTrace.start();
 
         setContentView(R.layout.bot);
         userInput = findViewById(R.id.userInput);
@@ -61,7 +58,6 @@ public class BotActivity extends AppCompatActivity {
                 return false;
             }
         });
-        myTrace.stop();
     }
     protected boolean isLastVisible() {
         LinearLayoutManager layoutManager = ((LinearLayoutManager) recyclerView.getLayoutManager());

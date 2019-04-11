@@ -104,8 +104,6 @@ import com.fsck.k9.search.LocalSearch;
 import com.fsck.k9.ui.EolConvertingEditText;
 import com.fsck.k9.ui.compose.QuotedMessageMvpView;
 import com.fsck.k9.ui.compose.QuotedMessagePresenter;
-import com.google.firebase.perf.FirebasePerformance;
-import com.google.firebase.perf.metrics.Trace;
 import com.ibm.watson.developer_cloud.language_translator.v3.LanguageTranslator;
 import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslateOptions;
 import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationResult;
@@ -309,9 +307,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Firebase APM
-        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
-        myTrace.start();
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -713,7 +708,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             setProgressBarIndeterminateVisibility(true);
             currentMessageBuilder.reattachCallback(this);
         }
-        myTrace.stop();
     }
 
     @Override
