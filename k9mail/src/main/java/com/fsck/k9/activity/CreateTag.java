@@ -17,6 +17,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,6 +41,10 @@ public class CreateTag extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Firebase APM
+        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+        myTrace.start();
+
         setContentView(R.layout.activity_create_tag);
 
         Button colorPickerButton1;
@@ -204,6 +210,7 @@ public class CreateTag extends AppCompatActivity {
 
             }
         });
+        myTrace.stop();
     }
 
     public void openColorPicker(final int tagNumber) {

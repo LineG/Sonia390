@@ -16,6 +16,8 @@ import com.fsck.k9.R;
 
 import com.fsck.k9.ResponseMessage;
 import com.fsck.k9.BotMessageAdapter;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
 
 public class BotActivity extends AppCompatActivity {
     protected EditText userInput;
@@ -26,6 +28,10 @@ public class BotActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Firebase APM
+        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+        myTrace.start();
+
         setContentView(R.layout.bot);
         userInput = findViewById(R.id.userInput);
         recyclerView = findViewById(R.id.conversation);
@@ -55,6 +61,7 @@ public class BotActivity extends AppCompatActivity {
                 return false;
             }
         });
+        myTrace.stop();
     }
     protected boolean isLastVisible() {
         LinearLayoutManager layoutManager = ((LinearLayoutManager) recyclerView.getLayoutManager());
