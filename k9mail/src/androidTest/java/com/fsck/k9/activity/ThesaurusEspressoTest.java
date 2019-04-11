@@ -164,3 +164,87 @@ public class ThesaurusEspressoTest {
                                 0)))
                 .atPosition(2);
         linearLayout.perform(click());
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction actionMenuItemView = onView(
+                allOf(withId(R.id.compose), withContentDescription("Compose"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("com.android.internal.widget.ActionBarContainer")),
+                                        0),
+                                4),
+                        isDisplayed()));
+        actionMenuItemView.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction button5 = onView(
+                allOf(withId(R.id.apply_thesaurus),
+                        childAtPosition(
+                                childAtPosition(
+                                        IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
+                                        6),
+                                0),
+                        isDisplayed()));
+        button5.check(matches(isDisplayed()));
+
+        ViewInteraction button6 = onView(
+                allOf(withId(R.id.apply_thesaurus), withText("Thesaurus"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        6),
+                                0)));
+        button6.perform(scrollTo(), click());
+
+        ViewInteraction relativeLayout = onView(
+                allOf(childAtPosition(
+                        IsInstanceOf.<View>instanceOf(android.widget.FrameLayout.class),
+                        0),
+                        isDisplayed()));
+        relativeLayout.check(matches(isDisplayed()));
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.popup_text), withText(", null, null, null, null, "),
+                        childAtPosition(
+                                childAtPosition(
+                                        IsInstanceOf.<View>instanceOf(android.widget.FrameLayout.class),
+                                        0),
+                                0),
+                        isDisplayed()));
+        textView.check(matches(withText(", null, null, null, null, ")));
+    }
+
+    private static Matcher<View> childAtPosition(
+            final Matcher<View> parentMatcher, final int position) {
+
+        return new TypeSafeMatcher<View>() {
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("Child at position " + position + " in parent ");
+                parentMatcher.describeTo(description);
+            }
+
+            @Override
+            public boolean matchesSafely(View view) {
+                ViewParent parent = view.getParent();
+                return parent instanceof ViewGroup && parentMatcher.matches(parent)
+                        && view.equals(((ViewGroup) parent).getChildAt(position));
+            }
+        };
+    }
+}
