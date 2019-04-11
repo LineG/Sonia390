@@ -16,8 +16,6 @@ import com.fsck.k9.R;
 
 import com.fsck.k9.ResponseMessage;
 import com.fsck.k9.BotMessageAdapter;
-import com.google.firebase.perf.FirebasePerformance;
-import com.google.firebase.perf.metrics.Trace;
 
 public class BotActivity extends AppCompatActivity {
     protected EditText userInput;

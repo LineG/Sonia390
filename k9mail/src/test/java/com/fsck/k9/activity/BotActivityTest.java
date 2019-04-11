@@ -6,8 +6,6 @@ import android.app.Activity;
 import android.content.Intent;
 import com.fsck.k9.BuildConfig;
 import com.fsck.k9.R;
-import com.google.firebase.perf.FirebasePerformance;
-import com.google.firebase.perf.metrics.Trace;
 
 import org.junit.Before;
 import static org.junit.Assert.assertEquals;
