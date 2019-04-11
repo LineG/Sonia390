@@ -266,6 +266,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private String targetLanguage;
     private IamOptions options;
     private LanguageTranslator translationService;
+    private String testResult;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -309,15 +310,15 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
     }
-////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////Thesaurus///////////////////////////////////////////////////
     private String getWebsite(String word) {
         Document doc = null;
         try {                           //https://www.thesaurus.com/browse/
             doc = Jsoup.connect("https://www.synonym.com/synonyms/" + word).get();
-                                                                //css-1hlsbfu etbu2a31 : the one tyler used
-                                                                //css-1lc0dpe et6tpn80
-                                                                //css-429zho e1991neq0 best option
+            //css-1hlsbfu etbu2a31 : the one tyler used
+            //css-1lc0dpe et6tpn80
+            //css-429zho e1991neq0 best option
             Elements links = doc.getElementsByClass("syn");
             String x = "";
             for(Element link : links) {
@@ -328,7 +329,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             String [] temp = getSynonyms(x);
             String synonyms = "";
             for (int a = 0; a < 5; a++) {
-               synonyms += temp [a] + ", ";
+                synonyms += temp [a] + ", ";
             }
 
             return synonyms;
@@ -368,7 +369,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             ContextThemeWrapper themeContext = new ContextThemeWrapper(this,
                     K9.getK9ThemeResourceId(K9.getK9ComposerTheme()));
             @SuppressLint("InflateParams") // this is the top level activity element, it has no root
-            View v = LayoutInflater.from(themeContext).inflate(R.layout.message_compose, null);
+                    View v = LayoutInflater.from(themeContext).inflate(R.layout.message_compose, null);
             TypedValue outValue = new TypedValue();
             // background color needs to be forced
             themeContext.getTheme().resolveAttribute(R.attr.messageViewBackgroundColor, outValue, true);
@@ -634,6 +635,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 });
             }
         });
+
+        testResult = getWebsite("Null");
 
         ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1869,7 +1872,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         final MessageReference messageReference;
 
         SendMessageTask(Context context, Account account, Contacts contacts, Message message,
-                Long draftId, MessageReference messageReference) {
+                        Long draftId, MessageReference messageReference) {
             this.context = context;
             this.account = account;
             this.contacts = contacts;
@@ -2090,7 +2093,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         @Override
         public void startIntentSenderForMessageLoaderHelper(IntentSender si, int requestCode, Intent fillIntent,
-                int flagsMask, int flagValues, int extraFlags) {
+                                                            int flagsMask, int flagValues, int extraFlags) {
             try {
                 requestCode |= REQUEST_MASK_LOADER_HELPER;
                 startIntentSenderForResult(si, requestCode, fillIntent, flagsMask, flagValues, extraFlags);
@@ -2319,6 +2322,10 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         m.setText(translation);
 
+    }
+
+    public String getTestResult() {
+        return testResult;
     }
 
 }
