@@ -308,7 +308,6 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
             return;

@@ -26,6 +26,7 @@ public class BotActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.bot);
         userInput = findViewById(R.id.userInput);
         recyclerView = findViewById(R.id.conversation);
