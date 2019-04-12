@@ -138,6 +138,7 @@ android {
     testOptions {
         unitTests {
             includeAndroidResources = true
+
         }
     }
 }
@@ -171,4 +172,10 @@ task jacocoTestReport2(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
     sourceDirectories = files([mainSrc])
     classDirectories = files([debugTree])
     executionData = files("${buildDir}/jacoco/testDebugUnitTest.exec")
+}
+
+task testDetection (dependsOn: 'testReleaseUnitTest') {
+
+    System.out.println("SUP");
+
 }
