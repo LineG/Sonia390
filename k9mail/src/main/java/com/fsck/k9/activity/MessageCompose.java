@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.ActivityCompat;
@@ -32,9 +33,11 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -44,6 +47,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -110,10 +114,15 @@ import com.ibm.watson.developer_cloud.language_translator.v3.model.TranslationRe
 import com.ibm.watson.developer_cloud.language_translator.v3.util.Language;
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.openintents.openpgp.util.OpenPgpApi;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -248,15 +257,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
     private EditText input;
     private Spinner templatesSpinnerView;
     private Button applyTemplateButtonView;
-    private String targetLanguage;
-    private IamOptions options;
-    private LanguageTranslator translationService;
     private MediaRecorder mediaRecorder;
     private int counter = 0;
     private MediaPlayer mp;
     private String filePath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private Date currentTime;
     private final int requestPermissionCode = 1000;
+    private String targetLanguage;
+    private IamOptions options;
+    private LanguageTranslator translationService;
+    private String testResult;
 
     public int templateFunc(int[] arr, int position) {
 
@@ -300,13 +310,53 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             }
         });
     }
-////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////Thesaurus///////////////////////////////////////////////////
+    private String getWebsite(String word) {
+        Document doc = null;
+        try {                           //https://www.thesaurus.com/browse/
+            doc = Jsoup.connect("https://www.synonym.com/synonyms/" + word).get();
+            //css-1hlsbfu etbu2a31 : the one tyler used
+            //css-1lc0dpe et6tpn80
+            //css-429zho e1991neq0 best option
+            Elements links = doc.getElementsByClass("syn");
+            String x = "";
+            for(Element link : links) {
 
+                x += link.text() + ", ";
+            }
+
+            String [] temp = getSynonyms(x);
+            String synonyms = "";
+            for (int a = 0; a < 5; a++) {
+                synonyms += temp [a] + ", ";
+            }
+
+            return synonyms;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return "No synonyms found";
+
+    }
+
+    private String[] getSynonyms(String temp) {
+        String [] tempArray = temp.split(",");
+        String[] newArray = Arrays.copyOfRange(tempArray, 0, 5);
+        return newArray;
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         if (UpgradeDatabases.actionUpgradeDatabases(this, getIntent())) {
             finish();
@@ -319,7 +369,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             ContextThemeWrapper themeContext = new ContextThemeWrapper(this,
                     K9.getK9ThemeResourceId(K9.getK9ComposerTheme()));
             @SuppressLint("InflateParams") // this is the top level activity element, it has no root
-            View v = LayoutInflater.from(themeContext).inflate(R.layout.message_compose, null);
+                    View v = LayoutInflater.from(themeContext).inflate(R.layout.message_compose, null);
             TypedValue outValue = new TypedValue();
             // background color needs to be forced
             themeContext.getTheme().resolveAttribute(R.attr.messageViewBackgroundColor, outValue, true);
@@ -549,7 +599,46 @@ public class MessageCompose extends K9Activity implements OnClickListener,
                 new TranslationTask().execute(input.getText().toString());
             }
         });
-    ////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////OnClick///////////////////////////////////////////////
+        Button button = (Button) findViewById(R.id.apply_thesaurus);
+        button.setOnClickListener(new  View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int startSelection = input.getSelectionStart();
+                int endSelection = input.getSelectionEnd();
+                String selectedText = input.getText().toString().substring(startSelection, endSelection);
+
+                // inflate the layout of the popup window
+                LayoutInflater inflater = (LayoutInflater)
+                        getSystemService(LAYOUT_INFLATER_SERVICE);
+                View popupView = inflater.inflate(R.layout.popup_window, null);
+
+                // create the popup window
+                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                boolean focusable = true; // lets taps outside the popup also dismiss it
+                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+                // show the popup window
+                // which view you pass in doesn't matter, it is only used for the window tolken
+                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+                ((TextView) popupWindow.getContentView().findViewById(R.id.popup_text)).setText(getWebsite(selectedText));
+
+                // dismiss the popup window when touched
+                popupView.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        popupWindow.dismiss();
+                        return true;
+                    }
+                });
+            }
+        });
+
+        testResult = getWebsite("Null");
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -1783,7 +1872,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
         final MessageReference messageReference;
 
         SendMessageTask(Context context, Account account, Contacts contacts, Message message,
-                Long draftId, MessageReference messageReference) {
+                        Long draftId, MessageReference messageReference) {
             this.context = context;
             this.account = account;
             this.contacts = contacts;
@@ -2004,7 +2093,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         @Override
         public void startIntentSenderForMessageLoaderHelper(IntentSender si, int requestCode, Intent fillIntent,
-                int flagsMask, int flagValues, int extraFlags) {
+                                                            int flagsMask, int flagValues, int extraFlags) {
             try {
                 requestCode |= REQUEST_MASK_LOADER_HELPER;
                 startIntentSenderForResult(si, requestCode, fillIntent, flagsMask, flagValues, extraFlags);
@@ -2233,6 +2322,10 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         m.setText(translation);
 
+    }
+
+    public String getTestResult() {
+        return testResult;
     }
 
 }
