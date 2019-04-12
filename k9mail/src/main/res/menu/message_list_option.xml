@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!--
     The comments preceding the (top level) menu items denote which part of the combined message
@@ -227,6 +228,12 @@
         android:icon="?attr/iconActionUpload"
         android:showAsAction="never"
         android:title="@string/send_messages_action"/>
+    <!-- MessageList -->
+    <item
+        android:id="@+id/empty_trash"
+        android:alphabeticShortcut="e"
+        android:title="@string/empty_trash_action"
+        app:showAsAction="never" />
 
     <!-- MessageList -->
     <item

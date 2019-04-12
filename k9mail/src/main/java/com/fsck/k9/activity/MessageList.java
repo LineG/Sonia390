@@ -998,6 +998,10 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
                 messageListFragment.onExpunge();
                 return true;
             }
+            case R.id.empty_trash: {
+                messageListFragment.onEmptyTrash();
+                return true;
+            }
             default: {
                 return super.onOptionsItemSelected(item);
             }
@@ -1171,6 +1175,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             menu.findItem(R.id.select_all).setVisible(false);
             menu.findItem(R.id.send_messages).setVisible(false);
             menu.findItem(R.id.expunge).setVisible(false);
+            menu.findItem(R.id.empty_trash).setVisible(false);
             menu.findItem(R.id.mark_all_as_read).setVisible(false);
             menu.findItem(R.id.show_folder_list).setVisible(false);
         } else {
@@ -1192,6 +1197,7 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             }
 
             menu.findItem(R.id.check_mail).setVisible(messageListFragment.isCheckMailSupported());
+            menu.findItem(R.id.empty_trash).setVisible(messageListFragment.isShowingTrashFolder());
 
             // If this is an explicit local search, show the option to search on the server
             if (!messageListFragment.isRemoteSearch() &&
