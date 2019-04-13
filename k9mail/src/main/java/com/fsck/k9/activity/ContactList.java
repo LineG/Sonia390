@@ -50,7 +50,7 @@ public class ContactList extends AppCompatActivity {
 
         listView = findViewById(R.id.contact_list_view);
 
-        retrieveTags(emailFb);
+        retrieveContact(emailFb);
 
 
 
@@ -81,7 +81,7 @@ public class ContactList extends AppCompatActivity {
     }
 
 
-    private void sendContact(String email) {
+    public void sendContact(String email) {
 
         Intent i = new Intent(this, MessageCompose.class);
         i.putExtra("contact_email", email);
@@ -90,7 +90,7 @@ public class ContactList extends AppCompatActivity {
 
     }
 
-    public void retrieveTags(final String email) {
+    public void retrieveContact(final String email) {
         DatabaseReference contactsDb = FirebaseDatabase.getInstance().getReference().child(email).child("contacts");
         contactsDb.addChildEventListener(new ChildEventListener() {
             @Override
