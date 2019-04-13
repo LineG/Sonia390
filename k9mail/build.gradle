@@ -176,6 +176,6 @@ task jacocoTestReport2(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
 
 task testDetection (dependsOn: 'testReleaseUnitTest') {
 
-    System.out.println("SUP");
+    System.out.println("Test Failure Detection");
 
 }
