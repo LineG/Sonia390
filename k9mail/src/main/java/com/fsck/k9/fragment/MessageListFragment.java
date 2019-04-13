@@ -975,6 +975,16 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
         messagingController.expunge(account, folderName);
     }
 
+    public void onEmptyTrash() {
+        if (isShowingTrashFolder()) {
+            showDialog(R.id.dialog_confirm_empty);
+        }
+    }
+
+    public boolean isShowingTrashFolder() {
+        return singleFolderMode && currentFolder != null && currentFolder.name.equals(account.getTrashFolderName());
+    }
+
     private void showDialog(int dialogId) {
         DialogFragment fragment;
         switch (dialogId) {
@@ -1015,6 +1025,17 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
                 String cancelText = getString(R.string.dialog_confirm_mark_all_as_read_cancel_button);
 
                 fragment = ConfirmationDialogFragment.newInstance(dialogId, title, message, confirmText, cancelText);
+                break;
+            }
+            case R.id.dialog_confirm_empty: {
+                String title = getString(R.string.dialog_confirm_empty_title);
+                String message = getString(R.string.dialog_confirm_empty_message);
+
+                String confirmText = getString(R.string.dialog_confirm_delete_confirm_button);
+                String cancelText = getString(R.string.dialog_confirm_delete_cancel_button);
+
+                fragment = ConfirmationDialogFragment.newInstance(dialogId, title, message,
+                        confirmText, cancelText);
                 break;
             }
             default: {
@@ -2229,6 +2250,10 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
             }
             case R.id.dialog_confirm_mark_all_as_read: {
                 markAllAsRead();
+                break;
+            }
+            case R.id.dialog_confirm_empty: {
+                messagingController.emptyTrash(account, null);
                 break;
             }
         }
