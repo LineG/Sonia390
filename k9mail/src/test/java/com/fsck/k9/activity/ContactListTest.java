@@ -71,6 +71,19 @@ public class ContactListTest {
         Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
         assertEquals(expectedIntent.getComponent(), actual.getComponent());
 
+
+        activity.onBackPressed();
+
+        try {
+
+            activity.retrieveContact("line");
+
+        }
+
+        catch (Exception e) {
+            e.getMessage();
+
+        }
     }
 
 }
