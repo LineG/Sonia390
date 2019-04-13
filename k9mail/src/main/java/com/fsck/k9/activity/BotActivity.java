@@ -65,7 +65,6 @@ public class BotActivity extends AppCompatActivity {
     }
 
     protected String commandChoice(String choice) {
-
         String selection = choice;
         if ("!cm mc".equals(choice)) {
             Intent intent = new Intent(this, MessageCompose.class);

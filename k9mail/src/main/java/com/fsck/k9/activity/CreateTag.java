@@ -249,6 +249,9 @@ public class CreateTag extends AppCompatActivity {
     }
 
     public void retrieveTags(final String email, final String messageId) {
+        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+        myTrace.start();
+
         DatabaseReference tag1Db = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
 
         tag1Db.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -284,5 +287,6 @@ public class CreateTag extends AppCompatActivity {
                 // Can't be empty
             }
         });
+        myTrace.stop();
     }
 }
