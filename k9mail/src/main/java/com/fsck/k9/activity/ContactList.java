@@ -30,6 +30,7 @@ public class ContactList extends AppCompatActivity {
     private String email;
     final ArrayList<Contact> contactList = new ArrayList<>();
     private EditText emailToDelete;
+    private String emailFb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class ContactList extends AppCompatActivity {
         setContentView(R.layout.activity_contact_list);
 
         ListView listView;
-        String emailFb;
+
 
         Intent intent = getIntent();
         email = intent.getStringExtra("email");
@@ -51,10 +52,10 @@ public class ContactList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String emailText = emailToDelete.getText().toString();
-                String emailTemp = emailText.replace(".","^");
 
-                if(emailText != null){
-                    deleteContact(emailTemp);
+                if(emailText != null || emailText.equals("")){
+                    Log.d("First Call", emailText);
+                    deleteContact(emailFb, emailText);
                 }
                 else{
                     Toast.makeText(ContactList.this, "You did not choose an email to delete",
@@ -124,7 +125,6 @@ public class ContactList extends AppCompatActivity {
                     String email = dataSnapshot.child("email").getValue().toString();
 
                     Contact contact = new Contact(firstName, lastName, email);
-                    Log.d("contact", contact.toString());
                     contactList.add(contact);
                     contactAdapter.notifyDataSetChanged();
                 }
@@ -149,46 +149,27 @@ public class ContactList extends AppCompatActivity {
         });
     }
 
-    public void deleteContact(final String email) {
-        final DatabaseReference contactsDb = FirebaseDatabase.getInstance().getReference().child(email).child("contacts");
-        contactsDb.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
-                if (dataSnapshot.exists()) {
-                    if(dataSnapshot.child(email).exists()){
-                        String emailTemp = email.replace("^",".");
-//                        contactsDb.child(email).removeValue();
-                        for(int i=0; i<contactList.size(); i++){
-                            if(contactList.get(i).getEmail().equals(emailTemp)){
-                                contactList.remove(contactList.get(i));
-                                contactAdapter.notifyDataSetChanged();
-                            }
+    public void deleteContact(String userEmail, String email) {
+        String emailToDelete = "";
+        Contact contactToDelete = null;
 
-                        }
-                    }
-                    else{
-                        Toast.makeText(ContactList.this, "Email doesn't exist",
-                                Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                //comment
-            }
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-                //comment
-            }
+        DatabaseReference contactsDb = FirebaseDatabase.getInstance().getReference().child(userEmail).child("contacts");
 
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-                //comment
+        for(int i=0; i<contactList.size(); i++) {
+            if (contactList.get(i).getEmail().equals(email)) {
+                emailToDelete = contactList.get(i).getEmail().replace(".","^");
+                contactToDelete = contactList.get(i);
+
             }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                //comment
-            }
-        });
+        }
+        if(contactToDelete != null){
+            contactList.remove(contactToDelete);
+            contactAdapter.notifyDataSetChanged();
+            contactsDb.child(emailToDelete).removeValue();
+        }
+        else{
+            Toast.makeText(ContactList.this, "The email chosen is not part of your contacts",
+                    Toast.LENGTH_LONG).show();
+        }
     }
 }

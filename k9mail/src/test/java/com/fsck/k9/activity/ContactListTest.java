@@ -2,6 +2,7 @@ package com.fsck.k9.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.fsck.k9.BuildConfig;
@@ -84,6 +85,20 @@ public class ContactListTest {
             e.getMessage();
 
         }
+    }
+
+    @Test
+    public void testTextFieldDelete() {
+
+        EditText name = (EditText) activity.findViewById(R.id.email_to_delete);
+        name.setText("Oumar");
+
+        assertEquals("Oumar", name.getText().toString());
+
+        Button button = (Button) activity.findViewById(R.id.delete_contact);
+
+
+
     }
 
 }
