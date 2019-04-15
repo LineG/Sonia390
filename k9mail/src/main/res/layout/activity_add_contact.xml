@@ -43,4 +43,19 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_below="@id/add_contact_email"/>
+
+    <TextView
+        android:id="@+id/invalid_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="195dp"
+        android:text="Please enter a valid email (e.g. name@email.com)"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone" />
 </RelativeLayout>

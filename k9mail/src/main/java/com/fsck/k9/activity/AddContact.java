@@ -1,11 +1,13 @@
 package com.fsck.k9.activity;
 
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.fsck.k9.R;
 import com.fsck.k9.firebasedb.Contact;
@@ -14,12 +16,15 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class AddContact extends AppCompatActivity {
     private EditText firstName;
     private EditText lastName;
     private EditText contactEmail;
+    private TextView invalidEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +37,9 @@ public class AddContact extends AppCompatActivity {
         firstName = (EditText) findViewById(R.id.add_contact_name);
         lastName = (EditText) findViewById(R.id.add_contact_lastName);
         contactEmail = (EditText) findViewById(R.id.add_contact_email);
+        invalidEmail = (TextView) findViewById(R.id.invalid_email);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         final String emailTemp = intent.getStringExtra("email");
         String email = emailTemp.replace(".", "^");
 
@@ -47,23 +53,46 @@ public class AddContact extends AppCompatActivity {
                 String firstNameText = firstName.getText().toString();
                 String lastNameText = lastName.getText().toString();
                 String contactEmailText = contactEmail.getText().toString();
-                String emailForSaving = contactEmailText.replace(".", "^");
 
-                Contact contact = new Contact(firstNameText, lastNameText, contactEmailText);
+                if ((firstNameText.equals("")) && !checkIfemailIsValid(contactEmailText)) {
+                    invalidEmail.setText("Please Enter A First Name and A Valid Email");
+                    invalidEmail.setVisibility(View.VISIBLE);
+                }
+                else if (!checkIfemailIsValid(contactEmailText)){
+                    invalidEmail.setVisibility(View.VISIBLE);
+                }
+                else if (firstNameText.equals("")){
+                    invalidEmail.setText("Please Enter A First Name");
+                    invalidEmail.setVisibility(View.VISIBLE);
+                }
+                else {
 
-                Map contactInfo = new HashMap<>();
+                    String emailForSaving = contactEmailText.replace(".", "^");
 
-                contactInfo.put(emailForSaving, contact);
+                    Contact contact = new Contact(firstNameText, lastNameText, contactEmailText);
+                    Map contactInfo = new HashMap<>();
 
-                contactsDb.updateChildren(contactInfo);
+                    contactInfo.put(emailForSaving, contact);
 
-                String email = emailTemp;
-                Intent intent = new Intent(AddContact.this, ContactList.class);
-                intent.putExtra("email", email);
-                startActivity(intent);
-                finish();
+                    contactsDb.updateChildren(contactInfo);
+
+                    String email = emailTemp;
+                    Intent intent = new Intent(AddContact.this, ContactList.class);
+                    intent.putExtra("email", email);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
+
+    }
+
+    public boolean checkIfemailIsValid(String email) {
+
+        String regex = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+        Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
 
     }
 }
