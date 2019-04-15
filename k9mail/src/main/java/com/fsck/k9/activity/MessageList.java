@@ -799,8 +799,18 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
         AccountSettings.actionSettings(this, account);
     }
 
+    //sonia bot new activity
     private void onBot() {
         Intent intent = new Intent(this, BotActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    //sonia contacts list new activity
+    private void onContactList() {
+        String email = account.getEmail();
+        Intent intent = new Intent(this, ContactList.class);
+        intent.putExtra("email", email);
         startActivity(intent);
         finish();
     }
@@ -973,6 +983,11 @@ public class MessageList extends K9Activity implements MessageListFragmentListen
             //Sonia changes for reminder email
             case R.id.reminder_button: {
                 messageViewFragment.reminder();
+                return true;
+            }
+            //Sonia changes for contacts
+            case R.id.contact_list: {
+                onContactList();
                 return true;
             }
         }
