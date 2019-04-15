@@ -21,6 +21,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.replaceText;
@@ -36,16 +37,13 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class ContactsTest {
+public class ContactTest {
 
     @Rule
     public ActivityTestRule<Accounts> mActivityTestRule = new ActivityTestRule<>(Accounts.class);
 
     @Test
-    public void contactsTest() {
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+    public void contactTest() {
         try {
             Thread.sleep(7000);
         } catch (InterruptedException e) {
@@ -78,34 +76,16 @@ public class ContactsTest {
                                         withClassName(is("android.widget.ScrollView")),
                                         0),
                                 0)));
-        editText.perform(scrollTo(), click());
-
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        editText.perform(scrollTo(), replaceText("390soen@gmail.com"), closeSoftKeyboard());
 
         ViewInteraction editText2 = onView(
-                allOf(withId(R.id.account_email),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                0)));
-        editText2.perform(scrollTo(), replaceText("390soen@gmail.com"), closeSoftKeyboard());
-
-        ViewInteraction editText3 = onView(
                 allOf(withId(R.id.account_password),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.ScrollView")),
                                         0),
                                 1)));
-        editText3.perform(scrollTo(), replaceText("minicapstone390"), closeSoftKeyboard());
+        editText2.perform(scrollTo(), replaceText("minicapstone390"), closeSoftKeyboard());
 
         ViewInteraction button2 = onView(
                 allOf(withId(R.id.next), withText("Next"),
@@ -126,32 +106,23 @@ public class ContactsTest {
             e.printStackTrace();
         }
 
+        ViewInteraction editText3 = onView(
+                allOf(withId(R.id.account_description), withContentDescription("Give this account a name (optional):"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                0)));
+        editText3.perform(scrollTo(), replaceText("sonia"), closeSoftKeyboard());
+
         ViewInteraction editText4 = onView(
-                allOf(withId(R.id.account_description), withContentDescription("Give this account a name (optional):"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                0)));
-        editText4.perform(scrollTo(), click());
-
-        ViewInteraction editText5 = onView(
-                allOf(withId(R.id.account_description), withContentDescription("Give this account a name (optional):"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                0)));
-        editText5.perform(scrollTo(), replaceText("sonis"), closeSoftKeyboard());
-
-        ViewInteraction editText6 = onView(
                 allOf(withId(R.id.account_name), withContentDescription("Type your name (displays on outgoing messages):"),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.ScrollView")),
                                         0),
                                 1)));
-        editText6.perform(scrollTo(), replaceText("sonia"), closeSoftKeyboard());
+        editText4.perform(scrollTo(), replaceText("sonia"), closeSoftKeyboard());
 
         ViewInteraction button3 = onView(
                 allOf(withId(R.id.done), withText("Done"),
@@ -224,7 +195,7 @@ public class ContactsTest {
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                0),
+                                2),
                         isDisplayed()));
         appCompatButton.perform(click());
 
@@ -265,7 +236,7 @@ public class ContactsTest {
                                         0),
                                 2),
                         isDisplayed()));
-        appCompatEditText3.perform(replaceText("oumarba221296@hotmail.c"), closeSoftKeyboard());
+        appCompatEditText3.perform(replaceText("s@hotmail.com"), closeSoftKeyboard());
 
         ViewInteraction appCompatButton2 = onView(
                 allOf(withId(R.id.save_contact), withText("Save contact"),
@@ -290,10 +261,130 @@ public class ContactsTest {
                 .inAdapterView(allOf(withId(R.id.contact_list_view),
                         childAtPosition(
                                 withClassName(is("android.widget.RelativeLayout")),
-                                1)))
-                .atPosition(2);
+                                3)))
+                .atPosition(1);
         linearLayout2.perform(click());
-        assert(true);
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        DataInteraction linearLayout3 = onData(anything())
+                .inAdapterView(allOf(withId(R.id.contact_list_view),
+                        childAtPosition(
+                                withClassName(is("android.widget.RelativeLayout")),
+                                3)))
+                .atPosition(3);
+        linearLayout3.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction actionMenuItemView2 = onView(
+                allOf(withId(R.id.contact_list),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("com.android.internal.widget.ActionBarContainer")),
+                                        0),
+                                3),
+                        isDisplayed()));
+        actionMenuItemView2.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        pressBack();
+
+        ViewInteraction appCompatEditText4 = onView(
+                allOf(withId(R.id.email_to_delete),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText4.perform(replaceText("s@hotmail.com"), closeSoftKeyboard());
+
+        ViewInteraction appCompatButton3 = onView(
+                allOf(withId(R.id.delete_contact), withText("Delete"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatButton3.perform(click());
+
+        ViewInteraction appCompatButton4 = onView(
+                allOf(withId(R.id.delete_contact), withText("Delete"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatButton4.perform(click());
+
+        pressBack();
+
+        pressBack();
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction linearLayout4 = onView(
+                allOf(withContentDescription("Compose, Navigate up"),
+                        childAtPosition(
+                                allOf(withClassName(is("com.android.internal.widget.ActionBarView")),
+                                        childAtPosition(
+                                                withClassName(is("com.android.internal.widget.ActionBarContainer")),
+                                                0)),
+                                0),
+                        isDisplayed()));
+        linearLayout4.perform(click());
+
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        ViewInteraction actionMenuItemView3 = onView(
+                allOf(withId(R.id.contact_list),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("com.android.internal.widget.ActionBarContainer")),
+                                        0),
+                                3),
+                        isDisplayed()));
+        actionMenuItemView3.perform(click());
+        assert (true);
     }
 
     private static Matcher<View> childAtPosition(
