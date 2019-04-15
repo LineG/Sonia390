@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.fsck.k9.R;
 import com.fsck.k9.firebasedb.Contact;
@@ -27,6 +29,7 @@ public class ContactList extends AppCompatActivity {
     private ContactListAdapter contactAdapter;
     private String email;
     final ArrayList<Contact> contactList = new ArrayList<>();
+    private EditText emailToDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +43,28 @@ public class ContactList extends AppCompatActivity {
         email = intent.getStringExtra("email");
         emailFb = email.replace(".", "^");
 
-        Button button = (Button) findViewById(R.id.add_new_contact);
-        button.setOnClickListener(new View.OnClickListener() {
+        emailToDelete = (EditText) findViewById(R.id.email_to_delete);
+        Button delete = (Button) findViewById(R.id.delete_contact);
+        Button addContact = (Button) findViewById(R.id.add_new_contact);
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String emailText = emailToDelete.getText().toString();
+                String emailTemp = emailText.replace(".","^");
+
+                if(emailText != null){
+                    deleteContact(emailTemp);
+                }
+                else{
+                    Toast.makeText(ContactList.this, "You did not choose an email to delete",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+        addContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openAddContactActivity();
@@ -104,6 +127,49 @@ public class ContactList extends AppCompatActivity {
                     Log.d("contact", contact.toString());
                     contactList.add(contact);
                     contactAdapter.notifyDataSetChanged();
+                }
+            }
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                //comment
+            }
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                //comment
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                //comment
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                //comment
+            }
+        });
+    }
+
+    public void deleteContact(final String email) {
+        final DatabaseReference contactsDb = FirebaseDatabase.getInstance().getReference().child(email).child("contacts");
+        contactsDb.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, String s) {
+                if (dataSnapshot.exists()) {
+                    if(dataSnapshot.child(email).exists()){
+                        String emailTemp = email.replace("^",".");
+//                        contactsDb.child(email).removeValue();
+                        for(int i=0; i<contactList.size(); i++){
+                            if(contactList.get(i).getEmail().equals(emailTemp)){
+                                contactList.remove(contactList.get(i));
+                                contactAdapter.notifyDataSetChanged();
+                            }
+
+                        }
+                    }
+                    else{
+                        Toast.makeText(ContactList.this, "Email doesn't exist",
+                                Toast.LENGTH_LONG).show();
+                    }
                 }
             }
             @Override
