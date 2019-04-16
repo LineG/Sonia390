@@ -27,24 +27,8 @@ public class CustomTagTest {
     @Before
     public void setUp() {
 
-        Bundle mb = mock(Bundle.class);
-
-        try {
-
-            activity = Robolectric.buildActivity(CreateTag.class).create().pause().get();
-            createTagActivity.onCreate(mb);
-            createTagActivity = new CreateTag();
-
-
-        } catch (IllegalStateException ill) {
-
-            ill.getMessage();
-
-        } catch (RuntimeException r) {
-
-            r.getMessage();
-
-        }
+        activity = Robolectric.buildActivity(CreateTag.class).create().pause().get();
+        createTagActivity = new CreateTag();
 
         tag = new Tag();
         tag = new Tag("Zishuo", 0);
@@ -60,7 +44,6 @@ public class CustomTagTest {
 
             activity.openColorPicker(temp);
             createTagActivity.openColorPicker(temp);
-
 
         } catch (Exception e) {
 

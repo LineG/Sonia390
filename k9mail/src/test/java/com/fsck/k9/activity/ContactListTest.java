@@ -29,7 +29,6 @@ import static org.robolectric.Shadows.shadowOf;
 public class ContactListTest {
 
     private ContactList activity;
-    private Contact contact;
 
     @Before
     public void setUp() {
@@ -94,8 +93,6 @@ public class ContactListTest {
         name.setText("Oumar");
 
         assertEquals("Oumar", name.getText().toString());
-
-        Button button = (Button) activity.findViewById(R.id.delete_contact);
 
 
 
