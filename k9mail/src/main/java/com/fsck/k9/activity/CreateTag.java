@@ -42,175 +42,186 @@ public class CreateTag extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Firebase APM
-        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
-        myTrace.start();
+        Trace myTrace = null;
+        try {
 
-        setContentView(R.layout.activity_create_tag);
+            myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+            myTrace.start();
 
-        Button colorPickerButton1;
-        Button colorPickerButton2;
-        Button colorPickerButton3;
-        Button save1;
-        Button save2;
-        Button save3;
-        Button remove1;
-        Button remove2;
-        Button remove3;
-        Button saveAll;
-
-        Intent intent = getIntent();
-        String messageIdTemp = intent.getStringExtra("messageId");
-        if (messageIdTemp == null) {
-            messageIdTemp = "test";
+        } catch (Exception e) {
+            e.getMessage();
         }
 
-        final String messageId = messageIdTemp;
-        String emailTemp = intent.getStringExtra("email");
+            setContentView(R.layout.activity_create_tag);
 
-        if (emailTemp != null) {
-            emailTemp = emailTemp.replace(".", "^");
+            Button colorPickerButton1;
+            Button colorPickerButton2;
+            Button colorPickerButton3;
+            Button save1;
+            Button save2;
+            Button save3;
+            Button remove1;
+            Button remove2;
+            Button remove3;
+            Button saveAll;
+
+            Intent intent = getIntent();
+            String messageIdTemp = intent.getStringExtra("messageId");
+            if (messageIdTemp == null) {
+                messageIdTemp = "test";
+            }
+
+            final String messageId = messageIdTemp;
+            String emailTemp = intent.getStringExtra("email");
+
+            if (emailTemp != null) {
+                emailTemp = emailTemp.replace(".", "^");
+            } else {
+                emailTemp = "390soen@gmailTest";
+            }
+
+            final String email = emailTemp;
+
+            tagColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
+
+            colorPickerButton1 = (Button) findViewById(R.id.color_picker1);
+            colorPickerButton2 = (Button) findViewById(R.id.color_picker2);
+            colorPickerButton3 = (Button) findViewById(R.id.color_picker3);
+            save1 = (Button) findViewById(R.id.save_tag1);
+            save2 = (Button) findViewById(R.id.save_tag2);
+            save3 = (Button) findViewById(R.id.save_tag3);
+            remove1 = (Button) findViewById(R.id.remove_1);
+            remove2 = (Button) findViewById(R.id.remove_2);
+            remove3 = (Button) findViewById(R.id.remove_3);
+            saveAll = (Button) findViewById(R.id.save_changes);
+
+
+            tag1Name = (EditText) findViewById(R.id.tag1_name);
+            tag2Name = (EditText) findViewById(R.id.tag2_name);
+            tag3Name = (EditText) findViewById(R.id.tag3_name);
+
+            tag1 = (TextView) findViewById(R.id.tag_1);
+            tag2 = (TextView) findViewById(R.id.tag_2);
+            tag3 = (TextView) findViewById(R.id.tag_3);
+
+            try {
+
+                final DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
+
+            retrieveTags(email, messageId);
+
+            colorPickerButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openColorPicker(1);
+                }
+            });
+
+            colorPickerButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openColorPicker(2);
+                }
+            });
+
+            colorPickerButton3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openColorPicker(3);
+                }
+            });
+
+            save1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tag1NameText = tag1Name.getText().toString();
+                    Map userInfo = new HashMap<>();
+
+                    Tag tag1 = new Tag(tag1NameText, tag1Color);
+                    userInfo.put("tag1", tag1);
+                    Toast.makeText(CreateTag.this, "Added tag1", Toast.LENGTH_LONG).show();
+
+                    tagsDb.updateChildren(userInfo);
+
+                }
+            });
+
+            save2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tag2NameText = tag2Name.getText().toString();
+                    Map userInfo = new HashMap<>();
+
+                    Tag tag2 = new Tag(tag2NameText, tag2Color);
+                    userInfo.put("tag2", tag2);
+                    Toast.makeText(CreateTag.this, "Added tag2", Toast.LENGTH_LONG).show();
+
+                    tagsDb.updateChildren(userInfo);
+
+                }
+            });
+
+            save3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tag3NameText = tag3Name.getText().toString();
+                    Map userInfo = new HashMap<>();
+
+                    Tag tag3 = new Tag(tag3NameText, tag3Color);
+                    userInfo.put("tag3", tag3);
+                    Toast.makeText(CreateTag.this, "Added tag3", Toast.LENGTH_LONG).show();
+
+                    tagsDb.updateChildren(userInfo);
+
+                }
+            });
+
+            remove1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tagsDb.child("tag1").removeValue();
+                    tag1.setText("Tag 1");
+                    tag1.setBackgroundColor(0);
+                    Toast.makeText(CreateTag.this, "Removed tag1", Toast.LENGTH_LONG).show();
+
+                }
+            });
+
+            remove2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tagsDb.child("tag2").removeValue();
+                    tag2.setText("Tag 2");
+                    tag2.setBackgroundColor(0);
+                    Toast.makeText(CreateTag.this, "Removed tag2", Toast.LENGTH_LONG).show();
+
+                }
+            });
+
+            remove3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tagsDb.child("tag3").removeValue();
+                    tag3.setText("Tag 3");
+                    tag3.setBackgroundColor(0);
+                    Toast.makeText(CreateTag.this, "Removed tag3", Toast.LENGTH_LONG).show();
+
+                }
+            });
+
+            saveAll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), Accounts.class);
+                    startActivity(intent);
+                    finish();
+
+                }
+            });
+            myTrace.stop();
+        } catch (Exception e) {
+            e.getMessage();
         }
-        else {
-            emailTemp = "390soen@gmailTest";
-        }
-
-        final String email = emailTemp;
-
-        tagColor = ContextCompat.getColor(CreateTag.this, R.color.colorPrimary);
-
-        colorPickerButton1 = (Button) findViewById(R.id.color_picker1);
-        colorPickerButton2 = (Button) findViewById(R.id.color_picker2);
-        colorPickerButton3 = (Button) findViewById(R.id.color_picker3);
-        save1 = (Button) findViewById(R.id.save_tag1);
-        save2 = (Button) findViewById(R.id.save_tag2);
-        save3 = (Button) findViewById(R.id.save_tag3);
-        remove1 = (Button) findViewById(R.id.remove_1);
-        remove2 = (Button) findViewById(R.id.remove_2);
-        remove3 = (Button) findViewById(R.id.remove_3);
-        saveAll = (Button) findViewById(R.id.save_changes);
-
-
-        tag1Name = (EditText) findViewById(R.id.tag1_name);
-        tag2Name = (EditText) findViewById(R.id.tag2_name);
-        tag3Name = (EditText) findViewById(R.id.tag3_name);
-
-        tag1 = (TextView) findViewById(R.id.tag_1);
-        tag2 = (TextView) findViewById(R.id.tag_2);
-        tag3 = (TextView) findViewById(R.id.tag_3);
-
-        final DatabaseReference tagsDb = FirebaseDatabase.getInstance().getReference().child(email).child(messageId);
-
-        retrieveTags(email,messageId);
-
-        colorPickerButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openColorPicker(1);
-            }
-        });
-
-        colorPickerButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openColorPicker(2);
-            }
-        });
-
-        colorPickerButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openColorPicker(3);
-            }
-        });
-
-        save1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tag1NameText = tag1Name.getText().toString();
-                Map userInfo = new HashMap<>();
-
-                Tag tag1 = new Tag(tag1NameText, tag1Color);
-                userInfo.put("tag1", tag1);
-                Toast.makeText(CreateTag.this, "Added tag1", Toast.LENGTH_LONG).show();
-
-                tagsDb.updateChildren(userInfo);
-
-            }
-        });
-
-        save2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tag2NameText = tag2Name.getText().toString();
-                Map userInfo = new HashMap<>();
-
-                Tag tag2 = new Tag(tag2NameText, tag2Color);
-                userInfo.put("tag2", tag2);
-                Toast.makeText(CreateTag.this, "Added tag2", Toast.LENGTH_LONG).show();
-
-                tagsDb.updateChildren(userInfo);
-
-            }
-        });
-
-        save3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tag3NameText = tag3Name.getText().toString();
-                Map userInfo = new HashMap<>();
-
-                Tag tag3 = new Tag(tag3NameText, tag3Color);
-                userInfo.put("tag3", tag3);
-                Toast.makeText(CreateTag.this, "Added tag3", Toast.LENGTH_LONG).show();
-
-                tagsDb.updateChildren(userInfo);
-
-            }
-        });
-
-        remove1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tagsDb.child("tag1").removeValue();
-                tag1.setText("Tag 1");
-                tag1.setBackgroundColor(0);
-                Toast.makeText(CreateTag.this, "Removed tag1", Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-        remove2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tagsDb.child("tag2").removeValue();
-                tag2.setText("Tag 2");
-                tag2.setBackgroundColor(0);
-                Toast.makeText(CreateTag.this, "Removed tag2", Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-        remove3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tagsDb.child("tag3").removeValue();
-                tag3.setText("Tag 3");
-                tag3.setBackgroundColor(0);
-                Toast.makeText(CreateTag.this, "Removed tag3", Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-        saveAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Accounts.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
-        myTrace.stop();
     }
 
     public void openColorPicker(final int tagNumber) {
