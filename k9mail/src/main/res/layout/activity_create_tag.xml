@@ -173,6 +173,15 @@
                 tools:layout_editor_absoluteY="302dp" />
 
         </LinearLayout>
+        <Button
+            android:id="@+id/save_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="302dp" />
 
     </RelativeLayout>
 
